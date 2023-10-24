@@ -5,7 +5,7 @@ public class MainMenuScript : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("MainLevel"); 
+        SceneManager.LoadScene("Couloir"); 
     }
 
     public void QuitGame()
