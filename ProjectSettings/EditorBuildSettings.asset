@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Couloir.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 90ad3d7b7f86c7b4d8cf8a2279036f7b
   - enabled: 1
+    path: Assets/Scenes/Couloir.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 0
     path: Assets/Scenes/MainLevel.unity
     guid: fffcfa0e748ecc94c8f10bbdf4e356bd
   - enabled: 1
