@@ -14,7 +14,7 @@ public class QuestManager : MonoBehaviour
     void Start()
     {
         // Initialisation de la quête
-        SetQuest("Parlez a (Trouver un nom sympa pour ce pnj).");
+        SetQuest("Parlez a l'etudiant confus.");
     }
 
     public void SetQuest(string newQuest)

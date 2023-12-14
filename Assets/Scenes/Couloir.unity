@@ -632,14 +632,14 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 4286153273
+  m_fontColor: {r: 0.22347811, g: 0.509434, b: 0.47395778, a: 1}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0, g: 1, b: 0.88305783, a: 1}
+    topRight: {r: 0, g: 0.990566, b: 0.9444596, a: 1}
+    bottomLeft: {r: 0.003921569, g: 0.9098039, b: 0.9529412, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -650,14 +650,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 461900125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beeac1eb4b84dba479720e694a73b394, type: 3}
+  m_Script: {fileID: 11500000, guid: efefe784143f4b2498a11c0863d5a3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 1570119693}
@@ -1280,14 +1280,14 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
+    rgba: 4294250774
+  m_fontColor: {r: 0.087029904, g: 0.06666665, b: 0.9607843, a: 1}
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.16785331, g: 0.48617953, b: 0.8679245, a: 1}
+    topRight: {r: 0.08877712, g: 0.8419123, b: 0.990566, a: 1}
+    bottomLeft: {r: 0.004494493, g: 0.9103445, b: 0.9528302, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -1298,8 +1298,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
-  m_fontSizeBase: 65
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11968,7 +11968,7 @@ GameObject:
   - component: {fileID: 1479082992}
   - component: {fileID: 1479082991}
   m_Layer: 0
-  m_Name: npc-idle_0
+  m_Name: etudiant_confus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12056,8 +12056,8 @@ Transform:
   m_GameObject: {fileID: 1479082987}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.9541, y: 4.2133, z: 0}
-  m_LocalScale: {x: 5.8662, y: 5.6693997, z: 1}
+  m_LocalPosition: {x: -7.48, y: 4.36, z: 0}
+  m_LocalScale: {x: 0.055729203, y: 0.048469767, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1573022361}
@@ -12095,18 +12095,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09735805, y: 0.018165872}
+  m_Offset: {x: -0.9095106, y: -5.4958057}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.14, y: 0.17}
+    oldSize: {x: 15.053763, y: 18.27957}
     newSize: {x: 0.14, y: 0.17}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.85183144, y: 0.5630423}
+  m_Size: {x: 34.106575, y: 35.18565}
   m_EdgeRadius: 0
 --- !u!114 &1479082992
 MonoBehaviour:
