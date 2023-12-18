@@ -10,10 +10,14 @@ public class DoorTrigger : MonoBehaviour
     {
         Debug.Log("OnTriggerEnter2D called");
 
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && CleManager.Instance.HasKey)
         {
             videoPlayer.Play();
-            videoPlayer.loopPointReached += LoadSalle1Scene; // S'abonner à l'événement de fin de vidéo
+            videoPlayer.loopPointReached += LoadSalle1Scene; // S'abonner ï¿½ l'ï¿½vï¿½nement de fin de vidï¿½o
+        }
+        else if (other.CompareTag("Player") && !CleManager.Instance.HasKey)
+        {
+            Debug.Log("You don't have the key");
         }
     }
 
