@@ -6,29 +6,29 @@ using TMPro;
 
 
 
-// Le gestionnaire de dialogues pour contrôler l'affichage des textes de dialogue dans le jeu.
+// Le gestionnaire de dialogues pour contrï¿½ler l'affichage des textes de dialogue dans le jeu.
 public class DialogManager : MonoBehaviour
 {
-    // Référence à l'Animator, utilisé pour animer la boîte de dialogue.
+    // Rï¿½fï¿½rence ï¿½ l'Animator, utilisï¿½ pour animer la boï¿½te de dialogue.
     public Animator Animator;
 
     // File d'attente pour stocker les phrases du dialogue.
     private Queue<string> sentences;
 
-    // Références TextMeshPro pour afficher le nom et le texte du dialogue.
+    // Rï¿½fï¿½rences TextMeshPro pour afficher le nom et le texte du dialogue.
     public TMP_Text nameText;
     public TMP_Text dialogText;
 
-    // Instance statique pour accéder au DialogManager depuis d'autres scripts.
+    // Instance statique pour accï¿½der au DialogManager depuis d'autres scripts.
     public static DialogManager Instance;
 
-    // Awake est appelé lorsque le script est chargé. 
+    // Awake est appelï¿½ lorsque le script est chargï¿½. 
     // Ici, il s'assure qu'une seule instance de DialogManager est active.
     private void Awake()
     {
         if (Instance != null)
         {
-            Debug.LogWarning("Plusieurs instances de DialogManager ont été trouvées dans la scène.");
+            Debug.LogWarning("Plusieurs instances de DialogManager ont ï¿½tï¿½ trouvï¿½es dans la scï¿½ne.");
             return;
         }
         Instance = this;
@@ -46,8 +46,8 @@ public class DialogManager : MonoBehaviour
         nameText.text = dialog.name;
 
         sentences.Clear();
-
-        // Ajoute chaque phrase du dialogue à la file d'attente.
+        Debug.Log("Oe " + dialog.sentences.Length);
+        // Ajoute chaque phrase du dialogue ï¿½ la file d'attente.
         foreach (string sentence in dialog.sentences)
         {
             sentences.Enqueue(sentence);
@@ -81,7 +81,7 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    // Termine le dialogue et ferme la boîte de dialogue.
+    // Termine le dialogue et ferme la boï¿½te de dialogue.
     public void EndDialog()
     {
         Animator.SetBool("isOpen", false);
