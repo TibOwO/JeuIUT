@@ -27,6 +27,7 @@ public class CleScript : MonoBehaviour
         {
             CleManager.Instance.HasKey = true;
             Destroy(gameObject); // Détruit l'objet clé
+
         }
     }
 }
