@@ -16,6 +16,7 @@ public class CleManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+
         }
     }
 }
