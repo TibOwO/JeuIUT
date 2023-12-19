@@ -13219,7 +13219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Etudiant
+    name: Etudiant Confus
     sentences:
     - Moi non plus je sais pas ce qu'il faut faire, t'inquiete
     - Bon courage !
