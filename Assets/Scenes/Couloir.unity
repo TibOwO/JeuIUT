@@ -13267,8 +13267,8 @@ MonoBehaviour:
   dialog:
     name: Etudiant Confus
     sentences:
-    - Moi non plus je sais pas ce qu'il faut faire, t'inquiete
-    - Bon courage !
+    - On m'avait dit d'entrer dans la premiere salle, mais la porte est fermee a
+      cle...
   isInRange: 0
 --- !u!61 &1479082993
 BoxCollider2D:
