@@ -12,10 +12,13 @@ public class DoorTriggerSalle1retour : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Video", "porte_anim.mov");
+            videoPlayer.url = videoPath;
+
             videoPlayer.Play();
             videoPlayer.loopPointReached += LoadCouloirScene;
 
-            // Mettre à jour le point de spawn dans les PlayerPrefs
+            // Mettre Ã  jour le point de spawn dans les PlayerPrefs
             PlayerPrefs.SetString("PointDeSpawn", "SpawnPorteSalle1");
         }
     }

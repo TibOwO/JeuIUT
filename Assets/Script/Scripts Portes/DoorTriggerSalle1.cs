@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 
-public class DoorTrigger : MonoBehaviour
+public class DoorTriggerSalle1 : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
 
@@ -12,8 +12,11 @@ public class DoorTrigger : MonoBehaviour
 
         if (other.CompareTag("Player") && CleManager.Instance.HasKey)
         {
+            string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Video", "porte_anim.mov");
+            videoPlayer.url = videoPath;
+
             videoPlayer.Play();
-            videoPlayer.loopPointReached += LoadSalle1Scene; // S'abonner � l'�v�nement de fin de vid�o
+            videoPlayer.loopPointReached += LoadSalle1Scene; // S'abonner à l'événement de fin de vidéo
         }
         else if (other.CompareTag("Player") && !CleManager.Instance.HasKey)
         {
