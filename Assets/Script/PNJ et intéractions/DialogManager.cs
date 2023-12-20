@@ -76,5 +76,7 @@ public class DialogManager : MonoBehaviour
     public void EndDialog()
     {
         Animator.SetBool("isOpen", false);
+        FindObjectOfType<NPCGuideManager>().OnDialogueComplete();
     }
+
 }
