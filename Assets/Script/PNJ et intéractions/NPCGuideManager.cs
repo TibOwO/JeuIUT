@@ -10,65 +10,74 @@ public class NPCGuideManager : MonoBehaviour
     private PlayerMovement playerMovement; // Référence au script de mouvement du joueur
     public CinematicBars cinematicBars;
 
+    // Variable statique pour garder une trace du nombre de fois que la cinématique a été jouée
+    private static int cinematicPlayCount = 0;
+
     void Start()
     {
-        // Trouver le script de mouvement du joueur et désactiver le mouvement
         playerMovement = FindObjectOfType<PlayerMovement>();
-        if (playerMovement != null)
-        {
-            playerMovement.SetCanMove(false);
-        }
 
-        StartCinematic();
+        // Vérifie si c'est la première fois que la cinématique est lancée dans cette session de jeu
+        if (cinematicPlayCount == 0)
+        {
+            // Désactivez le mouvement du joueur et lancez la cinématique
+            if (playerMovement != null)
+            {
+                playerMovement.SetCanMove(false);
+            }
+
+            StartCinematic();
+            cinematicPlayCount++; // Incrémentez le compteur pour que la cinématique ne se joue plus automatiquement
+        }
+        else
+        {
+            // Si la cinématique a déjà été jouée, réactivez immédiatement le mouvement du joueur
+            if (playerMovement != null)
+            {
+                playerMovement.SetCanMove(true);
+            }
+        }
     }
 
     public void StartCinematic()
     {
-        // Déclencher l'animation d'entrée du personnage
+        // Déclenchez l'animation d'entrée du personnage et affichez les barres cinématiques
         characterAnimator.SetTrigger("EnterScreen");
         cinematicBars.ShowBars();
 
-        // Ajouter un délai correspondant à la durée de l'animation "EnterScreen"
-        // avant de démarrer le dialogue
-        Invoke(nameof(StartDialogue), 1.5f); // Ajuster le temps pour correspondre à votre animation
+        // Commencez le dialogue après un court délai
+        Invoke(nameof(StartDialogue), 1.5f);
     }
 
     void StartDialogue()
     {
-        // Créer un objet Dialog avec le nom du personnage et les lignes de dialogue
+        // Créez un objet Dialog avec le nom du personnage et les lignes de dialogue
         Dialog dialog = new Dialog
         {
             name = characterName,
             sentences = dialogueLines
         };
 
-        // Démarrer le dialogue via le DialogManager
+        // Démarrez le dialogue via le DialogManager
         dialogManager.StartDialog(dialog);
     }
 
     public void OnDialogueComplete()
     {
-        // Ajouter un délai si vous souhaitez un peu de temps avant que le personnage ne sorte
-        Invoke(nameof(EndCinematic), 1f); // Ajuster le temps selon les besoins
+        // Terminez la cinématique après un court délai
+        Invoke(nameof(EndCinematic), 1f);
     }
 
     public void EndCinematic()
     {
-        // Déclencher l'animation de sortie du personnage
+        // Déclenchez l'animation de sortie du personnage et cachez les barres cinématiques
         characterAnimator.SetTrigger("ExitScreen");
         cinematicBars.HideBars();
 
-
-        // Réactiver le mouvement du joueur une fois la cinématique terminée
+        // Réactivez le mouvement du joueur
         if (playerMovement != null)
         {
             playerMovement.SetCanMove(true);
         }
-    }
-
-    // Appelée pour désactiver le sprite du personnage après l'animation de sortie
-    void DisableCharacterSprite()
-    {
-        characterSprite.SetActive(false);
     }
 }
