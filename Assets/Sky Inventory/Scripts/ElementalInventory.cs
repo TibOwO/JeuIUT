@@ -10,7 +10,27 @@ public class ElementalInventory : MonoBehaviour
 	public int maxStack;
 	public GameObject elementPrefab;
 	private Transform choosenItem;
+	public static ElementalInventory Instance { get; private set; }
 
+
+	void Start()
+	{
+		// Initialiser elementPrefab au démarrage
+		elementPrefab = GameObject.Find("ElementPrefab"); // Remplacez par le nom de votre élément préfabriqué
+	}
+
+	private void Awake()
+	{
+		if (Instance == null)
+		{
+			Instance = this;
+		}
+		else
+		{
+			Debug.LogError("Il existe déjà une instance de ElementalInventory.");
+			Destroy(gameObject); // Détruire le GameObject actuel pour éviter les duplications
+		}
+	}
 	public bool contains(string name, int count, Color color)
 	{
 		int inventoryCount = 0;
@@ -123,12 +143,14 @@ public class ElementalInventory : MonoBehaviour
 	}
 
 	//Add element to inventory
+	// Add element to inventory
 	public void addItem(string name, int count, Color color)
 	{
+		Debug.Log("Adding item: " + name + " - Count: " + count + " - Color: " + color.ToString());
 		int cellId = getEquals(name, color);
 		if (cellId != -1)
 		{
-			Cells[cellId].elementCount = count;
+			Cells[cellId].elementCount += count;
 		}
 		else
 		{
@@ -139,21 +161,22 @@ public class ElementalInventory : MonoBehaviour
 			}
 			Cells[cellId].elementCount += count;
 		}
-		//Set up element count
+
+		// Set up element count
 		if (Cells[cellId].elementCount > maxStack)
 		{
 			int remain = Cells[cellId].elementCount - maxStack;
 			Cells[cellId].elementCount = maxStack;
 			addItem(name, remain, color);
 		}
-		else
-		{
-			Cells[cellId].elementCount = count;
-		}
+
 		Cells[cellId].elementName = name;
 		Cells[cellId].elementColor = color;
+
+		// Call UpdateCellInterface to update the UI
 		Cells[cellId].UpdateCellInterface();
 	}
+
 
 	//Returns id of first clear cell
 	public int getFirst()

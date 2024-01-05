@@ -10,7 +10,7 @@ public class DoorTriggerSalle1 : MonoBehaviour
     {
         Debug.Log("OnTriggerEnter2D called");
 
-        if (other.CompareTag("Player") && CleManager.Instance.HasKey)
+        if (other.CompareTag("Player") && ElementalInventory.Instance.contains("Cle", 1, Color.yellow))
         {
             string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Video", "porte_anim.mov");
             videoPlayer.url = videoPath;
@@ -18,14 +18,15 @@ public class DoorTriggerSalle1 : MonoBehaviour
             videoPlayer.Play();
             videoPlayer.loopPointReached += LoadSalle1Scene; // S'abonner à l'événement de fin de vidéo
         }
-        else if (other.CompareTag("Player") && !CleManager.Instance.HasKey)
+        else if (other.CompareTag("Player") && !ElementalInventory.Instance.contains("Cle", 1, Color.yellow))
         {
-            Debug.Log("You don't have the key");
+            Debug.Log("Vous n'avez pas la clé nécessaire.");
         }
     }
 
     void LoadSalle1Scene(VideoPlayer vp)
     {
+
         SceneManager.LoadScene("Salle 1");
     }
 }

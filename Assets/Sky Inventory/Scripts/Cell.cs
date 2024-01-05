@@ -9,7 +9,7 @@ public class Cell : MonoBehaviour
 	public int elementCount; // Element Count
 	public Color elementColor; // Element Color
 	public Transform elementTransform; //Transform Element
-	private GameObject elementPrefab;
+	private GameObject elementPrefab; //Element Prefab
 
 	//Method to update UI of this cell
 	public void UpdateCellInterface()

@@ -3,7 +3,6 @@ using System.Collections;
 
 public class RandomItem : MonoBehaviour
 {
-
 	private ElementalInventory inventory;
 	private bool isInventoryOpen = false;
 
@@ -13,6 +12,7 @@ public class RandomItem : MonoBehaviour
 		{
 			inventory = FindObjectOfType(typeof(ElementalInventory)) as ElementalInventory;
 		}
+
 		if (Input.GetKeyDown(KeyCode.G))
 		{
 			inventory.addItem(SimpleMethods.randomElement(), Random.Range(1, inventory.maxStack), new Color(Random.value / 2f, Random.value / 2f, Random.value / 2f, 1f));
@@ -29,6 +29,7 @@ public class RandomItem : MonoBehaviour
 		{
 			inventory.loadFromString(PlayerPrefs.GetString("EInventory"));
 		}
+
 		if (Input.GetKeyDown(KeyCode.Tab))
 		{
 			// Inverser l'état de l'inventaire (ouvrir si fermé, fermer si ouvert)
@@ -37,6 +38,5 @@ public class RandomItem : MonoBehaviour
 			// Appliquer l'état à l'objet inventory
 			inventory.gameObject.SetActive(isInventoryOpen);
 		}
-
 	}
 }
