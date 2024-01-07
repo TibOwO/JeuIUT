@@ -10,13 +10,26 @@ public class ElementalInventory : MonoBehaviour
 	public int maxStack;
 	public GameObject elementPrefab;
 	private Transform choosenItem;
+
+	private InventoryRenderer inventoryRenderer;
 	public static ElementalInventory Instance { get; private set; }
 
 
-	void Start()
+
+	private void Start()
 	{
-		// Initialiser elementPrefab au démarrage
-		elementPrefab = GameObject.Find("ElementPrefab"); // Remplacez par le nom de votre élément préfabriqué
+		elementPrefab = GameObject.Find("ElementPrefab");
+
+		if (elementPrefab == null)
+		{
+			Debug.Log("ELEMENTPREFAB IS NULL");
+		}
+		inventoryRenderer = GetComponentInChildren<InventoryRenderer>();
+
+		if (inventoryRenderer == null)
+		{
+			Debug.LogError("InventoryRenderer component not found on ElementalInventory.");
+		}
 	}
 
 	private void Awake()
@@ -24,11 +37,16 @@ public class ElementalInventory : MonoBehaviour
 		if (Instance == null)
 		{
 			Instance = this;
+			DontDestroyOnLoad(gameObject); // Empêche la destruction lors d'un changement de scène
 		}
 		else
 		{
-			Debug.LogError("Il existe déjà une instance de ElementalInventory.");
-			Destroy(gameObject); // Détruire le GameObject actuel pour éviter les duplications
+			// S'il existe déjà une instance dans une autre scène, détruire cet objet
+			if (Instance != this)
+			{
+				Destroy(gameObject);
+				return;
+			}
 		}
 	}
 	public bool contains(string name, int count, Color color)
@@ -201,6 +219,19 @@ public class ElementalInventory : MonoBehaviour
 			}
 		}
 		return -1;
+	}
+
+	public void ToggleInventoryRenderer(bool isEnabled)
+	{
+		// Activer ou désactiver le composant InventoryRenderer selon le paramètre
+		if (inventoryRenderer != null)
+		{
+			inventoryRenderer.enabled = isEnabled;
+		}
+		else
+		{
+			Debug.LogError("InventoryRenderer component not found on ElementalInventory.");
+		}
 	}
 
 }
