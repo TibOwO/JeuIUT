@@ -172,9 +172,7 @@ public class ElementalInventory : MonoBehaviour
 
 		Cells[cellId].elementName = name;
 		Cells[cellId].elementColor = color;
-
-		// Call UpdateCellInterface to update the UI
-		Cells[cellId].UpdateCellInterface();
+		//Cells[cellId].UpdateCellInterface();
 	}
 
 

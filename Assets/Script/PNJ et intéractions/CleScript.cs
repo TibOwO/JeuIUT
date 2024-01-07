@@ -34,7 +34,7 @@ public class CleScript : MonoBehaviour
                 // Ajoute la clé à l'inventaire
                 ElementalInventory.Instance.addItem("Cle", 1, Color.yellow);
                 keyPickedUp = true; // La clé a été ramassée
-                Destroy(gameObject); // Détruit l'objet clé
+                gameObject.SetActive(false);
             }
             else
             {
