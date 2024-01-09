@@ -110,7 +110,7 @@ correct_answer_menu.grid(row=3, column=1)
 
 correct_answer_menu.bind('<Button-1>', correct_answer_menu_popup)
 
-#Bouton ajouter une question
+
 submit_button = tk.Button(root, text="Ajouter Question", command=submit)
 submit_button.grid(row=4, column=1)
 
