@@ -5,6 +5,14 @@ public class CleScript : MonoBehaviour
     private bool playerInRange = false;
     private bool keyPickedUp = false; // Nouvelle variable
 
+    private Renderer myRenderer; // Ajout d'une référence au composant Renderer
+
+    private void Start()
+    {
+        // Obtient le composant Renderer attaché à cet objet
+        myRenderer = GetComponent<Renderer>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -34,7 +42,16 @@ public class CleScript : MonoBehaviour
                 // Ajoute la clé à l'inventaire
                 ElementalInventory.Instance.addItem("Cle", 1, Color.yellow);
                 keyPickedUp = true; // La clé a été ramassée
-                gameObject.SetActive(false);
+
+                // Rend l'objet invisible
+                if (myRenderer != null)
+                {
+                    myRenderer.enabled = false;
+                }
+                else
+                {
+                    Debug.LogError("Le composant Renderer est introuvable sur cet objet.");
+                }
             }
             else
             {
