@@ -9,7 +9,7 @@ public class DialogTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isInRange)
+        if (Input.GetKeyDown(KeyCode.E) && isInRange && gameObject.activeSelf) // Ajout de la condition gameObject.activeSelf
         {
             TriggerDialog();
         }
@@ -40,6 +40,10 @@ public class DialogTrigger : MonoBehaviour
 
     public void TriggerDialog()
     {
-        FindObjectOfType<DialogManager>().StartDialog(dialog);
+        // Ajout de la condition pour vérifier si l'objet est actif (visible)
+        if (gameObject.activeSelf)
+        {
+            FindObjectOfType<DialogManager>().StartDialog(dialog);
+        }
     }
 }
