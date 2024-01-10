@@ -10,6 +10,8 @@ public class DialogManager : MonoBehaviour
     private Queue<string> sentences;
     public TMP_Text nameText;
     public TMP_Text dialogText;
+    private NPCGuideManager npcGuideManager; // Ajoutez cette ligne
+
     public static DialogManager Instance;
 
     // Ajout d'un indicateur pour vérifier si une phrase est en train d'être écrite.
@@ -24,6 +26,8 @@ public class DialogManager : MonoBehaviour
         }
         Instance = this;
         sentences = new Queue<string>();
+        npcGuideManager = FindObjectOfType<NPCGuideManager>(); // Ajoutez cette ligne
+
     }
 
     public void StartDialog(Dialog dialog)
@@ -76,7 +80,11 @@ public class DialogManager : MonoBehaviour
     public void EndDialog()
     {
         Animator.SetBool("isOpen", false);
-        FindObjectOfType<NPCGuideManager>().OnDialogueComplete();
+
+        if (npcGuideManager != null)
+        {
+            npcGuideManager.OnDialogueComplete();
+        }
     }
 
 }

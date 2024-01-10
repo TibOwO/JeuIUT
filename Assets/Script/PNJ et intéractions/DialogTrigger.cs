@@ -7,7 +7,7 @@ public class DialogTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isInRange && !CleManager.Instance.KeyPickedUp)
+        if (Input.GetKeyDown(KeyCode.E) && isInRange)
         {
             TriggerDialog();
         }
