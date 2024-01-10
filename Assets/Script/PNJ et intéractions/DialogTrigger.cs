@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogTrigger : MonoBehaviour
@@ -9,7 +7,7 @@ public class DialogTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isInRange && gameObject.activeSelf) // Ajout de la condition gameObject.activeSelf
+        if (Input.GetKeyDown(KeyCode.E) && isInRange && !CleManager.Instance.KeyPickedUp)
         {
             TriggerDialog();
         }

@@ -3,8 +3,13 @@ using UnityEngine;
 public class CleManager : MonoBehaviour
 {
     public static CleManager Instance;
+    private bool keyPickedUp = false;
 
-    public bool HasKey { get; set; }
+    public bool KeyPickedUp
+    {
+        get { return keyPickedUp; }
+        set { keyPickedUp = value; }
+    }
 
     private void Awake()
     {
@@ -16,7 +21,6 @@ public class CleManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
-
         }
     }
 }
