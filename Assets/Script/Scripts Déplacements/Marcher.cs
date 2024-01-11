@@ -3,10 +3,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public AudioSource footstepAudioSource; // Ajout de la source audio pour les pas
+    public AudioClip[] footstepSounds; // Tableau des sons de pas
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator animator;
     public bool canMove = true; // Flag pour contrôler le mouvement du personnage
+    private bool isMoving = false; // Pour vérifier si le personnage se déplace
 
     void Start()
     {
@@ -32,7 +35,14 @@ public class PlayerMovement : MonoBehaviour
 
         // Mise à jour du vecteur de mouvement
         movement = new Vector2(horizontal, vertical);
+        isMoving = movement != Vector2.zero;
         UpdateAnimator(movement);
+
+        // Jouer le son de pas si le personnage se déplace
+        if (isMoving && !footstepAudioSource.isPlaying)
+        {
+            PlayFootstepSound();
+        }
     }
 
     void FixedUpdate()
@@ -49,6 +59,14 @@ public class PlayerMovement : MonoBehaviour
         // Mise à jour des paramètres de l'Animator
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
+    }
+
+    private void PlayFootstepSound()
+    {
+        // Choisir un son de pas aléatoire
+        int index = Random.Range(0, footstepSounds.Length);
+        footstepAudioSource.clip = footstepSounds[index];
+        footstepAudioSource.Play();
     }
 
     // Méthode publique pour activer/désactiver le mouvement
