@@ -3,19 +3,23 @@ using UnityEngine;
 using TMPro;
 using System.Data;
 using Mono.Data.Sqlite;
+using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
-    private TextMeshProUGUI txtQuestion;
-    private TextMeshProUGUI txtBtnG;
-    private TextMeshProUGUI txtBtnD;
-    private string conn; // Chaîne de connexion à la base de données
+    public TextMeshProUGUI txtQuestion;
+    public TextMeshProUGUI txtBtnG;
+    public TextMeshProUGUI txtBtnD;
+    public string conn;
 
     public string Reponse;
-    public TypeWriter typeWriter; // Variable publique pour stocker la référence au script TypeWriter
-    public List<Question> questions; // Liste pour stocker les questions et réponses
+    public TypeWriter typeWriter;
+    public List<Question> questions;
+    public GameObject ZoneReponse1;
+    public GameObject ZoneReponse2;
 
-    // Structure pour représenter une question et ses réponses
+    public ButtonController buttonController;
+
     public struct Question
     {
         public string Text;
@@ -32,64 +36,77 @@ public class Quiz : MonoBehaviour
 
     void Awake()
     {
-        // Initialisation des composants (s'assurer que les noms correspondent à ceux dans votre scène)
         txtQuestion = GameObject.Find("txtQuestion").GetComponent<TextMeshProUGUI>();
         txtBtnG = GameObject.Find("TxtG").GetComponent<TextMeshProUGUI>();
         txtBtnD = GameObject.Find("TxtD").GetComponent<TextMeshProUGUI>();
 
-        // Vérifiez si les composants de l'interface utilisateur ont été trouvés
-        if (txtQuestion == null || txtBtnG == null || txtBtnD == null)
+        buttonController = GetComponent<ButtonController>();
+
+        if (txtQuestion == null || txtBtnG == null || txtBtnD == null || buttonController == null)
         {
             Debug.LogError("Un ou plusieurs composants d'interface utilisateur ne sont pas attachés au script.");
         }
 
-        // Initialisation de la chaîne de connexion à la base de données
         conn = "URI=file:" + Application.dataPath + "/Plugins/DB_Unity.db";
 
-        // Chargement des questions depuis la base de données
         LoadQuestionsFromDatabase();
     }
 
     void Start()
     {
-        // Pose la première question
         PoseUneQuestion();
     }
 
     void Update()
     {
-        // Gestion des entrées utilisateur ici...
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Collider2D hitCollider = Physics2D.OverlapPoint(mousePos);
             if (hitCollider != null)
             {
-                if (hitCollider.gameObject == txtBtnG.gameObject)
+                if (hitCollider.gameObject == ZoneReponse1)
                 {
-                    CheckAnswer(txtBtnG.text);
+                    buttonController.CheckAnswer(txtBtnG.text);
                 }
-                else if (hitCollider.gameObject == txtBtnD.gameObject)
+                else if (hitCollider.gameObject == ZoneReponse2)
                 {
-                    CheckAnswer(txtBtnD.text);
+                    buttonController.CheckAnswer(txtBtnD.text);
                 }
             }
         }
     }
 
-    // Méthode pour vérifier la réponse
-    void CheckAnswer(string selectedAnswer)
+    public class ButtonController : MonoBehaviour
     {
-        if (selectedAnswer == Reponse)
+        public Button ReponseG;
+        public Button ReponseD;
+
+        public Quiz quiz;
+
+        void Start()
         {
-            Debug.Log("Correct!");
+            ReponseG.onClick.AddListener(() => CheckAnswer(quiz.txtBtnG.text));
+            ReponseD.onClick.AddListener(() => CheckAnswer(quiz.txtBtnD.text));
         }
-        else
+
+        public void CheckAnswer(string selectedAnswer)
         {
-            Debug.Log("Incorrect!");
+            if (selectedAnswer == quiz.Reponse)
+            {
+                Debug.Log("Correct!");
+                quiz.txtQuestion.text = "Gagné!";
+            }
+            else
+            {
+                Debug.Log("Incorrect!");
+                quiz.txtQuestion.text = "Perdu!";
+            }
+            quiz.PoseUneQuestion();
         }
-        PoseUneQuestion(); // Pose la question suivante
     }
+
+
 
     // Méthode pour charger les questions depuis la base de données
     void LoadQuestionsFromDatabase()
