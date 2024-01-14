@@ -3,12 +3,12 @@ using UnityEngine;
 public class CleManager : MonoBehaviour
 {
     public static CleManager Instance;
-    private bool keyPickedUp = false;
+    private bool itemPickedUp = false;
 
-    public bool KeyPickedUp
+    public bool ItemPickedUp
     {
-        get { return keyPickedUp; }
-        set { keyPickedUp = value; }
+        get { return itemPickedUp; }
+        set { itemPickedUp = value; }
     }
 
     private void Awake()

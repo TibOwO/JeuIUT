@@ -1,18 +1,15 @@
 using UnityEngine;
 
-public class CleScript : MonoBehaviour
+public class CleScript : MonoBehaviour, IInteractable
 {
     private bool playerInRange = false;
-    private bool keyPickedUp = false; // Nouvelle variable
-    private Renderer myRenderer; // Ajout d'une référence au composant Renderer
+    private bool itemPickedUp = false;
+    private Renderer myRenderer;
 
     private void Start()
     {
-        // Obtient le composant Renderer attaché à cet objet
         myRenderer = GetComponent<Renderer>();
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,32 +29,33 @@ public class CleScript : MonoBehaviour
 
     private void Update()
     {
-        // Vérifie si le joueur est dans la zone, appuie sur la touche E et que la clé n'a pas été ramassée
-        if (playerInRange && Input.GetKeyDown(KeyCode.E) && !keyPickedUp)
+        if (playerInRange && Input.GetKeyDown(KeyCode.E) && !itemPickedUp)
         {
-            // Vérifie si l'inventaire contient un emplacement vide
-            int emptyCellId = ElementalInventory.Instance.getFirst();
+            Interact();
+        }
+    }
 
-            if (emptyCellId != -1)
+    public void Interact()
+    {
+        int emptyCellId = ElementalInventory.Instance.getFirst();
+
+        if (emptyCellId != -1)
+        {
+            ElementalInventory.Instance.addItem(gameObject.name, 1, Color.yellow);
+            itemPickedUp = true;
+
+            if (myRenderer != null)
             {
-                // Ajoute la clé à l'inventaire
-                ElementalInventory.Instance.addItem("Cle", 1, Color.yellow);
-                keyPickedUp = true; // La clé a été ramassée
-
-                // Rend l'objet invisible
-                if (myRenderer != null)
-                {
-                    myRenderer.enabled = false;
-                }
-                else
-                {
-                    Debug.LogError("Le composant Renderer est introuvable sur cet objet.");
-                }
+                myRenderer.enabled = false;
             }
             else
             {
-                Debug.Log("L'inventaire est plein. Libérez de l'espace.");
+                Debug.LogError("Le composant Renderer est introuvable sur cet objet.");
             }
+        }
+        else
+        {
+            Debug.Log("L'inventaire est plein. Libérez de l'espace.");
         }
     }
 }
