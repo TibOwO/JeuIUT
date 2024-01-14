@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine;
 using UnityEngine.UI;
 
 public class ReponseGButton : MonoBehaviour
@@ -16,6 +15,6 @@ public class ReponseGButton : MonoBehaviour
 
     void TaskOnClick()
     {
-        quiz.CheckAnswer(quiz.txtBtnG.text);
+        //quiz.CheckAnswer(quiz.txtBtnG.text);
     }
 }

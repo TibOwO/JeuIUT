@@ -3074,6 +3074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  footstepAudioSource: {fileID: 0}
+  footstepSounds: []
   canMove: 1
 --- !u!50 &309853054
 Rigidbody2D:
@@ -10572,7 +10574,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice 1
+      value: Indice MathsDiscretes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20466,7 +20468,10 @@ MonoBehaviour:
   dialog:
     name: Indice
     sentences:
-    - "Voici un \xE9l\xE9ment"
+    - Oh tiens...
+    - "Un \xE9l\xE8ve a laisser son antis\xE8che sur le bureau du professeur."
+    - "\"Total d'\xE9l\xE8ves = Eleves maths discretes + Eleves algebre \u2014 Eleves
+      maths discretes et algebre + Eleves ni maths discretes ni algebre\""
   isInRange: 0
 --- !u!1 &2021552845
 GameObject:
