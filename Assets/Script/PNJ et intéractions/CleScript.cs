@@ -41,7 +41,8 @@ public class CleScript : MonoBehaviour, IInteractable
 
         if (emptyCellId != -1)
         {
-            ElementalInventory.Instance.addItem(gameObject.name, 1, Color.yellow);
+            Color randomColor = new Color(Random.value, Random.value, Random.value);
+            ElementalInventory.Instance.addItem(gameObject.name, 1, randomColor);
             itemPickedUp = true;
 
             if (myRenderer != null)

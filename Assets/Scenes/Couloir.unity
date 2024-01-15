@@ -2279,6 +2279,63 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+--- !u!1001 &234818727
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
+      propertyPath: m_Name
+      value: ElementPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
 --- !u!1 &254829952
 GameObject:
   m_ObjectHideFlags: 0
@@ -2610,6 +2667,7 @@ MonoBehaviour:
     name: Cle
     sentences:
     - Vous avez ramasse une cle
+    - Vous pouvez appuyer sur TAB pour afficher les objets de votre inventaire
   isInRange: 0
 --- !u!1 &287033591
 GameObject:
@@ -6341,7 +6399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -230}
+  m_AnchoredPosition: {x: 0, y: -191}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &741157352
@@ -6365,9 +6423,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 1
+    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
+    m_FontSize: 16
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -28195,5 +28253,6 @@ SceneRoots:
   - {fileID: 2006590398}
   - {fileID: 862055019}
   - {fileID: 114211411}
+  - {fileID: 234818727}
   - {fileID: 1227276528}
   - {fileID: 524636434}
