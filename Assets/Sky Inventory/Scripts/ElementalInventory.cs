@@ -49,12 +49,12 @@ public class ElementalInventory : MonoBehaviour
 			}
 		}
 	}
-	public bool contains(string name, int count, Color color)
+	public bool contains(string name, int count)
 	{
 		int inventoryCount = 0;
 		for (int i = 0; i < Cells.Length; i++)
 		{
-			if (Cells[i].elementCount != 0 && Cells[i].elementName == name && Cells[i].elementColor == color)
+			if (Cells[i].elementCount != 0 && Cells[i].elementName == name)
 			{
 				inventoryCount += Cells[i].elementCount;
 			}

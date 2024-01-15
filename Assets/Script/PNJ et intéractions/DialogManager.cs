@@ -32,7 +32,6 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(Dialog dialog)
     {
-        Debug.Log("Starting conversation with " + dialog.name);
         Animator.SetBool("isOpen", true);
         nameText.text = dialog.name;
         sentences.Clear();

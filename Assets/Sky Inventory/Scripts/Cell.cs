@@ -27,7 +27,8 @@ public class Cell : MonoBehaviour
 		{
 			if (elementTransform != null)
 			{
-				Destroy(elementTransform.gameObject);
+				Debug.Log("elementTransform n'est pas null ca devrait détruire l'objet =", elementPrefab);
+				//Destroy(elementTransform.gameObject);
 			}
 			return;
 		}
