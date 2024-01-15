@@ -10311,9 +10311,9 @@ MonoBehaviour:
     name: Indice Maths DIscretes
     sentences:
     - Oh tiens...
-    - "Un \xE9l\xE8ve a laisser son antis\xE8che sur le bureau du professeur."
-    - "\"Total d'\xE9l\xE8ves = Eleves maths discretes + Eleves algebre \u2014 Eleves
-      maths discretes et algebre + Eleves ni maths discretes ni algebre\""
+    - Un eleve a laisser son antiseche sur le bureau du professeur.
+    - "\"Total d'eleves = Eleves maths discretes + Eleves algebre \u2014 Eleves maths
+      discretes et algebre + Eleves ni maths discretes ni algebre\""
   isInRange: 0
 --- !u!1 &1200791619
 GameObject:
