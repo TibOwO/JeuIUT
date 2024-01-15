@@ -17,6 +17,11 @@ public class Cell : MonoBehaviour
 		if (elementPrefab == null)
 		{
 			elementPrefab = (FindObjectOfType(typeof(ElementalInventory)) as ElementalInventory).elementPrefab;
+			Debug.Log("elementPrefab est NULL =", elementPrefab);
+		}
+		else
+		{
+			Debug.Log("elementPrefab est pas null =", elementPrefab);
 		}
 		if (elementCount == 0)
 		{
