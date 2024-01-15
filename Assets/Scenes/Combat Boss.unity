@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 28137061}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,7 +272,6 @@ GameObject:
   - component: {fileID: 482441637}
   - component: {fileID: 482441636}
   - component: {fileID: 482441635}
-  - component: {fileID: 482441639}
   m_Layer: 5
   m_Name: ReponseG
   m_TagString: Untagged
@@ -382,19 +381,6 @@ RectTransform:
   m_AnchoredPosition: {x: -255, y: -115}
   m_SizeDelta: {x: 627.6195, y: 195.2489}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &482441639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482441634}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a6e73050a670a04e80130f3cf5ee54c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quiz: {fileID: 0}
 --- !u!1 &487033108
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +391,6 @@ GameObject:
   m_Component:
   - component: {fileID: 487033109}
   - component: {fileID: 487033111}
-  - component: {fileID: 487033110}
   m_Layer: 5
   m_Name: Panel Question
   m_TagString: Untagged
@@ -434,36 +419,6 @@ RectTransform:
   m_AnchoredPosition: {x: 165.19019, y: 203.01463}
   m_SizeDelta: {x: -418.7262, y: -495.26}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &487033110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487033108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &487033111
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -483,7 +438,6 @@ GameObject:
   - component: {fileID: 804849342}
   - component: {fileID: 804849344}
   - component: {fileID: 804849343}
-  - component: {fileID: 804849345}
   - component: {fileID: 804849346}
   m_Layer: 5
   m_Name: Boss
@@ -549,18 +503,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804849341}
   m_CullTransparentMesh: 1
---- !u!114 &804849345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804849341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16bf43c966d07fc4998c8b5e58a1b8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &804849346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,7 +1077,6 @@ GameObject:
   - component: {fileID: 1303978083}
   - component: {fileID: 1303978082}
   - component: {fileID: 1303978081}
-  - component: {fileID: 1303978085}
   m_Layer: 5
   m_Name: ReponseD
   m_TagString: Untagged
@@ -1245,19 +1186,6 @@ RectTransform:
   m_AnchoredPosition: {x: 504.5478, y: -114.71}
   m_SizeDelta: {x: 704.9698, y: 194.67}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1303978085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303978080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dcd6af45fc116b45be25dbbad6ec205, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quiz: {fileID: 0}
 --- !u!1 &1327613858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7725491, g: 0.7725491, b: 0.78823537, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
