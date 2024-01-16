@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 
-public class DoorTriggerSalle2retour : MonoBehaviour
+public class DoorTriggerSalle5 : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
 
@@ -17,15 +17,12 @@ public class DoorTriggerSalle2retour : MonoBehaviour
             videoPlayer.url = videoPath;
 
             videoPlayer.Play();
-            videoPlayer.loopPointReached += LoadCouloirScene;
-
-            // Mettre à jour le point de spawn dans les PlayerPrefs
-            PlayerPrefs.SetString("PointDeSpawn", "SpawnPorteSalle2");
+            videoPlayer.loopPointReached += LoadSalle3Scene; // S'abonner à l'événement de fin de vidéo
         }
     }
 
-    void LoadCouloirScene(VideoPlayer vp)
+    void LoadSalle3Scene(VideoPlayer vp)
     {
-        SceneManager.LoadScene("Couloir");
+        SceneManager.LoadScene("Salle 5");
     }
 }

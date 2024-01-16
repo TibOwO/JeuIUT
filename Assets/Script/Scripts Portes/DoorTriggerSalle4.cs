@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 
-public class DoorTriggerSalle1retour : MonoBehaviour
+public class DoorTriggerSalle4 : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
 
@@ -12,19 +12,17 @@ public class DoorTriggerSalle1retour : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+
             string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Video", "porte_anim.mov");
             videoPlayer.url = videoPath;
 
             videoPlayer.Play();
-            videoPlayer.loopPointReached += LoadCouloirScene;
-
-            // Mettre à jour le point de spawn dans les PlayerPrefs
-            PlayerPrefs.SetString("PointDeSpawn", "SpawnPorteSalle1");
+            videoPlayer.loopPointReached += LoadSalle3Scene; // S'abonner à l'événement de fin de vidéo
         }
     }
 
-    void LoadCouloirScene(VideoPlayer vp)
+    void LoadSalle3Scene(VideoPlayer vp)
     {
-        SceneManager.LoadScene("Couloir");
+        SceneManager.LoadScene("Salle 4");
     }
 }
