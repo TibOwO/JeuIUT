@@ -16,12 +16,11 @@ public class Cell : MonoBehaviour
 	{
 		if (elementPrefab == null)
 		{
-			elementPrefab = (FindObjectOfType(typeof(ElementalInventory)) as ElementalInventory).elementPrefab;
-			Debug.Log("elementPrefab est NULL =", elementPrefab);
+			elementPrefab = GameObject.Find("ElementPrefab");
 		}
-		else
+		if (elementPrefab == null)
 		{
-			Debug.Log("elementPrefab est pas null =", elementPrefab);
+			Debug.Log("Ici");
 		}
 		if (elementCount == 0)
 		{
