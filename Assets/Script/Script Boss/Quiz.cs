@@ -1,9 +1,12 @@
 using System.Collections.Generic;
+using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 using System.Data;
 using Mono.Data.Sqlite;
 using UnityEngine.UI;
+using MagicPigGames;
 
 public class Quiz : MonoBehaviour
 {
@@ -11,7 +14,15 @@ public class Quiz : MonoBehaviour
     public Button btnReponseG;
     public Button btnReponseD;
     public string conn;
+    public ProgressBar bossHealthBar; // Référence à la barre de progression du boss
 
+    public int bossHealth, bossMaxHealth = 20;
+    public int playerLives = 3; // Vies initiales du joueur
+    public string winSceneName = "Salle 1"; // Nom de la scène de victoire
+    public Image[] heartImages; // Références aux images des coeurs dans l'UI
+    public Sprite fullHeartSprite;
+    public Sprite emptyHeartSprite;
+    public string loseSceneName = "Couloir"; // Nom de la scène de défaite
     public string Reponse;
     public TypeWriter typeWriter;
     public List<Question> questions;
@@ -27,6 +38,20 @@ public class Quiz : MonoBehaviour
             Text = text;
             Answers = answers;
             CorrectAnswer = correctAnswer;
+        }
+    }
+
+    void Update()
+    {
+        if (typeWriter.IsTyping)
+        {
+            btnReponseG.interactable = false;
+            btnReponseD.interactable = false;
+        }
+        else
+        {
+            btnReponseG.interactable = true;
+            btnReponseD.interactable = true;
         }
     }
 
@@ -48,46 +73,22 @@ public class Quiz : MonoBehaviour
 
     void Start()
     {
+        // Initialiser les cœurs comme invisibles
+        foreach (var heart in heartImages)
+        {
+            heart.enabled = false;
+        }
         PoseUneQuestion();
     }
 
-    void Update()
-{
-    // jessaie de debuger
-    if (Input.GetMouseButtonDown(0))
-    {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Collider2D hitCollider = Physics2D.OverlapPoint(mousePos);
 
-       
-        if (btnReponseG != null && btnReponseD != null)
-        {
-            if (hitCollider != null)
-            {
-                if (hitCollider.gameObject == btnReponseG.gameObject)
-                {
-                    CheckAnswer(btnReponseG.GetComponentInChildren<TextMeshProUGUI>().text);
-                }
-                else if (hitCollider.gameObject == btnReponseD.gameObject)
-                {
-                    CheckAnswer(btnReponseD.GetComponentInChildren<TextMeshProUGUI>().text);
-                }
-            }
-        }
-        else
-        {
-            Debug.LogError("Un ou plusieurs boutons ne sont pas initialisés.");
-        }
-    }
-}
-
- public class ButtonController : MonoBehaviour
+    public class ButtonController : MonoBehaviour
     {
-        private Quiz quiz; 
+        private Quiz quiz;
 
         void Start()
         {
-            quiz = FindObjectOfType<Quiz>(); 
+            quiz = FindObjectOfType<Quiz>();
 
             if (quiz == null)
             {
@@ -95,13 +96,13 @@ public class Quiz : MonoBehaviour
                 return;
             }
 
-            
+
             GetComponent<Button>().onClick.AddListener(OnClick);
         }
 
         void OnClick()
         {
-     
+
             if (quiz != null)
             {
                 quiz.CheckAnswer(GetComponentInChildren<TextMeshProUGUI>().text);
@@ -109,7 +110,7 @@ public class Quiz : MonoBehaviour
         }
     }
 
- 
+
     void LoadQuestionsFromDatabase()
     {
         questions = new List<Question>();
@@ -131,7 +132,7 @@ public class Quiz : MonoBehaviour
                         List<string> answers = new List<string>();
                         string correctAnswer = "";
 
-                        
+
                         using (var answerCmd = dbConnection.CreateCommand())
                         {
                             answerCmd.CommandText = "SELECT * FROM ANSWERS WHERE ParentID = @ParentID";
@@ -143,7 +144,7 @@ public class Quiz : MonoBehaviour
                                 {
                                     string answerText = answerReader.GetString(1);
                                     answers.Add(answerText);
-                                    if (answerReader.GetInt32(3) == 1) 
+                                    if (answerReader.GetInt32(3) == 1)
                                     {
                                         correctAnswer = answerText;
                                     }
@@ -151,7 +152,7 @@ public class Quiz : MonoBehaviour
                             }
                         }
 
-                        
+
                         questions.Add(new Question(questionText, answers, correctAnswer));
                     }
                 }
@@ -162,38 +163,149 @@ public class Quiz : MonoBehaviour
 
 
     // Méthode pour poser une question
-   void PoseUneQuestion()
-{
-    if (questions.Count == 0)
+    void PoseUneQuestion()
     {
-        Debug.LogError("Aucune question n'a été chargée de la base de données.");
-        return;
+        if (questions.Count == 0)
+        {
+            Debug.LogError("Aucune question n'a été chargée de la base de données.");
+            return;
+        }
+
+        // Sélection aléatoire d'une question
+        var currentQuestion = questions[Random.Range(0, questions.Count)];
+        Reponse = currentQuestion.CorrectAnswer;
+
+        typeWriter.SetText(currentQuestion.Text); // Affiche la question
+
+
+        btnReponseG.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.Answers[0]; // Affiche la première réponse
+        btnReponseD.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.Answers[1]; // Affiche la deuxième réponse
     }
 
-    // Sélection aléatoire d'une question
-    var currentQuestion = questions[Random.Range(0, questions.Count)];
-    Reponse = currentQuestion.CorrectAnswer;
 
-    typeWriter.SetText(currentQuestion.Text); // Affiche la question
+    public void OnButtonClicked(Button buttonClicked)
+    {
+        string buttonText = buttonClicked.GetComponentInChildren<TextMeshProUGUI>().text;
+        CheckAnswer(buttonText);
+    }
 
-    
-    btnReponseG.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.Answers[0]; // Affiche la première réponse
-    btnReponseD.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.Answers[1]; // Affiche la deuxième réponse
-}
+    private void UpdateBossHealthBar()
+    {
+        float healthPercentage = (float)bossHealth / bossMaxHealth;
+        bossHealthBar.SetProgress(healthPercentage);
+        Debug.Log("Boss Health: " + healthPercentage * 100 + "%");
+    }
 
-
-public void CheckAnswer(string selectedAnswer)
+    public void CheckAnswer(string selectedAnswer)
     {
         if (selectedAnswer == Reponse)
         {
             Debug.Log("Correct !");
-            txtQuestion.text = "Gagné !";
+            bossHealth -= 10; // Diminuez la santé du boss
+            UpdateBossHealthBar();
+            Debug.Log($"Santé du boss restante : {bossHealth}");
+
+            if (bossHealth <= 0)
+            {
+                Debug.Log("Le joueur gagne !");
+                SceneManager.LoadScene(winSceneName); // Chargez la scène de victoire
+            }
         }
         else
         {
             Debug.Log("Incorrect !");
-            txtQuestion.text = "Perdu !";
+            playerLives -= 1; // Diminuez les vies du joueur
+            StartCoroutine(LoseLifeRoutine());
+            Debug.Log($"Vies du joueur restantes : {playerLives}");
+
+            if (playerLives <= 0)
+            {
+                Debug.Log("Le joueur perd !");
+                SceneManager.LoadScene(loseSceneName); // Chargez la scène de défaite
+            }
         }
         PoseUneQuestion();
     }
+
+    IEnumerator LoseLifeRoutine()
+    {
+        // Afficher brièvement les cœurs
+        foreach (var heart in heartImages)
+        {
+            heart.enabled = true;
+        }
+
+        // Vibrer l'écran
+        StartCoroutine(ScreenShake());
+
+        // Mettre à jour les cœurs
+        UpdateHeartSprites();
+
+        // Attendre un moment
+        yield return new WaitForSeconds(1f);
+
+        // Si le joueur n'a plus de vie
+        if (playerLives <= 0)
+        {
+            StartCoroutine(FadeToBlackAndLoadScene());
+        }
+        else
+        {
+            foreach (var heart in heartImages)
+            {
+                heart.enabled = false;
+            }
+        }
+    }
+
+    void UpdateHeartSprites()
+    {
+        for (int i = 0; i < heartImages.Length; i++)
+        {
+            heartImages[i].sprite = i < playerLives ? fullHeartSprite : emptyHeartSprite;
+        }
+    }
+
+    IEnumerator ScreenShake()
+    {
+        float duration = 4.5f; // Durée de l'effet de vibration
+        float magnitude = 50f; // Amplitude de la vibration
+
+        GameObject cameraGameObject = GameObject.FindGameObjectWithTag("MainCamera");
+        if (cameraGameObject == null)
+        {
+            Debug.LogError("Camera with tag 'MainCamera' not found.");
+            yield break; // Arrête la coroutine si la caméra n'est pas trouvée
+        }
+
+        Vector3 originalPosition = cameraGameObject.transform.localPosition;
+
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;
+
+            cameraGameObject.transform.localPosition = new Vector3(x, y, originalPosition.z);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        cameraGameObject.transform.localPosition = originalPosition;
+    }
+
+
+
+
+
+    IEnumerator FadeToBlackAndLoadScene()
+    {
+        // Implémentez la transition vers l'écran noir ici
+        yield return new WaitForSeconds(1f); // Durée de l'effet
+        SceneManager.LoadScene(loseSceneName);
+    }
+
 }

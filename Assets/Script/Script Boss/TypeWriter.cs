@@ -5,8 +5,9 @@ using TMPro;
 
 public class TypeWriter : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI uiText;
+    [SerializeField] private TextMeshProUGUI uiText;
     public float delay = 0.2f;
+    public bool IsTyping { get; private set; }
 
     void Awake()
     {
@@ -15,17 +16,24 @@ public class TypeWriter : MonoBehaviour
 
     public void SetText(string text)
     {
+        if (IsTyping)
+        {
+            return; // Ne pas lancer une nouvelle animation si une est déjà en cours
+        }
         StartCoroutine(ShowLetterByLetter(text));
     }
 
     IEnumerator ShowLetterByLetter(string originalText)
     {
+        IsTyping = true;
+        uiText.text = string.Empty;
+
         for (int i = 0; i <= originalText.Length; ++i)
         {
             uiText.text = originalText.Substring(0, i);
             yield return new WaitForSeconds(delay);
         }
-    }
 
-    // Reste du script...
+        IsTyping = false;
+    }
 }
