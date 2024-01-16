@@ -1481,8 +1481,8 @@ MonoBehaviour:
   btnReponseD: {fileID: 1303978081}
   conn: 
   bossHealthBar: {fileID: 1358381595}
-  bossHealth: 20
-  bossMaxHealth: 20
+  bossHealth: 100
+  bossMaxHealth: 100
   playerLives: 3
   winSceneName: Salle 1
   heartImages:
