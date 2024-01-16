@@ -9561,7 +9561,7 @@ GameObject:
   - component: {fileID: 2007570796}
   - component: {fileID: 2007570799}
   m_Layer: 0
-  m_Name: Porte_Salle3
+  m_Name: Porte_Salle5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

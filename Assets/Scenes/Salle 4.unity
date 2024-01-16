@@ -8011,7 +8011,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 24.490534, y: -3.4783807}
+  m_Offset: {x: 24.490534, y: -3.3282146}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8022,7 +8022,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.0296898, y: 1.8130217}
+  m_Size: {x: 3.0296898, y: 2.113354}
   m_EdgeRadius: 0
 --- !u!4 &1763342674
 Transform:
@@ -8242,7 +8242,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 20.65458, y: -4.419479}
+  m_Offset: {x: 20.65458, y: -4.3115864}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8253,7 +8253,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5089779, y: 1.7507191}
+  m_Size: {x: 1.5089798, y: 1.9665027}
   m_EdgeRadius: 0
 --- !u!4 &2002018785
 Transform:
@@ -8283,7 +8283,7 @@ GameObject:
   - component: {fileID: 2007570796}
   - component: {fileID: 2007570799}
   m_Layer: 0
-  m_Name: Porte_Salle3
+  m_Name: Porte_Salle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

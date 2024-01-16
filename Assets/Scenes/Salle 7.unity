@@ -6619,16 +6619,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -2, y: -6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 14
-      m_TileSpriteIndex: 12
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 21
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 0, y: -6, z: 0}
     second:
       serializedVersion: 2
@@ -8219,7 +8209,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 3a1076d608ba5284aa1d843ecaa5c7e1, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 36bc440a12dd1da4ba1bb75862d76352, type: 2}
-  - m_RefCount: 43
+  - m_RefCount: 42
     m_Data: {fileID: 11400000, guid: a4953785e55ce2245beca580712dc85c, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: c58009d87eaec70419cb54776be33c89, type: 2}
@@ -8318,7 +8308,7 @@ Tilemap:
     m_Data: {fileID: -1045786902, guid: 33d7c6826c7ffa346b378e8c11e1d941, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: -2002300850, guid: c9282a28db2c72f48b635580cd6c1d1b, type: 3}
-  - m_RefCount: 43
+  - m_RefCount: 42
     m_Data: {fileID: -2001410911, guid: c9282a28db2c72f48b635580cd6c1d1b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 788507152, guid: c9282a28db2c72f48b635580cd6c1d1b, type: 3}
@@ -8397,7 +8387,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 296795420, guid: 33d7c6826c7ffa346b378e8c11e1d941, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 167
+  - m_RefCount: 166
     m_Data:
       e00: 1
       e01: 0
@@ -8458,7 +8448,7 @@ Tilemap:
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   - m_RefCount: 0
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - m_RefCount: 167
+  - m_RefCount: 166
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -9036,7 +9026,7 @@ GameObject:
   - component: {fileID: 2007570796}
   - component: {fileID: 2007570799}
   m_Layer: 0
-  m_Name: Porte_Salle3
+  m_Name: Porte_Salle7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9074,7 +9064,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25728583}
+  m_Offset: {x: -0.4946822, y: -0.25728583}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -9085,7 +9075,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.48542833}
+  m_Size: {x: 1.9893644, y: 0.48542833}
   m_EdgeRadius: 0
 --- !u!328 &2007570797
 VideoPlayer:
