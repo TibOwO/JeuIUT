@@ -1,15 +1,32 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
     public bool isInRange = false;
+    public bool isBoss = false;
+
+    // Noms des objets à ramasser
+    public string requiredItem1 = "Cle";
+    public string requiredItem2 = "Objet2";
+    public string requiredItem3 = "Objet3";
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && isInRange)
         {
-            TriggerDialog();
+            // Vérifier si c'est un boss et si les objets nécessaires sont dans l'inventaire
+            if (isBoss && CheckRequiredItems())
+            {
+                // Déclencher la scène de combat ici
+                StartBossFight();
+            }
+            else
+            {
+                TriggerDialog();
+            }
         }
     }
 
@@ -43,5 +60,24 @@ public class DialogTrigger : MonoBehaviour
         {
             FindObjectOfType<DialogManager>().StartDialog(dialog);
         }
+    }
+
+    // Fonction pour vérifier si les objets nécessaires sont dans l'inventaire
+    private bool CheckRequiredItems()
+    {
+        // Utiliser les noms configurables depuis l'Inspector
+        bool hasItem1 = ElementalInventory.Instance.contains(requiredItem1, 1);
+        bool hasItem2 = ElementalInventory.Instance.contains(requiredItem2, 1);
+        bool hasItem3 = ElementalInventory.Instance.contains(requiredItem3, 1);
+
+        // Retourner vrai si tous les objets sont présents
+        return hasItem1 && hasItem2 && hasItem3;
+    }
+
+    // Fonction pour déclencher la scène de combat avec le boss
+    private void StartBossFight()
+    {
+        SceneManager.LoadScene("Boss Morancey");
+        Debug.Log("Lancement de la scène de combat avec le boss!");
     }
 }

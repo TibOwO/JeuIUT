@@ -1078,6 +1078,10 @@ MonoBehaviour:
       tete...
     - ...
   isInRange: 0
+  isBoss: 1
+  requiredItem1: Indice Ensembles
+  requiredItem2: 'Infos Matieres IUT '
+  requiredItem3: Indice Maths DIscretes
 --- !u!61 &79550651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7467,7 +7471,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_Name
-      value: Indice (2)
+      value: Indice Ensembles
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalScale.x
@@ -7686,11 +7690,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: "Indices th\xE9orie des ensembles"
+    name: Indices theorie des ensembles
     sentences:
-    - "D\xE9finition: Soit A et B deux ensembles l'intersection de A et B seraientles
-      \xE9l\xE9ments situ\xE9 a la fois dans A et B"
+    - 'Definition: Soit A et B deux ensembles l''intersection de A et B seraientles
+      elements situe a la fois dans A et B'
   isInRange: 0
+  isBoss: 0
+  requiredItem1: Cle
+  requiredItem2: Objet2
+  requiredItem3: Objet3
 --- !u!1 &828224873
 GameObject:
   m_ObjectHideFlags: 0
@@ -10315,6 +10323,10 @@ MonoBehaviour:
     - "\"Total d'eleves = Eleves maths discretes + Eleves algebre \u2014 Eleves maths
       discretes et algebre + Eleves ni maths discretes ni algebre\""
   isInRange: 0
+  isBoss: 0
+  requiredItem1: Cle
+  requiredItem2: Objet2
+  requiredItem3: Objet3
 --- !u!1 &1200791619
 GameObject:
   m_ObjectHideFlags: 0
@@ -21010,6 +21022,10 @@ MonoBehaviour:
     - "Un deuxieme concernant :\n\u2022 \xE9conomie et gestion des organisations,\r\n\u2022
       langues, expression et communication,\r\n\u2022 math\xE9matiques. "
   isInRange: 0
+  isBoss: 0
+  requiredItem1: Cle
+  requiredItem2: Objet2
+  requiredItem3: Objet3
 --- !u!1 &1999998533
 GameObject:
   m_ObjectHideFlags: 0
