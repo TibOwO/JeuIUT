@@ -1570,7 +1570,7 @@ MonoBehaviour:
   loseSceneName: Couloir
   Reponse: 
   typeWriter: {fileID: 961102978}
-  selectedProfessor: Nevot
+  selectedProfessor: Morancey
   fadeImage: {fileID: 384359096}
   sceneParent: {fileID: 1951801816}
 --- !u!1 &1303978080
