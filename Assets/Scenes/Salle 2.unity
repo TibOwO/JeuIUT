@@ -3872,8 +3872,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 2050292000}
-  nameText: {fileID: 0}
-  dialogText: {fileID: 0}
+  nameText: {fileID: 651044261}
+  dialogText: {fileID: 963705815}
 --- !u!4 &601628415
 Transform:
   m_ObjectHideFlags: 0
@@ -8281,7 +8281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1299209412
 RectTransform:
   m_ObjectHideFlags: 0
