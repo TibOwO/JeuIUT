@@ -77,7 +77,7 @@ public class DialogTrigger : MonoBehaviour
     // Fonction pour déclencher la scène de combat avec le boss
     private void StartBossFight()
     {
-        SceneManager.LoadScene("Boss Morancey");
+        SceneManager.LoadScene(gameObject.name);
         Debug.Log("Lancement de la scène de combat avec le boss!");
     }
 }
