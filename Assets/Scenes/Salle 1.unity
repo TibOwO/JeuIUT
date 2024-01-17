@@ -1081,7 +1081,7 @@ MonoBehaviour:
     - Je vais te poser des questions sur les notions mathematiques abnordee a l'iut
   isInRange: 0
   isBoss: 1
-  isDoor: 1
+  isDoor: 0
   requiredItems:
   - Indice Ensembles
   - Indice Maths DIscretes

@@ -16,7 +16,7 @@ public class DoorTriggerSalle2 : MonoBehaviour
             videoPlayer.url = videoPath;
 
             videoPlayer.Play();
-            videoPlayer.loopPointReached += LoadSalle2Scene; // S'abonner à l'événement de fin de vidéo
+            videoPlayer.loopPointReached += LoadSalle2Scene;
         }
         else if (other.CompareTag("Player") && !ElementalInventory.Instance.contains("Cle 2", 1))
         {

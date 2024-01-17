@@ -18,7 +18,6 @@ public class DoorTriggerCouloir : MonoBehaviour
             videoPlayer.Play();
             videoPlayer.loopPointReached += LoadCouloirScene;
 
-            // Mettre à jour le point de spawn dans les PlayerPrefs
             PlayerPrefs.SetString("PointDeSpawn", "SpawnPorteSalle1");
         }
     }

@@ -10,18 +10,21 @@ public class DoorTriggerSalle4 : MonoBehaviour
     {
         Debug.Log("OnTriggerEnter2D called");
 
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && ElementalInventory.Instance.contains("Cle 4", 1))
         {
-
             string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Video", "porte_anim.mov");
             videoPlayer.url = videoPath;
 
             videoPlayer.Play();
-            videoPlayer.loopPointReached += LoadSalle3Scene; // S'abonner à l'événement de fin de vidéo
+            videoPlayer.loopPointReached += LoadSalle4Scene;
+        }
+        else if (other.CompareTag("Player") && !ElementalInventory.Instance.contains("Cle 4", 1))
+        {
+            Debug.Log("Vous n'avez pas la clé nécessaire.");
         }
     }
 
-    void LoadSalle3Scene(VideoPlayer vp)
+    void LoadSalle4Scene(VideoPlayer vp)
     {
         SceneManager.LoadScene("Salle 4");
     }
