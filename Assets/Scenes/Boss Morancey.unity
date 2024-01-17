@@ -717,7 +717,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nom de Boss
+  m_text: Mr.MORANCEY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7402e9f6af74f3f499dd96d108129046, type: 2}
   m_sharedMaterial: {fileID: -6109000611441954184, guid: 7402e9f6af74f3f499dd96d108129046,
