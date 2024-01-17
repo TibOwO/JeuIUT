@@ -223,7 +223,8 @@ public class ElementalInventory : MonoBehaviour
 
 	public void ToggleInventoryRenderer(bool isEnabled)
 	{
-		// Activer ou désactiver le composant InventoryRenderer selon le paramètre
+
+		inventoryRenderer = GetComponentInChildren<InventoryRenderer>();
 		if (inventoryRenderer != null)
 		{
 			inventoryRenderer.enabled = isEnabled;

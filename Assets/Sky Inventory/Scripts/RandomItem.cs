@@ -6,6 +6,20 @@ public class RandomItem : MonoBehaviour
 	private ElementalInventory inventory;
 	private bool isInventoryOpen = false;
 
+
+	void Start()
+	{
+		if (inventory == null)
+		{
+			inventory = FindObjectOfType<ElementalInventory>();
+			if (inventory == null)
+			{
+				Debug.LogError("ElementalInventory non trouvé dans la scène.");
+				return;
+			}
+		}
+		inventory.ToggleInventoryRenderer(isInventoryOpen);
+	}
 	void Update()
 	{
 		if (inventory == null)
