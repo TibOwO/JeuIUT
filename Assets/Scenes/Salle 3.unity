@@ -1960,7 +1960,7 @@ GameObject:
   - component: {fileID: 267932536}
   - component: {fileID: 267932535}
   m_Layer: 0
-  m_Name: Martinnevot
+  m_Name: Boss Nevot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

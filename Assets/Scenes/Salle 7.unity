@@ -10165,7 +10165,7 @@ GameObject:
   - component: {fileID: 1362141416}
   - component: {fileID: 1362141415}
   m_Layer: 0
-  m_Name: Makssoud
+  m_Name: Boss Makssoud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

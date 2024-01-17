@@ -1897,7 +1897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indice Maths DIscretes
+    name: Indice Programmation
     sentences:
     - Oh tiens...
     - Un eleve a laisser son antiseche sur le bureau du professeur.
@@ -4029,7 +4029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indices theorie des ensembles
+    name: Indice C++
     sentences:
     - 'Definition: Soit A et B deux ensembles l''intersection de A et B seraientles
       elements situe a la fois dans A et B'
@@ -6633,7 +6633,7 @@ GameObject:
   - component: {fileID: 901275378}
   - component: {fileID: 901275380}
   m_Layer: 0
-  m_Name: Casali
+  m_Name: Boss Casali
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6720,9 +6720,9 @@ MonoBehaviour:
     - Je vais te poser des questions sur les notions de programmation abordee a l'iut
   isInRange: 0
   isBoss: 1
-  requiredItem1: 
-  requiredItem2: 
-  requiredItem3: 
+  requiredItem1: Infos Matieres IUT
+  requiredItem2: Indice Programmation
+  requiredItem3: Indice C++
 --- !u!61 &901275380
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9055,7 +9055,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice MathsDiscretes
+      value: Indice C++
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20433,7 +20433,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice MathsDiscretes
+      value: Indice Programmation
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
