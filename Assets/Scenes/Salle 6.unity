@@ -1900,7 +1900,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice Anglais
+      value: Indice SQL2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2051,7 +2051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indice Anglais
+    name: Indice SQL
     sentences:
     - 'Definition: Soit A et B deux ensembles l''intersection de A et B seraientles
       elements situe a la fois dans A et B'
@@ -3204,7 +3204,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice Anglais2
+      value: Indice SQL
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3355,7 +3355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indice Anglais
+    name: Indice SQL
     sentences:
     - Oh tiens...
     - Un eleve a laisser son antiseche sur le bureau du professeur.
