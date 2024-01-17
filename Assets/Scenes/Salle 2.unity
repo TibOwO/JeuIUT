@@ -1905,9 +1905,8 @@ MonoBehaviour:
       discretes et algebre + Eleves ni maths discretes ni algebre\""
   isInRange: 0
   isBoss: 0
-  requiredItem1: Cle
-  requiredItem2: Objet2
-  requiredItem3: Objet3
+  isDoor: 0
+  requiredItems: []
 --- !u!1 &309853052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4035,9 +4034,8 @@ MonoBehaviour:
       elements situe a la fois dans A et B'
   isInRange: 0
   isBoss: 0
-  requiredItem1: Cle
-  requiredItem2: Objet2
-  requiredItem3: Objet3
+  isDoor: 0
+  requiredItems: []
 --- !u!1001 &569617489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6720,9 +6718,11 @@ MonoBehaviour:
     - Je vais te poser des questions sur les notions de programmation abordee a l'iut
   isInRange: 0
   isBoss: 1
-  requiredItem1: Infos Matieres IUT
-  requiredItem2: Indice Programmation
-  requiredItem3: Indice C++
+  isDoor: 0
+  requiredItems:
+  - Infos Matieres IUT
+  - Indice Programmation
+  - Indice C++
 --- !u!61 &901275380
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7877,9 +7877,8 @@ MonoBehaviour:
       langues, expression et communication,\r\n\u2022 math\xE9matiques. "
   isInRange: 0
   isBoss: 0
-  requiredItem1: Cle
-  requiredItem2: Objet2
-  requiredItem3: Objet3
+  isDoor: 0
+  requiredItems: []
 --- !u!1 &1098739099
 GameObject:
   m_ObjectHideFlags: 0
