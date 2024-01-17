@@ -2614,7 +2614,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_Name
-      value: Indice Maths DIscretes
+      value: Indice Comm2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalScale.x
@@ -2626,11 +2626,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.93
+      value: 11.17
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2682,7 +2682,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice MathsDiscretes
+      value: Indice Comm2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3154,7 +3154,7 @@ GameObject:
   - component: {fileID: 465205242}
   - component: {fileID: 465205241}
   m_Layer: 0
-  m_Name: Boss Morancey
+  m_Name: Boss Salou
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3196,7 +3196,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
+    oldSize: {x: 2.6666667, y: 2.6666667}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3218,19 +3218,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Mr Morancey
+    name: Mme Salou
     sentences:
-    - Salut jeune etudiant, je suis Mr Morancey, le professeur de Mathematique de
+    - Salut jeune etudiant, je suis Mr Morancey, la professeur de communication de
       ce departement.
     - "reviens me voir quand tu auras trouve les cartes cach\xE9e qui te donneront
       des informations sur ma mati\xE8re ainsi que le fonctionnement de l'iut"
-    - Je vais te poser des questions sur les notions mathematiques abordee a l'iut
+    - Je vais te poser des questions sur la communication abordee a l'iut
   isInRange: 0
   isBoss: 1
   isDoor: 0
   requiredItems:
-  - Indice Ensembles
-  - Indice Maths DIscretes
+  - Indice Comm
+  - Indice Comm2
   - 'Infos Matieres IUT '
 --- !u!61 &465205243
 BoxCollider2D:
@@ -3268,7 +3268,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
+    oldSize: {x: 2.6666667, y: 2.6666667}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3318,7 +3318,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5e50f7f7235417a4083fa661d44f4faa, type: 3}
+  m_Sprite: {fileID: -1837368720, guid: bd5b43064d3c18f4b83a6915f06e4929, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5119,7 +5119,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 128236816, guid: c9282a28db2c72f48b635580cd6c1d1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5156,7 +5156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indice Maths DIscretes
+    name: Indice Communication
     sentences:
     - Oh tiens...
     - Un eleve a laisser son antiseche sur le bureau du professeur.
@@ -10259,7 +10259,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_Name
-      value: Indice Ensembles
+      value: Indice Comm
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalScale.x
@@ -10271,11 +10271,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.71
+      value: -2.58
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.12
+      value: 4.57
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10327,7 +10327,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice MathsDiscretes
+      value: Indice Comm
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18190,7 +18190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indices theorie des ensembles
+    name: Indice Communication
     sentences:
     - 'Definition: Soit A et B deux ensembles l''intersection de A et B seraientles
       elements situe a la fois dans A et B'
@@ -20431,11 +20431,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.03
+      value: -3.547
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.11
+      value: -3.182
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.z

@@ -6072,20 +6072,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Mr Random
+    name: Mme Makssoud
     sentences:
-    - "Salut jeune etudiant, je suis Mr Random, le professeur de base de donn\xE9es
-      de ce departement."
-    - "reviens me voir quand tu auras trouve les cartes cach\xE9e qui te donneront
+    - "Salut jeune etudiant, je suis Mme Makssoud, la chef du d\xE9partement informatique"
+    - "Reviens me voir quand tu auras trouve la carte cach\xE9e qui te donneront
       des informations sur ma mati\xE8re ainsi que le fonctionnement de l'iut"
-    - "Je vais te poser des questions sur les notions de base de donn\xE9es abordee
-      a l'iut"
+    - Je vais te poser des questions sur le BUT Informatique
   isInRange: 0
   isBoss: 1
   isDoor: 0
   requiredItems:
-  - Indice SQL
-  - Indice SQL2
   - 'Infos Matieres IUT '
 --- !u!61 &888834735
 BoxCollider2D:
@@ -19926,7 +19922,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 990194798, guid: 23ca0c58a4386e94a9d56c043a89a0a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -22249,7 +22245,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.2479048, y: 1.2638669}
+  m_Offset: {x: 3.1761427, y: 1.2638669}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -22260,7 +22256,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5685806, y: 6.573804}
+  m_Size: {x: 2.4250565, y: 6.573804}
   m_EdgeRadius: 0
 --- !u!4 &2107239281
 Transform:
