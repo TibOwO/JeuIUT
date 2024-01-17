@@ -10059,11 +10059,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
-  - component: {fileID: 1318827882}
-  - component: {fileID: 1318827884}
-  - component: {fileID: 1318827883}
-=======
   - component: {fileID: 1300350253}
   - component: {fileID: 1300350254}
   - component: {fileID: 1300350255}
@@ -10966,7 +10961,6 @@ GameObject:
   - component: {fileID: 1380141547}
   - component: {fileID: 1380141549}
   - component: {fileID: 1380141548}
->>>>>>> Stashed changes
   m_Layer: 5
   m_Name: Second Part
   m_TagString: Untagged
@@ -19960,11 +19954,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
---- !u!1 &1739778465
-=======
 --- !u!1 &1738716786
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19972,38 +19962,21 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
-  - component: {fileID: 1739778466}
-  - component: {fileID: 1739778468}
-  - component: {fileID: 1739778467}
-  m_Layer: 5
-  m_Name: Background
-=======
   - component: {fileID: 1738716788}
   - component: {fileID: 1738716787}
   m_Layer: 0
   m_Name: musique
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
---- !u!224 &1739778466
-RectTransform:
-=======
 --- !u!82 &1738716787
 AudioSource:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-  m_GameObject: {fileID: 1739778465}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-=======
   m_GameObject: {fileID: 1738716786}
   m_Enabled: 1
   serializedVersion: 4
@@ -20103,61 +20076,12 @@ Transform:
   m_GameObject: {fileID: 1738716786}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
->>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< Updated upstream
-  m_Father: {fileID: 2145797121}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 82, y: 82}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1739778467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739778465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1739778468
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739778465}
-  m_CullTransparentMesh: 1
-=======
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &1752402252
 GameObject:
   m_ObjectHideFlags: 0
@@ -23688,17 +23612,6 @@ SceneRoots:
   - {fileID: 2056259419}
   - {fileID: 1399803588}
   - {fileID: 2007570798}
-<<<<<<< Updated upstream
-  - {fileID: 1785531414}
-  - {fileID: 1100308132}
-  - {fileID: 2008190840}
-  - {fileID: 859113232}
-  - {fileID: 1578182447}
-  - {fileID: 550328963}
-  - {fileID: 888834737}
-  - {fileID: 188079068}
-  - {fileID: 842537557}
-=======
   - {fileID: 1667645989}
   - {fileID: 1443704073}
   - {fileID: 941813502}
@@ -23706,4 +23619,3 @@ SceneRoots:
   - {fileID: 1311349516}
   - {fileID: 487298621}
   - {fileID: 1738716788}
->>>>>>> Stashed changes
