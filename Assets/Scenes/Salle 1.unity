@@ -1072,11 +1072,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: ???
+    name: Mr Morancey
     sentences:
-    - L'air vibre autour de vous, et des chiffres commencent a virevolter dans votre
-      tete...
-    - ...
+    - Salut jeune etudiant, je suis Mr Morancey, le professeur de Mathematique de
+      ce departement.
+    - "reviens me voir quand tu auras trouve les cartes cach\xE9e qui te donneront
+      des informations sur ma mati\xE8re ainsi que le fonctionnement de l'iut"
+    - Je vais te poser des questions sur les notions mathematiques abnordee a l'iut
   isInRange: 0
   isBoss: 1
   requiredItem1: Indice Ensembles
