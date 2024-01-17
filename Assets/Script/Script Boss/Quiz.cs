@@ -15,7 +15,6 @@ public class Quiz : MonoBehaviour
     public Button btnReponseD;
     public string conn;
     public ProgressBar bossHealthBar; // Référence à la barre de progression du boss
-
     public int bossHealth, bossMaxHealth = 20;
     public int playerLives = 3; // Vies initiales du joueur
     public string winSceneName = "Salle 1"; // Nom de la scène de victoire
@@ -26,6 +25,9 @@ public class Quiz : MonoBehaviour
     public string Reponse;
     public TypeWriter typeWriter;
     public List<Question> questions;
+    public string selectedProfessor;
+    public Image fadeImage;
+    public GameObject sceneParent; // Référence à l'objet parent de la scène
 
     public struct Question
     {
@@ -121,7 +123,8 @@ public class Quiz : MonoBehaviour
 
             using (var dbCmd = dbConnection.CreateCommand())
             {
-                dbCmd.CommandText = "SELECT * FROM QUESTIONS";
+                dbCmd.CommandText = "SELECT * FROM QUESTIONS WHERE Professeur = @Professeur";
+                dbCmd.Parameters.AddWithValue("@Professeur", selectedProfessor);
                 using (IDataReader reader = dbCmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -217,12 +220,6 @@ public class Quiz : MonoBehaviour
             playerLives -= 1; // Diminuez les vies du joueur
             StartCoroutine(LoseLifeRoutine());
             Debug.Log($"Vies du joueur restantes : {playerLives}");
-
-            if (playerLives <= 0)
-            {
-                Debug.Log("Le joueur perd !");
-                SceneManager.LoadScene(loseSceneName); // Chargez la scène de défaite
-            }
         }
         PoseUneQuestion();
     }
@@ -247,6 +244,8 @@ public class Quiz : MonoBehaviour
         // Si le joueur n'a plus de vie
         if (playerLives <= 0)
         {
+            Debug.Log("Activation coroutine");
+            fadeImage.gameObject.SetActive(true);
             StartCoroutine(FadeToBlackAndLoadScene());
         }
         else
@@ -266,20 +265,14 @@ public class Quiz : MonoBehaviour
         }
     }
 
-    IEnumerator ScreenShake()
+   
+
+    private IEnumerator ScreenShake()
     {
-        float duration = 4.5f; // Durée de l'effet de vibration
-        float magnitude = 50f; // Amplitude de la vibration
+        float duration = 0.5f; // Durée de l'effet de secousse
+        float magnitude = 0.8f; // Amplitude de la secousse
 
-        GameObject cameraGameObject = GameObject.FindGameObjectWithTag("MainCamera");
-        if (cameraGameObject == null)
-        {
-            Debug.LogError("Camera with tag 'MainCamera' not found.");
-            yield break; // Arrête la coroutine si la caméra n'est pas trouvée
-        }
-
-        Vector3 originalPosition = cameraGameObject.transform.localPosition;
-
+        Vector3 originalPosition = sceneParent.transform.localPosition;
         float elapsed = 0.0f;
 
         while (elapsed < duration)
@@ -287,25 +280,44 @@ public class Quiz : MonoBehaviour
             float x = Random.Range(-1f, 1f) * magnitude;
             float y = Random.Range(-1f, 1f) * magnitude;
 
-            cameraGameObject.transform.localPosition = new Vector3(x, y, originalPosition.z);
+            sceneParent.transform.localPosition = originalPosition + new Vector3(x, y, 0);
 
             elapsed += Time.deltaTime;
-
             yield return null;
         }
 
-        cameraGameObject.transform.localPosition = originalPosition;
+        sceneParent.transform.localPosition = originalPosition;
     }
 
 
 
 
 
-    IEnumerator FadeToBlackAndLoadScene()
+
+
+    private IEnumerator FadeToBlackAndLoadScene()
     {
-        // Implémentez la transition vers l'écran noir ici
-        yield return new WaitForSeconds(1f); // Durée de l'effet
-        SceneManager.LoadScene(loseSceneName);
+        Debug.Log("Début de la coroutine de fondu au noir");
+        Debug.Log("Image de fondu activée");
+
+        float fadeDuration = 0.8f; // Durée totale du fondu
+        float fadeStep = 0.2f; // Incrément de transparence par étape
+
+        for (float i = 0; i <= 1; i += fadeStep)
+        {
+            fadeImage.color = new Color(0, 0, 0, i);
+            Debug.Log("Fondu au noir progressif : Alpha = " + i);
+            yield return new WaitForSeconds(fadeDuration * fadeStep);
+        }
+
+        Debug.Log("Fondu au noir terminé");
+
+        yield return new WaitForSeconds(1f); // Attente supplémentaire après le fondu complet
+        Debug.Log("Chargement de la nouvelle scène : " + loseSceneName);
+
+        SceneManager.LoadScene(loseSceneName); // Charge la scène après le fondu
     }
+
+
 
 }
