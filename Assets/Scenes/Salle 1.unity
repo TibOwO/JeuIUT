@@ -940,7 +940,7 @@ GameObject:
   - component: {fileID: 79550650}
   - component: {fileID: 79550651}
   m_Layer: 0
-  m_Name: morancey
+  m_Name: Boss Morancey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
