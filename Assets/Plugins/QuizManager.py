@@ -37,25 +37,30 @@ def add_question_and_answers(question, answers, correct_answer_index, professor)
 
 question_ids = []  # Liste globale pour stocker les IDs des questions
 
+
 def load_questions():
     global question_ids
     question_ids.clear()
     tree.delete(*tree.get_children())  # Effacer les entrées existantes dans la Treeview
     conn = sqlite3.connect('Db_Unity.db')
     c = conn.cursor()
-    c.execute("SELECT ID, STRING, Professeur FROM QUESTIONS")
-    for idx, question in enumerate(c.fetchall()):
-        question_id = question[0]
-        question_text = f"{question[1]} (Prof: {question[2]})"
-        tree.insert('', 'end', iid=question_id, text=question_text, tags=('question', 'evenrow' if idx % 2 == 0 else 'oddrow'))
-        question_ids.append(question_id)  # Stocker l'ID correspondant
+    c.execute("SELECT DISTINCT Professeur FROM QUESTIONS")
+    profs = c.fetchall()
 
-        # Charger et afficher les réponses pour chaque question
-        c2 = conn.cursor()
-        c2.execute("SELECT STRING, IsCorrect FROM ANSWERS WHERE ParentID = ?", (question_id,))
-        for answer in c2.fetchall():
-            answer_text = f"{'[Correct]' if answer[1] == 1 else ''} {answer[0]}"
-            tree.insert(question_id, 'end', text=answer_text, tags=('answer',))
+    # Création d'un nœud pour chaque professeur
+    for prof in profs:
+        prof_node = tree.insert('', 'end', text=prof[0], open=True)  # open=True pour ouvrir les nœuds par défaut
+        c.execute("SELECT ID, STRING FROM QUESTIONS WHERE Professeur = ?", (prof[0],))
+        for question in c.fetchall():
+            question_id = question[0]
+            question_text = question[1]
+            question_node = tree.insert(prof_node, 'end', iid=question_id, text=question_text, tags=('question',))
+            question_ids.append(question_id)  # Stocker l'ID correspondant
+            c2 = conn.cursor()
+            c2.execute("SELECT STRING, IsCorrect FROM ANSWERS WHERE ParentID = ?", (question_id,))
+            for answer in c2.fetchall():
+                answer_text = f"{'[Correct]' if answer[1] == 1 else ''} {answer[0]}"
+                tree.insert(question_node, 'end', text=answer_text, tags=('answer',))
     conn.close()
 
 
@@ -109,38 +114,45 @@ def submit():
         add_question_and_answers(question, answers, correct_answer_index, professor)
     except ValueError:
         print("Erreur : La bonne réponse doit correspondre à l'une des réponses fournies.")
+    entry_question.delete(0, tk.END)
+    entry_answer1.delete(0, tk.END)
+    entry_answer2.delete(0, tk.END)
+    correct_answer_var.set('')  # Réinitialiser le menu déroulant de la bonne réponse
+    entry_professor.delete(0, tk.END)
 
 create_db()
 root = tk.Tk()
 root.title("Quiz Manager")
 root.state('zoomed') # Maximiser la fenêtre
 
+input_frame = tk.Frame(root)
+input_frame.grid(row=0, column=1, sticky='ew')
 
-tk.Label(root, text="Question:").grid(row=0, column=0)
-entry_question = tk.Entry(root, width=50)
+tk.Label(input_frame, text="Question:").grid(row=0, column=0)
+entry_question = tk.Entry(input_frame, width=50)
 entry_question.grid(row=0, column=1)
 
-tk.Label(root, text="Réponse 1:").grid(row=1, column=0)
-entry_answer1 = tk.Entry(root, width=50)
+tk.Label(input_frame, text="Réponse 1:").grid(row=1, column=0)
+entry_answer1 = tk.Entry(input_frame, width=50)
 entry_answer1.grid(row=1, column=1)
 entry_answer1.bind('<FocusOut>', lambda e: update_correct_answer_options())
 
-tk.Label(root, text="Réponse 2:").grid(row=2, column=0)
-entry_answer2 = tk.Entry(root, width=50)
+tk.Label(input_frame, text="Réponse 2:").grid(row=2, column=0)
+entry_answer2 = tk.Entry(input_frame, width=50)
 entry_answer2.grid(row=2, column=1)
 entry_answer2.bind('<FocusOut>', lambda e: update_correct_answer_options())
 
-tk.Label(root, text="Bonne Réponse:").grid(row=3, column=0)
+tk.Label(input_frame, text="Bonne Réponse:").grid(row=3, column=0)
 correct_answer_var = tk.StringVar()
-correct_answer_menu = tk.OptionMenu(root, correct_answer_var, "")
+correct_answer_menu = tk.OptionMenu(input_frame, correct_answer_var, "")
 correct_answer_menu.grid(row=3, column=1)
 correct_answer_menu.bind('<Button-1>', correct_answer_menu_popup)
 
-tk.Label(root, text="Professeur:").grid(row=4, column=0)
-entry_professor = tk.Entry(root, width=50)
+tk.Label(input_frame, text="Professeur:").grid(row=4, column=0)
+entry_professor = tk.Entry(input_frame, width=50)
 entry_professor.grid(row=4, column=1)
 
-submit_button = tk.Button(root, text="Ajouter Question", command=submit)
+submit_button = tk.Button(input_frame, text="Ajouter Question", command=submit)
 submit_button.grid(row=5, column=1)
 
 # Création de la Treeview
@@ -150,19 +162,6 @@ tree.grid(row=0, column=2, rowspan=5, sticky='nsew')  # Sticky pour l'expansion 
 # Configuration pour permettre l'expansion de la colonne et de la rangée où se trouve la Treeview
 root.grid_columnconfigure(2, weight=1)
 root.grid_rowconfigure(0, weight=1)
-
-
-
-# Scrollbar verticale
-v_scrollbar = tk.Scrollbar(root, orient="vertical", command=tree.yview)
-v_scrollbar.grid(row=0, column=3, rowspan=5, sticky='ns')
-tree.configure(yscrollcommand=v_scrollbar.set)
-
-# Scrollbar horizontale
-h_scrollbar = tk.Scrollbar(root, orient="horizontal", command=tree.xview)
-h_scrollbar.grid(row=6, column=2, sticky='ew')
-tree.configure(xscrollcommand=h_scrollbar.set)
-
 
 # Ajouter des styles différents pour les questions et les réponses
 style = ttk.Style()
@@ -175,11 +174,6 @@ tree.tag_configure('question', font=('Helvetica', 12, 'bold'))
 tree.tag_configure('answer', font=('Helvetica', 12))
 
 tree.grid(row=0, column=2, rowspan=5, sticky='nsew')
-
-# Ajouter une scrollbar à la Treeview
-scrollbar = tk.Scrollbar(root, orient="vertical", command=tree.yview)
-scrollbar.grid(row=0, column=3, rowspan=5, sticky='ns')
-tree.configure(yscrollcommand=scrollbar.set)
 
 delete_button = tk.Button(root, text="Retirer Question", command=delete_question)
 delete_button.grid(row=5, column=2)
