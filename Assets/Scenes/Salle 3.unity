@@ -1960,7 +1960,7 @@ GameObject:
   - component: {fileID: 267932536}
   - component: {fileID: 267932535}
   m_Layer: 0
-  m_Name: Martinnevot
+  m_Name: Boss Nevot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2044,9 +2044,8 @@ MonoBehaviour:
     sentences:
     - Salut jeune etudiant, je suis Mr Martin Nevot, le professeur de programmation
       de ce departement.
-    - Je vais te poser des questions sur les notions de programmation abnordee a
-      l'iut
-  isInRange: 1
+    - Je vais te poser des questions sur les notions de programmation abordee a l'iut
+  isInRange: 0
   isBoss: 1
   requiredItem1: 
   requiredItem2: 
