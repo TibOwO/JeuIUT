@@ -210,7 +210,32 @@ public class Quiz : MonoBehaviour
 
             if (bossHealth <= 0)
             {
-                Debug.Log("Le joueur gagne !");
+                Color randomColor = new Color(Random.value, Random.value, Random.value);
+                if (!ElementalInventory.Instance.contains("Cle 2", 1))
+                {
+                    ElementalInventory.Instance.addItem("Cle 2", 1, randomColor);
+                }
+                else if (!ElementalInventory.Instance.contains("Cle 3", 1))
+                {
+                    ElementalInventory.Instance.addItem("Cle 3", 1, randomColor);
+                }
+                else if (!ElementalInventory.Instance.contains("Cle 4", 1))
+                {
+                    ElementalInventory.Instance.addItem("Cle 4", 1, randomColor);
+                }
+                else if (!ElementalInventory.Instance.contains("Cle 5", 1))
+                {
+                    ElementalInventory.Instance.addItem("Cle 5", 1, randomColor);
+                }
+                else if (!ElementalInventory.Instance.contains("Cle 6", 1))
+                {
+                    ElementalInventory.Instance.addItem("Cle 6", 1, randomColor);
+                }
+                else if (!ElementalInventory.Instance.contains("Cle 7", 1))
+                {
+                    ElementalInventory.Instance.addItem("Cle 7", 1, randomColor);
+                }
+
                 SceneManager.LoadScene(winSceneName); // Chargez la scène de victoire
             }
         }
@@ -265,7 +290,7 @@ public class Quiz : MonoBehaviour
         }
     }
 
-   
+
 
     private IEnumerator ScreenShake()
     {
