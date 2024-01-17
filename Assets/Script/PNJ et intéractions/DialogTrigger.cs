@@ -1,17 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Collections.Generic;
 
 public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
     public bool isInRange = false;
     public bool isBoss = false;
+    public bool isDoor = false;
 
-    // Noms des objets à ramasser
-    public string requiredItem1 = "Cle";
-    public string requiredItem2 = "Objet2";
-    public string requiredItem3 = "Objet3";
+    // Liste des noms des objets à ramasser (dynamique)
+    public List<string> requiredItems = new List<string>();
 
     void Update()
     {
@@ -22,6 +21,10 @@ public class DialogTrigger : MonoBehaviour
             {
                 // Déclencher la scène de combat ici
                 StartBossFight();
+            }
+            else if (isDoor && !CheckRequiredItems())
+            {
+                TriggerDialog();
             }
             else
             {
@@ -62,16 +65,20 @@ public class DialogTrigger : MonoBehaviour
         }
     }
 
-    // Fonction pour vérifier si les objets nécessaires sont dans l'inventaire
     private bool CheckRequiredItems()
     {
-        // Utiliser les noms configurables depuis l'Inspector
-        bool hasItem1 = ElementalInventory.Instance.contains(requiredItem1, 1);
-        bool hasItem2 = ElementalInventory.Instance.contains(requiredItem2, 1);
-        bool hasItem3 = ElementalInventory.Instance.contains(requiredItem3, 1);
+        // Utiliser la liste de noms d'objets configurables depuis l'Inspector
+        foreach (string itemName in requiredItems)
+        {
+            bool hasItem = ElementalInventory.Instance.contains(itemName, 1);
+            if (!hasItem)
+            {
+                return false; // Si l'un des objets n'est pas présent, retournez false
+            }
+        }
 
-        // Retourner vrai si tous les objets sont présents
-        return hasItem1 && hasItem2 && hasItem3;
+        // Si tous les objets sont présents, retournez vrai
+        return true;
     }
 
     // Fonction pour déclencher la scène de combat avec le boss

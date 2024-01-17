@@ -3799,9 +3799,11 @@ MonoBehaviour:
     - Vous pouvez appuyer sur TAB pour afficher les objets de votre inventaire
   isInRange: 0
   isBoss: 0
-  requiredItem1: Cle
-  requiredItem2: Objet2
-  requiredItem3: Objet3
+  isDoor: 0
+  requiredItems:
+  - 
+  - 
+  - 
 --- !u!1 &280964780
 GameObject:
   m_ObjectHideFlags: 0
@@ -49975,9 +49977,11 @@ MonoBehaviour:
 '
   isInRange: 0
   isBoss: 0
-  requiredItem1: 
-  requiredItem2: 
-  requiredItem3: 
+  isDoor: 0
+  requiredItems:
+  - 
+  - 
+  - 
 --- !u!61 &1227276531
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -59821,11 +59825,15 @@ MonoBehaviour:
     sentences:
     - On m'avait dit d'entrer dans la premiere salle, mais la porte est fermee a
       cle...
+    - Ah oui et aussi ...
+    - Vous pourrez ramasser des objet avec "E"
   isInRange: 0
   isBoss: 0
-  requiredItem1: Cle
-  requiredItem2: Objet2
-  requiredItem3: Objet3
+  isDoor: 0
+  requiredItems:
+  - 
+  - 
+  - 
 --- !u!61 &1479082993
 BoxCollider2D:
   m_ObjectHideFlags: 0

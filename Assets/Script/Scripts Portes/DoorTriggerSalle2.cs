@@ -10,7 +10,7 @@ public class DoorTriggerSalle2 : MonoBehaviour
     {
         Debug.Log("OnTriggerEnter2D called");
 
-        if (other.CompareTag("Player") && ElementalInventory.Instance.contains("Cle", 1))
+        if (other.CompareTag("Player") && ElementalInventory.Instance.contains("Cle 2", 1))
         {
             string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Video", "porte_anim.mov");
             videoPlayer.url = videoPath;

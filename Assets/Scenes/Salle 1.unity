@@ -1081,9 +1081,11 @@ MonoBehaviour:
     - Je vais te poser des questions sur les notions mathematiques abnordee a l'iut
   isInRange: 0
   isBoss: 1
-  requiredItem1: Indice Ensembles
-  requiredItem2: 'Infos Matieres IUT '
-  requiredItem3: Indice Maths DIscretes
+  isDoor: 1
+  requiredItems:
+  - Indice Ensembles
+  - Indice Maths DIscretes
+  - 'Infos Matieres IUT '
 --- !u!61 &79550651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7698,9 +7700,8 @@ MonoBehaviour:
       elements situe a la fois dans A et B'
   isInRange: 0
   isBoss: 0
-  requiredItem1: Cle
-  requiredItem2: Objet2
-  requiredItem3: Objet3
+  isDoor: 0
+  requiredItems: []
 --- !u!1 &828224873
 GameObject:
   m_ObjectHideFlags: 0
@@ -10326,9 +10327,8 @@ MonoBehaviour:
       discretes et algebre + Eleves ni maths discretes ni algebre\""
   isInRange: 0
   isBoss: 0
-  requiredItem1: Cle
-  requiredItem2: Objet2
-  requiredItem3: Objet3
+  isDoor: 0
+  requiredItems: []
 --- !u!1 &1200791619
 GameObject:
   m_ObjectHideFlags: 0
@@ -21025,9 +21025,8 @@ MonoBehaviour:
       langues, expression et communication,\r\n\u2022 math\xE9matiques. "
   isInRange: 0
   isBoss: 0
-  requiredItem1: Cle
-  requiredItem2: Objet2
-  requiredItem3: Objet3
+  isDoor: 0
+  requiredItems: []
 --- !u!1 &1999998533
 GameObject:
   m_ObjectHideFlags: 0
