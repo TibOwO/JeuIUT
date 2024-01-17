@@ -1591,7 +1591,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_Name
-      value: Indice Maths DIscretes
+      value: Indice HTML
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalScale.x
@@ -1603,11 +1603,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.31
+      value: 9.85
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.47
+      value: -3.35
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1659,7 +1659,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice MathsDiscretes
+      value: Indice HTML
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3180,7 +3180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indices theorie des ensembles
+    name: Indice CSS
     sentences:
     - 'Definition: Soit A et B deux ensembles l''intersection de A et B seraientles
       elements situe a la fois dans A et B'
@@ -3198,7 +3198,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_Name
-      value: Indice Ensembles
+      value: Indice CSS
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalScale.x
@@ -3210,11 +3210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.4
+      value: -6.6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.09
+      value: 5.055
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3266,7 +3266,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice MathsDiscretes
+      value: Indice CSS
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5964,7 +5964,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
+    oldSize: {x: 2.6666667, y: 2.6666667}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5986,19 +5986,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Mr Morancey
+    name: Mr Martin Nevot
     sentences:
-    - Salut jeune etudiant, je suis Mr Morancey, le professeur de Mathematique de
-      ce departement.
+    - Salut jeune etudiant, je suis Mr Martin Nevot, le professeur de programmation
+      web de ce departement.
     - "reviens me voir quand tu auras trouve les cartes cach\xE9e qui te donneront
       des informations sur ma mati\xE8re ainsi que le fonctionnement de l'iut"
-    - Je vais te poser des questions sur les notions mathematiques abordee a l'iut
+    - Je vais te poser des questions sur les notions de programmation web abordee
+      a l'iut
   isInRange: 0
   isBoss: 1
   isDoor: 0
   requiredItems:
-  - Indice Ensembles
-  - Indice Maths DIscretes
+  - Indice CSS
+  - Indice HTML
   - 'Infos Matieres IUT '
 --- !u!61 &716072691
 BoxCollider2D:
@@ -6036,7 +6037,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
+    oldSize: {x: 2.6666667, y: 2.6666667}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6086,7 +6087,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5e50f7f7235417a4083fa661d44f4faa, type: 3}
+  m_Sprite: {fileID: 2065068682, guid: 2206a095bf63d6c46bbd681afe8b8e1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -20599,7 +20600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indice Maths DIscretes
+    name: Indice HTML
     sentences:
     - Oh tiens...
     - Un eleve a laisser son antiseche sur le bureau du professeur.
