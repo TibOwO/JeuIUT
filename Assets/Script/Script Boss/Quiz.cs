@@ -168,12 +168,7 @@ public class Quiz : MonoBehaviour
     // Méthode pour poser une question
     void PoseUneQuestion()
     {
-        if (questions.Count == 0)
-        {
-            Debug.LogError("Toutes les questions ont été posées.");
-            // Ici, vous pouvez gérer la logique de fin de jeu ou de réinitialisation
-            return;
-        }
+     
 
         // Sélection aléatoire d'une question et la retirer de la liste
         int randomIndex = Random.Range(0, questions.Count);
