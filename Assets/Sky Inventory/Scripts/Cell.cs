@@ -5,13 +5,12 @@ using System.Collections;
 public class Cell : MonoBehaviour
 {
 
-	public string elementName; // Element Name
-	public int elementCount; // Element Count
-	public Color elementColor; // Element Color
-	public Transform elementTransform; //Transform Element
-	private GameObject elementPrefab; //Element Prefab
+	public string elementName;
+	public int elementCount;
+	public Color elementColor;
+	public Transform elementTransform;
+	private GameObject elementPrefab;
 
-	//Method to update UI of this cell
 	public void UpdateCellInterface()
 	{
 		if (elementPrefab == null)

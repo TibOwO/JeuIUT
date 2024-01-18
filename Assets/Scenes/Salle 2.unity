@@ -4567,8 +4567,7 @@ MonoBehaviour:
   dialog:
     name: RTFM
     sentences:
-    - 'Definition: Soit A et B deux ensembles l''intersection de A et B seraientles
-      elements situe a la fois dans A et B'
+    - Read The Fucking Manual
   interactMessage: {fileID: 1067422017}
   isInRange: 0
   isBoss: 0
@@ -6707,10 +6706,8 @@ MonoBehaviour:
   dialog:
     name: Infos Language
     sentences:
-    - "Les enseignements a l'iut sont regroup\xE9 en deux groupes"
-    - Un premier concernant toutes la matieres informatiques
-    - "Un deuxieme concernant :\n\u2022 \xE9conomie et gestion des organisations,\r\n\u2022
-      langues, expression et communication,\r\n\u2022 math\xE9matiques. "
+    - "De nombreux languages de programation sont enseign\xE9 au sein de l'iut"
+    - "Java, Sql, HTML, C++, tous ont leurs avantages et  inconv\xE9niants"
   interactMessage: {fileID: 1067422017}
   isInRange: 0
   isBoss: 0
@@ -18314,10 +18311,7 @@ MonoBehaviour:
   dialog:
     name: Indice C++
     sentences:
-    - Oh tiens...
-    - Un eleve a laisser son antiseche sur le bureau du professeur.
-    - "\"Total d'eleves = Eleves maths discretes + Eleves algebre \u2014 Eleves maths
-      discretes et algebre + Eleves ni maths discretes ni algebre\""
+    - "Entr\xE9e: cout << \"Bonjour\";\nSortie: Bonjour"
   interactMessage: {fileID: 1067422017}
   isInRange: 0
   isBoss: 0
