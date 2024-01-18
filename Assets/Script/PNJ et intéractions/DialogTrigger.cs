@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using TMPro;
+
 
 public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
+    public TextMeshProUGUI interactMessage;
     public bool isInRange = false;
     public bool isBoss = false;
     public bool isDoor = false;
@@ -38,6 +41,7 @@ public class DialogTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isInRange = true;
+            interactMessage.gameObject.SetActive(true);
             Debug.Log("Le joueur est dans la zone de dialogue");
         }
     }
@@ -46,6 +50,7 @@ public class DialogTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            interactMessage.gameObject.SetActive(false);
             TriggerExit();
         }
     }
