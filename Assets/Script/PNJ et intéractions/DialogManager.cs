@@ -20,10 +20,12 @@ public class DialogManager : MonoBehaviour
 
     private void Awake()
     {
-<<<<<<< Updated upstream
-=======
-        
->>>>>>> Stashed changes
+        if (Instance != null)
+        {
+            Debug.LogWarning("Plusieurs instances de DialogManager ont été trouvées dans la scène.");
+            return;
+        }
+        Instance = this;
         sentences = new Queue<string>();
         npcGuideManager = FindObjectOfType<NPCGuideManager>(); // Ajoutez cette ligne
 
