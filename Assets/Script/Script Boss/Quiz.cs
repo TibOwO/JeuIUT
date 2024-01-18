@@ -222,8 +222,6 @@ public class Quiz : MonoBehaviour
                 }
                 else
                 {
-                    // Sinon, exécutez la logique de victoire standard
-                    GameController.VictoryAchieved = true;
                     SceneManager.LoadScene(winSceneName); // Chargez la scène de victoire standard
                 }
                 Color randomColor = new Color(Random.value, Random.value, Random.value);
