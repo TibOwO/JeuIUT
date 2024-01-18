@@ -25,4 +25,4 @@ public class QuitGameAfterDelay : MonoBehaviour
         Application.Quit();
 #endif
     }
-} 
+}

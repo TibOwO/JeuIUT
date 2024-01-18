@@ -15,7 +15,7 @@ public class DialogManager : MonoBehaviour
 
     public static DialogManager Instance;
 
-    // Ajout d'un indicateur pour vérifier si une phrase est en train d'être écrite.
+    // Ajout d'un indicateur pour vérifier si une phrase est en train d'être écrite
     private bool isTyping = false;
 
     private void Awake()

@@ -39,7 +39,7 @@ public class PauseMenuManager : MonoBehaviour
 
     public void QuitToMainMenu()
     {
-        Time.timeScale = 1f; // Assurez-vous de remettre le TimeScale à 1 lorsque vous quittez
-        SceneManager.LoadScene("MenuPrincipal"); // Chargez votre scène de menu principal
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene("MenuPrincipal");
     }
 }

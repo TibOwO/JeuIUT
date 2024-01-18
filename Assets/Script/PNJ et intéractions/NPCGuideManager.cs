@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class NPCGuideManager : MonoBehaviour
 {
-    public Animator characterAnimator; // R�f�rence au composant Animator du personnage
-    public DialogManager dialogManager; // R�f�rence au composant DialogManager existant
-    public GameObject characterSprite; // R�f�rence � l'objet GameObject du sprite du personnage
-    public string characterName; // Le nom du personnage pour le dialogue
-    public string[] dialogueLines; // Tableau de lignes de dialogue � afficher
-    private PlayerMovement playerMovement; // R�f�rence au script de mouvement du joueur
+    public Animator characterAnimator; 
+    public DialogManager dialogManager; 
+    public GameObject characterSprite; 
+    public string characterName; 
+    public string[] dialogueLines; 
+    private PlayerMovement playerMovement; 
     public CinematicBars cinematicBars;
 
-    // Variable statique pour garder une trace du nombre de fois que la cin�matique a �t� jou�e
+   
     private static int cinematicPlayCount = 0;
 
     void Start()
@@ -20,14 +20,14 @@ public class NPCGuideManager : MonoBehaviour
         // V�rifie si c'est la premi�re fois que la cin�matique est lanc�e dans cette session de jeu
         if (cinematicPlayCount == 0)
         {
-            // D�sactivez le mouvement du joueur et lancez la cin�matique
+
             if (playerMovement != null)
             {
                 playerMovement.SetCanMove(false);
             }
 
             StartCinematic();
-            cinematicPlayCount++; // Incr�mentez le compteur pour que la cin�matique ne se joue plus automatiquement
+            cinematicPlayCount++; 
         }
         else
         {

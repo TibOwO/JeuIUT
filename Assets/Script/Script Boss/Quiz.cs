@@ -209,7 +209,7 @@ public class Quiz : MonoBehaviour
         if (selectedAnswer == Reponse)
         {
             Debug.Log("Correct !");
-            bossHealth -= 10; // Diminuez la santé du boss
+            bossHealth -= 10; 
             UpdateBossHealthBar();
             Debug.Log($"Santé du boss restante : {bossHealth}");
 
@@ -218,11 +218,11 @@ public class Quiz : MonoBehaviour
 
                 if (SceneManager.GetActiveScene().name == "Boss Makssoud")
                 {
-                    SceneManager.LoadScene("Credits"); // Chargez la scène "Credits" après avoir vaincu le boss
+                    SceneManager.LoadScene("Credits"); 
                 }
                 else
                 {
-                    SceneManager.LoadScene(winSceneName); // Chargez la scène de victoire standard
+                    SceneManager.LoadScene(winSceneName); 
                 }
                 Color randomColor = new Color(Random.value, Random.value, Random.value);
                 if (!ElementalInventory.Instance.contains("Cle 2", 1))
@@ -255,7 +255,7 @@ public class Quiz : MonoBehaviour
         else
         {
             Debug.Log("Incorrect !");
-            playerLives -= 1; // Diminuez les vies du joueur
+            playerLives -= 1; 
             StartCoroutine(LoseLifeRoutine());
             Debug.Log($"Vies du joueur restantes : {playerLives}");
         }
@@ -264,22 +264,19 @@ public class Quiz : MonoBehaviour
 
     IEnumerator LoseLifeRoutine()
     {
-        // Afficher brièvement les cœurs
         foreach (var heart in heartImages)
         {
             heart.enabled = true;
         }
 
-        // Vibrer l'écran
+
         StartCoroutine(ScreenShake());
 
-        // Mettre à jour les cœurs
         UpdateHeartSprites();
 
-        // Attendre un moment
         yield return new WaitForSeconds(1f);
 
-        // Si le joueur n'a plus de vie
+
         if (playerLives <= 0)
         {
             Debug.Log("Activation coroutine");
@@ -338,8 +335,8 @@ public class Quiz : MonoBehaviour
         Debug.Log("Début de la coroutine de fondu au noir");
         Debug.Log("Image de fondu activée");
 
-        float fadeDuration = 0.8f; // Durée totale du fondu
-        float fadeStep = 0.2f; // Incrément de transparence par étape
+        float fadeDuration = 0.8f; 
+        float fadeStep = 0.2f; 
 
         for (float i = 0; i <= 1; i += fadeStep)
         {
@@ -350,10 +347,10 @@ public class Quiz : MonoBehaviour
 
         Debug.Log("Fondu au noir terminé");
 
-        yield return new WaitForSeconds(1f); // Attente supplémentaire après le fondu complet
+        yield return new WaitForSeconds(1f); 
         Debug.Log("Chargement de la nouvelle scène : " + loseSceneName);
 
-        SceneManager.LoadScene(loseSceneName); // Charge la scène après le fondu
+        SceneManager.LoadScene(loseSceneName); 
     }
 
 

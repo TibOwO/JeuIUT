@@ -32,7 +32,7 @@ public class Pulse : MonoBehaviour
             Vector3 targetScale = breathingIn ? breatheIn : breatheOut;
             Vector3 startScale = breathingIn ? breatheOut : breatheIn;
 
-            currentTime += Time.deltaTime; // Utilisez Time.deltaTime, pas Time.deltatime
+            currentTime += Time.deltaTime; 
 
             float lerpFactor = currentTime / expandDuration;
             targetObject.transform.localScale = Vector3.Lerp(startScale, targetScale, lerpFactor);

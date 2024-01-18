@@ -18,7 +18,7 @@ public class TypeWriter : MonoBehaviour
     {
         if (IsTyping)
         {
-            return; // Ne pas lancer une nouvelle animation si une est déjà en cours
+            return; 
         }
         StartCoroutine(ShowLetterByLetter(text));
     }
