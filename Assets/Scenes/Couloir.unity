@@ -39596,7 +39596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: sasasa
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 91fa0e1f1b7d4be4f89ddc2b577a3c77, type: 2}
   m_sharedMaterial: {fileID: 3305130846604582569, guid: 91fa0e1f1b7d4be4f89ddc2b577a3c77,
@@ -39606,8 +39606,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284668827
-  m_fontColor: {r: 0.6068477, g: 0.8584906, b: 0.38470095, a: 1}
+    rgba: 4284067837
+  m_fontColor: {r: 0.990566, g: 0.68681353, b: 0.3504361, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
