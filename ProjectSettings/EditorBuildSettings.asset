@@ -20,8 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Salle 1.unity
     guid: 74404b41a4d185e49b15f6c61fec8285
-  - enabled: 1
-    path: Assets/Scenes/Salle 21.unity
+  - enabled: 0
+    path: Assets/Scenes/Salle 2.unity
     guid: d479162f57b8a044aa79f685b3bb4ac3
   - enabled: 1
     path: Assets/Scenes/Salle 3.unity
