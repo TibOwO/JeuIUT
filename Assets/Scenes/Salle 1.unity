@@ -602,7 +602,7 @@ MonoBehaviour:
   isDoor: 0
   requiredItems:
   - Indice Ensembles
-  - Indice Maths DIscretes
+  - Indice Graphes
   - 'Infos Matieres IUT '
 --- !u!61 &79550651
 BoxCollider2D:
@@ -6629,7 +6629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indices theorie des ensembles
+    name: Indices Probabilite
     sentences:
     - Une carte cachee sous une table de chevet....
     - 'Il y est inscrit le texte suivant:'
@@ -8978,7 +8978,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_Name
-      value: Indice Maths DIscretes
+      value: Indice Graphes
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalScale.x
@@ -9197,7 +9197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indice Maths DIscretes
+    name: Indice Graphes
     sentences:
     - Oh tiens...
     - Un eleve a laisse son antiseche sur le bureau du professeur.
