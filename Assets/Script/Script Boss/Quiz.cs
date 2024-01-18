@@ -168,7 +168,11 @@ public class Quiz : MonoBehaviour
     // Méthode pour poser une question
     void PoseUneQuestion()
     {
-     
+        if (questions.Count == 0)
+        {
+            Debug.Log("Victoire sérée!");
+            // Ici, vous pouvez gérer la logique de fin de jeu ou de réinitialisation
+        }
 
         // Sélection aléatoire d'une question et la retirer de la liste
         int randomIndex = Random.Range(0, questions.Count);
@@ -208,6 +212,17 @@ public class Quiz : MonoBehaviour
 
             if (bossHealth <= 0)
             {
+
+                if (SceneManager.GetActiveScene().name == "Boss Makssoud")
+                {
+                    SceneManager.LoadScene("Credits"); // Chargez la scène "Credits" après avoir vaincu le boss
+                }
+                else
+                {
+                    // Sinon, exécutez la logique de victoire standard
+                    GameController.VictoryAchieved = true;
+                    SceneManager.LoadScene(winSceneName); // Chargez la scène de victoire standard
+                }
                 Color randomColor = new Color(Random.value, Random.value, Random.value);
                 if (!ElementalInventory.Instance.contains("Cle 2", 1))
                 {
@@ -233,8 +248,7 @@ public class Quiz : MonoBehaviour
                 {
                     ElementalInventory.Instance.addItem("Cle 7", 1, randomColor);
                 }
-                GameController.VictoryAchieved = true;
-                SceneManager.LoadScene(winSceneName); // Chargez la scène de victoire
+                
             }
         }
         else
