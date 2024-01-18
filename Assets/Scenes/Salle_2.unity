@@ -18311,10 +18311,7 @@ MonoBehaviour:
   dialog:
     name: Indice C++
     sentences:
-    - Oh tiens...
-    - Un eleve a laisser son antiseche sur le bureau du professeur.
-    - "\"Total d'eleves = Eleves maths discretes + Eleves algebre \u2014 Eleves maths
-      discretes et algebre + Eleves ni maths discretes ni algebre\""
+    - "Entr\xE9e: cout << \"Bonjour\";\nSortie: Bonjour"
   interactMessage: {fileID: 1067422017}
   isInRange: 0
   isBoss: 0
