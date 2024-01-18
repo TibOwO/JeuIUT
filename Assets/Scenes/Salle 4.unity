@@ -251,12 +251,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: 'Infos Matieres IUT '
+    name: 'Info  IUT '
     sentences:
-    - "Les enseignements a l'iut sont regroup\xE9 en deux groupes"
-    - Un premier concernant toutes la matieres informatiques
-    - "Un deuxieme concernant :\n\u2022 \xE9conomie et gestion des organisations,\r\n\u2022
-      langues, expression et communication,\r\n\u2022 math\xE9matiques. "
+    - Une competence regroupe plusieurs matieres et le BUT est divise en 6 competences
+    - Chaque competence possede ses coefficient et les SAE sont ce qui ont le plus
+      gros coefficient
   isInRange: 0
   isBoss: 0
   isDoor: 0
@@ -5011,9 +5010,8 @@ MonoBehaviour:
     name: Indice Communication
     sentences:
     - Oh tiens...
-    - Un eleve a laisser son antiseche sur le bureau du professeur.
-    - "\"Total d'eleves = Eleves maths discretes + Eleves algebre \u2014 Eleves maths
-      discretes et algebre + Eleves ni maths discretes ni algebre\""
+    - Mme Salou a laisse tomber un cours
+    - ... Samuel Morse a invente le telegramme ...
   isInRange: 0
   isBoss: 0
   isDoor: 0
@@ -18055,10 +18053,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indice Communication
+    name: Indice orientation
     sentences:
-    - 'Definition: Soit A et B deux ensembles l''intersection de A et B seraientles
-      elements situe a la fois dans A et B'
+    - "Un ikigai est un concepte japonais de bien \xEAtre lie a une satisfaction
+      professionnelle"
+    - Il reunit les centres d'interet, les loisir, les desirs et la personne
   isInRange: 0
   isBoss: 0
   isDoor: 0
