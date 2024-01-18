@@ -4264,11 +4264,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indice Programmation
+    name: RTFM
     sentences:
-    - 'Definition: Soit A et B deux ensembles l''intersection de A et B seraientles
-      elements situe a la fois dans A et B'
-  isInRange: 0
+    - Read The Fucking Manuaaaaaal!
+  isInRange: 1
   isBoss: 0
   isDoor: 0
   requiredItems: []
@@ -5744,12 +5743,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: 'Infos Matieres IUT '
+    name: Infos Language
     sentences:
-    - "Les enseignements a l'iut sont regroup\xE9 en deux groupes"
-    - Un premier concernant toutes la matieres informatiques
-    - "Un deuxieme concernant :\n\u2022 \xE9conomie et gestion des organisations,\r\n\u2022
-      langues, expression et communication,\r\n\u2022 math\xE9matiques. "
+    - "A l'IUT de nombreux languages sont enseign\xE9 car ils ont tous une utilit\xE9e,
+      des carast\xE9ristiques et des performances diff\xE9rentes."
+    - "Parmis ceux enseign\xE9s, C++, JAVA, PHP, SQL, HTML, JavaScript en sont des
+      exemple."
   isInRange: 0
   isBoss: 0
   isDoor: 0
@@ -14973,7 +14972,7 @@ MonoBehaviour:
   requiredItems:
   - Indice C++
   - Indice Programmation
-  - 'Infos Matieres IUT '
+  - Infos Language
 --- !u!61 &1536980057
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17153,10 +17152,7 @@ MonoBehaviour:
   dialog:
     name: Indice C++
     sentences:
-    - Oh tiens...
-    - Un eleve a laisser son antiseche sur le bureau du professeur.
-    - "\"Total d'eleves = Eleves maths discretes + Eleves algebre \u2014 Eleves maths
-      discretes et algebre + Eleves ni maths discretes ni algebre\""
+    - "entr\xE9e : cout << \"Bonjour\";\nsortie: Bonjour"
   isInRange: 0
   isBoss: 0
   isDoor: 0
