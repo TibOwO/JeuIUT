@@ -39606,9 +39606,9 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4286153273
-  m_fontColor: {r: 0.9811321, g: 0.6109963, b: 0.38412246, a: 1}
-  m_enableVertexGradient: 1
+    rgba: 4281183999
+  m_fontColor: {r: 1, g: 0.6840401, b: 0.1745283, a: 1}
+  m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 0.9803922, g: 0.6117647, b: 0.38431376, a: 1}
