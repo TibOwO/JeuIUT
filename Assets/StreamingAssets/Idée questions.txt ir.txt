@@ -1,0 +1,23 @@
+Question Théorie des ensembles : Si A{1,2,3} et B={3,4,5}, quelle est l'intersection de A et B ? 
+a) {3} Bonne réponse
+b) {1,2}
+
+
+Question Probabilité : Si la probabilité de tirer une boule rouge d'un sac est de 1/3, quelle est la probabilité de tirer une boule non rouge? 
+a) 2/3 Bonne réponse
+b) 1/2
+
+Question Statistiques : Si la moyenne d'un ensemble de données est de 12, et il y a 5 données, quelle est la somme totale des données ?
+a) 55 (Bonne réponse)
+b) 60
+
+Question Maths Discretes : Dans une classe de 20 élèves:
+-8 aiment les mathématiques discrètes
+-10 aiment l'algèbre
+-et 4 aiment les deux matières
+Combien d'élèves n'aiment aucune des deux matières?
+a) 2 élèves n'aiment aucune des deux matières. (bonne réponse) (Total = Elèves discrètes + Elèves algèbre — Elèves discrètes et algèbre + Elèves ni discrètes ni algèbre)
+c) 6 élèves n'aiment aucune des deux matières.
+
+
+Question 
