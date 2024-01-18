@@ -11,6 +11,7 @@ public class DialogManager : MonoBehaviour
     public TMP_Text nameText;
     public TMP_Text dialogText;
     private NPCGuideManager npcGuideManager; // Ajoutez cette ligne
+    public PlayerMovement playerMovement;
 
     public static DialogManager Instance;
 
@@ -32,6 +33,10 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(Dialog dialog)
     {
+        if (playerMovement != null)
+        {
+            playerMovement.SetCanMove(false); // Désactiver le mouvement
+        }
         Animator.SetBool("isOpen", true);
         nameText.text = dialog.name;
         sentences.Clear();
@@ -83,6 +88,11 @@ public class DialogManager : MonoBehaviour
         if (npcGuideManager != null)
         {
             npcGuideManager.OnDialogueComplete();
+        }
+
+        if (playerMovement != null)
+        {
+            playerMovement.SetCanMove(true); // Réactiver le mouvement
         }
     }
 

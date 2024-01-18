@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: 90ad3d7b7f86c7b4d8cf8a2279036f7b
   - enabled: 1
     path: Assets/Scenes/Boss Nevot.unity
-    guid: bb9bf9b3380dff4478d20b46a1a28f8a
+    guid: 394382f8f94d63448b58072b646c5692
   - enabled: 1
     path: Assets/Scenes/Salle 1.unity
     guid: 74404b41a4d185e49b15f6c61fec8285
@@ -43,11 +43,11 @@ EditorBuildSettings:
     guid: 56adb5e64f2cb864487aa4cb90c96f50
   - enabled: 1
     path: Assets/Scenes/Boss Casali.unity
-    guid: 7a5e40e0b8e328f44a1b2d137ff593af
+    guid: d4c4e2576ee59d44cb063cd27f85927f
   - enabled: 1
     path: Assets/Scenes/Boss Morancey.unity
     guid: 4e4ec870c792ec5479a2ece93d509806
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Boss Salou.unity
     guid: 845920e97680ced4688f11c1e0ffd3bc
   m_configObjects: {}

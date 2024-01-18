@@ -4914,8 +4914,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -157.47, y: -1726}
-  m_SizeDelta: {x: 451.425, y: 715.159}
+  m_AnchoredPosition: {x: -63.27, y: -1771.39}
+  m_SizeDelta: {x: 500.71, y: 729.95}
   m_Pivot: {x: 1.9112139, y: -2.0701272}
 --- !u!114 &804849343
 MonoBehaviour:
@@ -4937,7 +4937,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 54dd365d472ed4d49a63d7b4bb5fb04e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76b992e007b83124e8463834faf81a81, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6449,7 +6449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mr.CASALI
+  m_text: Mr.RANDOM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7402e9f6af74f3f499dd96d108129046, type: 2}
   m_sharedMaterial: {fileID: -6109000611441954184, guid: 7402e9f6af74f3f499dd96d108129046,
@@ -8106,7 +8106,7 @@ MonoBehaviour:
   bossHealth: 30
   bossMaxHealth: 30
   playerLives: 3
-  winSceneName: Salle 2
+  winSceneName: Salle 6
   heartImages:
   - {fileID: 920626656}
   - {fileID: 1958497933}
@@ -8116,7 +8116,7 @@ MonoBehaviour:
   loseSceneName: Couloir
   Reponse: 
   typeWriter: {fileID: 961102978}
-  selectedProfessor: Casali
+  selectedProfessor: Random
   fadeImage: {fileID: 384359096}
   sceneParent: {fileID: 1951801816}
 --- !u!1 &1108285444

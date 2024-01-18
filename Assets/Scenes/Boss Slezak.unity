@@ -4937,7 +4937,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 54dd365d472ed4d49a63d7b4bb5fb04e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cc38b82aa268a74fbe56f5674e1ab4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6449,7 +6449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mr.CASALI
+  m_text: Mme.SLEZAK
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7402e9f6af74f3f499dd96d108129046, type: 2}
   m_sharedMaterial: {fileID: -6109000611441954184, guid: 7402e9f6af74f3f499dd96d108129046,
@@ -8103,10 +8103,10 @@ MonoBehaviour:
   btnReponseD: {fileID: 1303978081}
   conn: 
   bossHealthBar: {fileID: 1358381595}
-  bossHealth: 100
-  bossMaxHealth: 100
+  bossHealth: 30
+  bossMaxHealth: 30
   playerLives: 3
-  winSceneName: Salle 1
+  winSceneName: Salle 5
   heartImages:
   - {fileID: 920626656}
   - {fileID: 1958497933}
@@ -8116,7 +8116,7 @@ MonoBehaviour:
   loseSceneName: Couloir
   Reponse: 
   typeWriter: {fileID: 961102978}
-  selectedProfessor: Casali
+  selectedProfessor: Slezak
   fadeImage: {fileID: 384359096}
   sceneParent: {fileID: 1951801816}
 --- !u!1 &1108285444

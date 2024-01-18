@@ -40088,6 +40088,7 @@ MonoBehaviour:
   Animator: {fileID: 1570119693}
   nameText: {fileID: 869881832}
   dialogText: {fileID: 429515438}
+  playerMovement: {fileID: 26847347}
 --- !u!4 &461900127
 Transform:
   m_ObjectHideFlags: 0

@@ -170,20 +170,23 @@ public class Quiz : MonoBehaviour
     {
         if (questions.Count == 0)
         {
-            Debug.LogError("Aucune question n'a été chargée de la base de données.");
+            Debug.LogError("Toutes les questions ont été posées.");
+            // Ici, vous pouvez gérer la logique de fin de jeu ou de réinitialisation
             return;
         }
 
-        // Sélection aléatoire d'une question
-        var currentQuestion = questions[Random.Range(0, questions.Count)];
+        // Sélection aléatoire d'une question et la retirer de la liste
+        int randomIndex = Random.Range(0, questions.Count);
+        var currentQuestion = questions[randomIndex];
+        questions.RemoveAt(randomIndex); // Retire la question utilisée de la liste
+
         Reponse = currentQuestion.CorrectAnswer;
 
         typeWriter.SetText(currentQuestion.Text); // Affiche la question
-
-
         btnReponseG.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.Answers[0]; // Affiche la première réponse
         btnReponseD.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.Answers[1]; // Affiche la deuxième réponse
     }
+
 
 
     public void OnButtonClicked(Button buttonClicked)
@@ -235,7 +238,7 @@ public class Quiz : MonoBehaviour
                 {
                     ElementalInventory.Instance.addItem("Cle 7", 1, randomColor);
                 }
-
+                GameController.VictoryAchieved = true;
                 SceneManager.LoadScene(winSceneName); // Chargez la scène de victoire
             }
         }

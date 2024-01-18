@@ -7065,10 +7065,10 @@ MonoBehaviour:
   btnReponseD: {fileID: 1303978081}
   conn: 
   bossHealthBar: {fileID: 1358381595}
-  bossHealth: 100
-  bossMaxHealth: 100
+  bossHealth: 30
+  bossMaxHealth: 30
   playerLives: 3
-  winSceneName: Salle 1
+  winSceneName: Salle 7
   heartImages:
   - {fileID: 920626656}
   - {fileID: 1958497933}
@@ -7153,89 +7153,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122433855}
   m_CullTransparentMesh: 1
---- !u!1 &1140222524
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1140222528}
-  - component: {fileID: 1140222527}
-  - component: {fileID: 1140222526}
-  - component: {fileID: 1140222525}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1140222525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140222524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c60660a9316b55a42b0444c356281eb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topBarAnimator: {fileID: 0}
-  bottomBarAnimator: {fileID: 0}
---- !u!114 &1140222526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140222524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e56496b174ed54c85b5f524aa1f4e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterAnimator: {fileID: 0}
-  dialogManager: {fileID: 1140222527}
-  characterSprite: {fileID: 0}
-  characterName: Mysterieux Guide
-  dialogueLines:
-  - "Bienvenue \xE0 l'IUT d'Aix-en-Provence, je serai votre guide pour votre voyage
-    au sein de l'etablissement"
-  cinematicBars: {fileID: 1140222525}
---- !u!114 &1140222527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140222524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efefe784143f4b2498a11c0863d5a3cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Animator: {fileID: 0}
-  nameText: {fileID: 0}
-  dialogText: {fileID: 0}
---- !u!4 &1140222528
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140222524}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.39501023, y: -3.3203745, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143323505
 GameObject:
   m_ObjectHideFlags: 0
@@ -14524,6 +14441,5 @@ SceneRoots:
   - {fileID: 1951801817}
   - {fileID: 674945862}
   - {fileID: 715823252}
-  - {fileID: 1140222528}
   - {fileID: 543522920}
   - {fileID: 348746759}
