@@ -2101,8 +2101,8 @@ MonoBehaviour:
   dialog:
     name: Indice SQL
     sentences:
-    - 'Definition: Soit A et B deux ensembles l''intersection de A et B seraientles
-      elements situe a la fois dans A et B'
+    - "Le PHP est le langage utilis\xE9 pour interagir avec les bases de donnees
+      sur les sites internet notamment"
   interactMessage: {fileID: 1587193969}
   isInRange: 0
   isBoss: 0
@@ -3467,10 +3467,8 @@ MonoBehaviour:
   dialog:
     name: Indice SQL
     sentences:
-    - Oh tiens...
-    - Un eleve a laisser son antiseche sur le bureau du professeur.
-    - "\"Total d'eleves = Eleves maths discretes + Eleves algebre \u2014 Eleves maths
-      discretes et algebre + Eleves ni maths discretes ni algebre\""
+    - Une table est composee d'une cle primaire qui lui sert d'identifiant et de
+      plusieurs attributs.
   interactMessage: {fileID: 1587193969}
   isInRange: 0
   isBoss: 0
@@ -5522,12 +5520,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: 'Infos Matieres IUT '
+    name: 'Info IUT '
     sentences:
-    - "Les enseignements a l'iut sont regroup\xE9 en deux groupes"
-    - Un premier concernant toutes la matieres informatiques
-    - "Un deuxieme concernant :\n\u2022 \xE9conomie et gestion des organisations,\r\n\u2022
-      langues, expression et communication,\r\n\u2022 math\xE9matiques. "
+    - Chaque annee, il est possible d'elir un bureau des eleves qui representera
+      les eleves et le BUT informatique
   interactMessage: {fileID: 1587193969}
   isInRange: 0
   isBoss: 0
