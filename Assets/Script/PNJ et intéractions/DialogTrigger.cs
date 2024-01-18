@@ -22,7 +22,6 @@ public class DialogTrigger : MonoBehaviour
             // Vérifier si c'est un boss et si les objets nécessaires sont dans l'inventaire
             if (isBoss && CheckRequiredItems())
             {
-                // Déclencher la scène de combat ici
                 StartBossFight();
             }
             else if (isDoor && !CheckRequiredItems())
@@ -79,11 +78,10 @@ public class DialogTrigger : MonoBehaviour
             Debug.Log(ElementalInventory.Instance.convertToString());
             if (!hasItem)
             {
-                return false; // Si l'un des objets n'est pas présent, retournez false
+                return false; 
             }
         }
 
-        // Si tous les objets sont présents, retournez vrai
         return true;
     }
 
