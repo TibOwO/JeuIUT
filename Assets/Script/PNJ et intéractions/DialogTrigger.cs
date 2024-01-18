@@ -39,10 +39,6 @@ public class DialogTrigger : MonoBehaviour
         {
             isInRange = true;
             Debug.Log("Le joueur est dans la zone de dialogue");
-            if (isDoor && !CheckRequiredItems())
-            {
-                TriggerDialog();
-            }
         }
     }
 
