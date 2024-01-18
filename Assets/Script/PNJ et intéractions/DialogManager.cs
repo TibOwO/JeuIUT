@@ -20,6 +20,10 @@ public class DialogManager : MonoBehaviour
 
     private void Awake()
     {
+<<<<<<< Updated upstream
+=======
+        
+>>>>>>> Stashed changes
         sentences = new Queue<string>();
         npcGuideManager = FindObjectOfType<NPCGuideManager>(); // Ajoutez cette ligne
 

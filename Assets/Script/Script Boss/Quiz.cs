@@ -7,6 +7,7 @@ using System.Data;
 using Mono.Data.Sqlite;
 using UnityEngine.UI;
 using MagicPigGames;
+using System.IO;
 
 public class Quiz : MonoBehaviour
 {
@@ -68,10 +69,12 @@ public class Quiz : MonoBehaviour
             Debug.LogError("Un ou plusieurs composants d'interface utilisateur ne sont pas attachés au script.");
         }
 
-        conn = "URI=file:" + Application.dataPath + "/Plugins/DB_Unity.db";
-
+        string databasePath = Path.Combine(Application.streamingAssetsPath, "DB_Unity.db");
+        conn = "URI=file:" + databasePath;
         LoadQuestionsFromDatabase();
     }
+
+
 
     void Start()
     {
