@@ -53,10 +53,8 @@ public class RandomItem : MonoBehaviour
 		{
 			if (inventory != null)
 			{
-				// Inverser l'état de l'inventaire (ouvrir si fermé, fermer si ouvert)
 				isInventoryOpen = !isInventoryOpen;
 
-				// Appliquer l'état à l'objet inventory
 				if (inventory.gameObject != null)
 				{
 					inventory.ToggleInventoryRenderer(isInventoryOpen);

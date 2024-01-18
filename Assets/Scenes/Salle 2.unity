@@ -16237,7 +16237,7 @@ MonoBehaviour:
   requiredItems:
   - Indice C++
   - Indice Programmation
-  - Infos Language
+  - 'Infos Matieres IUT '
 --- !u!61 &1536980057
 BoxCollider2D:
   m_ObjectHideFlags: 0
