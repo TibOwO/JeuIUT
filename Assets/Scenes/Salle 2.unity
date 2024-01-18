@@ -2947,7 +2947,6 @@ GameObject:
   m_Component:
   - component: {fileID: 508802937}
   - component: {fileID: 508802936}
-  - component: {fileID: 508802935}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -2955,18 +2954,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &508802935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508802934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acfcbd86f2c04394997824dc1ef7eb89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &508802936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19800,74 +19787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d4d78ecacfa88d47b4827c916213df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1905061611
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1905061614}
-  - component: {fileID: 1905061613}
-  - component: {fileID: 1905061612}
-  m_Layer: 0
-  m_Name: VictoryDialog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1905061612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905061611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da792c87f7648e144917460ff0ade326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Victoire!
-    sentences:
-    - Vous avez gagne ce combat de boss et fait l'acquisition d'une cle pour la salle
-      suivante!
-  interactMessage: {fileID: 0}
-  isInRange: 0
-  isBoss: 0
-  isDoor: 0
-  requiredItems: []
---- !u!114 &1905061613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905061611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b3dad19310920c46b227a9e204bc320, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  victoryDialog: {fileID: 1905061612}
---- !u!4 &1905061614
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905061611}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1907412230
 GameObject:
   m_ObjectHideFlags: 0
@@ -20916,5 +20835,4 @@ SceneRoots:
   - {fileID: 1273545046}
   - {fileID: 642524263}
   - {fileID: 508802937}
-  - {fileID: 1905061614}
   - {fileID: 569122093}
