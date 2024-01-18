@@ -7826,7 +7826,8 @@ MonoBehaviour:
     sentences:
     - Une carte cachee sous une table de chevet....
     - 'Il y est inscrit le texte suivant:'
-    - '"Les mathematiques discretes sont l''etude des nombres continus"'
+    - "\"Les probabilites sont utilis\xE9es pour estimer les risques et prendre des
+      d\xE9cisions en cons\xE9quences\""
     - Vous rangez la carte dans votre inventaire
   isInRange: 0
   isBoss: 0
@@ -21080,12 +21081,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: 'Infos Matieres IUT '
+    name: 'Infos IUT '
     sentences:
-    - "Les enseignements a l'iut sont regroup\xE9 en deux groupes"
-    - Un premier concernant toutes la matieres informatiques
-    - "Un deuxieme concernant :\n\u2022 \xE9conomie et gestion des organisations,\r\n\u2022
-      langues, expression et communication,\r\n\u2022 math\xE9matiques. "
+    - "Il est possible de faire de l'alternance \xE0 partir de la seconde ann\xE9e"
   isInRange: 0
   isBoss: 0
   isDoor: 0

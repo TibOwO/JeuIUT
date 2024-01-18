@@ -3032,10 +3032,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indice CSS
+    name: Indice Architecture des Ordinateurs
     sentences:
-    - 'Definition: Soit A et B deux ensembles l''intersection de A et B seraientles
-      elements situe a la fois dans A et B'
+    - Alan Turing a creer le tout premier ordinateur
   isInRange: 0
   isBoss: 0
   isDoor: 0
@@ -3050,7 +3049,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_Name
-      value: Indice CSS
+      value: Indice ArchiOrdi
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalScale.x
@@ -3118,7 +3117,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice CSS
+      value: Indice ArchiOrdi
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5678,12 +5677,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: 'Infos Matieres IUT '
+    name: 'Infos IUT '
     sentences:
-    - "Les enseignements a l'iut sont regroup\xE9 en deux groupes"
-    - Un premier concernant toutes la matieres informatiques
-    - "Un deuxieme concernant :\n\u2022 \xE9conomie et gestion des organisations,\r\n\u2022
-      langues, expression et communication,\r\n\u2022 math\xE9matiques. "
+    - Le BUT informatique d'Aix a fete ses 50 ans en 2023
   isInRange: 0
   isBoss: 0
   isDoor: 0
@@ -5850,7 +5846,7 @@ MonoBehaviour:
   isBoss: 1
   isDoor: 0
   requiredItems:
-  - Indice CSS
+  - Indice ArchiOrdi
   - Indice HTML
   - 'Infos Matieres IUT '
 --- !u!61 &716072691
@@ -20710,9 +20706,8 @@ MonoBehaviour:
     name: Indice HTML
     sentences:
     - Oh tiens...
-    - Un eleve a laisser son antiseche sur le bureau du professeur.
-    - "\"Total d'eleves = Eleves maths discretes + Eleves algebre \u2014 Eleves maths
-      discretes et algebre + Eleves ni maths discretes ni algebre\""
+    - Un eleve a fait tomber une feuille de cours
+    - '"La balise br permet de sauter une ligne"'
   isInRange: 0
   isBoss: 0
   isDoor: 0

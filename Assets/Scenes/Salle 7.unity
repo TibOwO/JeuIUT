@@ -10916,12 +10916,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: 'Infos Matieres IUT '
+    name: Tract BDE
     sentences:
-    - "Les enseignements a l'iut sont regroup\xE9 en deux groupes"
-    - Un premier concernant toutes la matieres informatiques
-    - "Un deuxieme concernant :\n\u2022 \xE9conomie et gestion des organisations,\r\n\u2022
-      langues, expression et communication,\r\n\u2022 math\xE9matiques. "
+    - "Le BDE du But Informatique d'Aix a organis\xE9 une competition Smash Bros
+      ainsi qu'une nuit de l'info"
   isInRange: 0
   isBoss: 0
   isDoor: 0
