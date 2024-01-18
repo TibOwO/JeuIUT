@@ -4264,7 +4264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indice Programmation
+    name: RTFM
     sentences:
     - 'Definition: Soit A et B deux ensembles l''intersection de A et B seraientles
       elements situe a la fois dans A et B'
@@ -5746,7 +5746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: 'Infos Matieres IUT '
+    name: Infos Language
     sentences:
     - "Les enseignements a l'iut sont regroup\xE9 en deux groupes"
     - Un premier concernant toutes la matieres informatiques
@@ -15112,7 +15112,7 @@ MonoBehaviour:
   requiredItems:
   - Indice C++
   - Indice Programmation
-  - 'Infos Matieres IUT '
+  - Infos Language
 --- !u!61 &1536980057
 BoxCollider2D:
   m_ObjectHideFlags: 0
