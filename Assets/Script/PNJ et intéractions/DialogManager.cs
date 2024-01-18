@@ -10,7 +10,7 @@ public class DialogManager : MonoBehaviour
     private Queue<string> sentences;
     public TMP_Text nameText;
     public TMP_Text dialogText;
-    private NPCGuideManager npcGuideManager; // Ajoutez cette ligne
+    private NPCGuideManager npcGuideManager; 
     public PlayerMovement playerMovement;
 
     public static DialogManager Instance;
@@ -27,7 +27,7 @@ public class DialogManager : MonoBehaviour
         }
         Instance = this;
         sentences = new Queue<string>();
-        npcGuideManager = FindObjectOfType<NPCGuideManager>(); // Ajoutez cette ligne
+        npcGuideManager = FindObjectOfType<NPCGuideManager>(); 
 
     }
 

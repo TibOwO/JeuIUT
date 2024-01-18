@@ -1383,7 +1383,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 955712938}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
         m_MethodName: QuitToMainMenu
         m_Mode: 1
@@ -2283,6 +2283,7 @@ GameObject:
   - component: {fileID: 309853053}
   - component: {fileID: 309853058}
   - component: {fileID: 309853059}
+  - component: {fileID: 309853060}
   m_Layer: 0
   m_Name: PersonnagePrincipal
   m_TagString: Player
@@ -2554,6 +2555,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &309853060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309853052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f364495c3eed8c4aa16ab3d5bfe8c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 955712937}
 --- !u!1 &320601516
 GameObject:
   m_ObjectHideFlags: 0
@@ -6726,7 +6740,6 @@ GameObject:
   m_Component:
   - component: {fileID: 846229011}
   - component: {fileID: 846229010}
-  - component: {fileID: 846229012}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -6765,18 +6778,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &846229012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846229009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acfcbd86f2c04394997824dc1ef7eb89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &858331143
 GameObject:
   m_ObjectHideFlags: 0
@@ -7416,27 +7417,13 @@ GameObject:
   - component: {fileID: 955712941}
   - component: {fileID: 955712940}
   - component: {fileID: 955712939}
-  - component: {fileID: 955712938}
   m_Layer: 5
   m_Name: Menu_Echap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &955712938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 955712937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f364495c3eed8c4aa16ab3d5bfe8c28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 955712937}
+  m_IsActive: 1
 --- !u!114 &955712939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9794,74 +9781,6 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
---- !u!1 &1241327765
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1241327767}
-  - component: {fileID: 1241327769}
-  - component: {fileID: 1241327768}
-  m_Layer: 0
-  m_Name: VictoryDialog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1241327767
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241327765}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1241327768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241327765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da792c87f7648e144917460ff0ade326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Victoire!
-    sentences:
-    - Vous avez gagne ce combat de boss et fait l'acquisition d'une cle pour la salle
-      suivante!
-  interactMessage: {fileID: 0}
-  isInRange: 0
-  isBoss: 0
-  isDoor: 0
-  requiredItems: []
---- !u!114 &1241327769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241327765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b3dad19310920c46b227a9e204bc320, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  victoryDialog: {fileID: 1241327768}
 --- !u!1 &1252974269
 GameObject:
   m_ObjectHideFlags: 0
@@ -17976,7 +17895,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 955712938}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -22408,5 +22327,4 @@ SceneRoots:
   - {fileID: 1502911372}
   - {fileID: 800577412}
   - {fileID: 262177450}
-  - {fileID: 1241327767}
   - {fileID: 1316836848}
