@@ -1180,7 +1180,6 @@ GameObject:
   - component: {fileID: 86620350}
   - component: {fileID: 86620349}
   - component: {fileID: 86620352}
-  - component: {fileID: 86620353}
   m_Layer: 0
   m_Name: Porte_salle3
   m_TagString: Untagged
@@ -1297,29 +1296,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 86620350}
---- !u!114 &86620353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86620347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da792c87f7648e144917460ff0ade326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Porte Salle 3
-    sentences:
-    - Vous n'avez pas encore la cle pour la Salle 3, veuillez battre le boss de la
-      salle 2
-  interactMessage: {fileID: 0}
-  isInRange: 0
-  isBoss: 0
-  isDoor: 1
-  requiredItems:
-  - Cle 3
 --- !u!1 &93111228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,7 +1862,6 @@ GameObject:
   - component: {fileID: 128371495}
   - component: {fileID: 128371494}
   - component: {fileID: 128371493}
-  - component: {fileID: 128371497}
   m_Layer: 0
   m_Name: Porte_salle6
   m_TagString: Untagged
@@ -2003,29 +1978,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &128371497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128371492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da792c87f7648e144917460ff0ade326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Porte Salle 6
-    sentences:
-    - Vous n'avez pas encore la cle pour la Salle 6, veuillez battre le boss de la
-      salle 5
-  interactMessage: {fileID: 0}
-  isInRange: 0
-  isBoss: 0
-  isDoor: 1
-  requiredItems:
-  - Cle 6
 --- !u!1 &129054610
 GameObject:
   m_ObjectHideFlags: 0
@@ -39576,7 +39528,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4284067837
-  m_fontColor: {r: 0.990566, g: 0.68681353, b: 0.3504361, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -42030,7 +41982,6 @@ GameObject:
   - component: {fileID: 658261878}
   - component: {fileID: 658261877}
   - component: {fileID: 658261876}
-  - component: {fileID: 658261880}
   m_Layer: 0
   m_Name: Porte_salle7
   m_TagString: Untagged
@@ -42147,29 +42098,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &658261880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658261875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da792c87f7648e144917460ff0ade326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Porte Salle 7
-    sentences:
-    - Vous n'avez pas encore la cle pour la Salle 7, veuillez battre le boss de la
-      salle 6
-  interactMessage: {fileID: 0}
-  isInRange: 0
-  isBoss: 0
-  isDoor: 1
-  requiredItems:
-  - Cle 7
 --- !u!1 &660922581
 GameObject:
   m_ObjectHideFlags: 0
@@ -44827,7 +44755,6 @@ GameObject:
   - component: {fileID: 718298998}
   - component: {fileID: 718298997}
   - component: {fileID: 718298996}
-  - component: {fileID: 718299000}
   m_Layer: 0
   m_Name: Porte_salle2
   m_TagString: Untagged
@@ -44944,29 +44871,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &718299000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718298995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da792c87f7648e144917460ff0ade326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Porte Salle 2
-    sentences:
-    - Vous n'avez pas encore la cle pour la Salle 2, veuillez battre le boss de la
-      salle 1
-  interactMessage: {fileID: 0}
-  isInRange: 0
-  isBoss: 0
-  isDoor: 1
-  requiredItems:
-  - Cle 2
 --- !u!1 &739470262
 GameObject:
   m_ObjectHideFlags: 0
@@ -48886,7 +48790,6 @@ GameObject:
   - component: {fileID: 1122399143}
   - component: {fileID: 1122399142}
   - component: {fileID: 1122399141}
-  - component: {fileID: 1122399145}
   m_Layer: 0
   m_Name: Porte_salle4
   m_TagString: Untagged
@@ -49003,29 +48906,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1122399145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122399140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da792c87f7648e144917460ff0ade326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Porte Salle 4
-    sentences:
-    - Vous n'avez pas encore la cle pour la Salle 4, veuillez battre le boss de la
-      salle 3
-  interactMessage: {fileID: 0}
-  isInRange: 0
-  isBoss: 0
-  isDoor: 1
-  requiredItems:
-  - Cle 4
 --- !u!1 &1126216465
 GameObject:
   m_ObjectHideFlags: 0
@@ -49794,7 +49674,6 @@ GameObject:
   - component: {fileID: 1202169553}
   - component: {fileID: 1202169552}
   - component: {fileID: 1202169555}
-  - component: {fileID: 1202169556}
   m_Layer: 0
   m_Name: Porte_salle5
   m_TagString: Untagged
@@ -49911,29 +49790,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1202169553}
---- !u!114 &1202169556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202169551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da792c87f7648e144917460ff0ade326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Porte Salle 5
-    sentences:
-    - Vous n'avez pas encore la cle pour la Salle 5, veuillez battre le boss de la
-      salle 4
-  interactMessage: {fileID: 0}
-  isInRange: 0
-  isBoss: 0
-  isDoor: 1
-  requiredItems:
-  - Cle 5
 --- !u!1 &1227276525
 GameObject:
   m_ObjectHideFlags: 0
@@ -50546,7 +50402,6 @@ GameObject:
   - component: {fileID: 1280666180}
   - component: {fileID: 1280666179}
   - component: {fileID: 1280666183}
-  - component: {fileID: 1280666184}
   m_Layer: 0
   m_Name: Porte_salle1
   m_TagString: Untagged
@@ -50708,29 +50563,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0271974, y: 1.2077503}
   m_EdgeRadius: 0
---- !u!114 &1280666184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280666178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da792c87f7648e144917460ff0ade326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    name: Porte Salle 1
-    sentences:
-    - Vous n'avez pas encore la cle pour la Salle 1, Cherchez la cle dans le couloir
-      la secretaire a perdue la cle
-  interactMessage: {fileID: 0}
-  isInRange: 0
-  isBoss: 0
-  isDoor: 1
-  requiredItems:
-  - Cle
 --- !u!1 &1291760424
 GameObject:
   m_ObjectHideFlags: 0
