@@ -17,6 +17,7 @@ public class DialogManager : MonoBehaviour
 
     // Ajout d'un indicateur pour vérifier si une phrase est en train d'être écrite
     private bool isTyping = false;
+    public bool IsDialogueActive { get; private set; }
 
     private void Awake()
     {
@@ -33,6 +34,7 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(Dialog dialog)
     {
+        IsDialogueActive = true;
         if (playerMovement != null)
         {
             playerMovement.SetCanMove(false); // Désactiver le mouvement
@@ -83,6 +85,7 @@ public class DialogManager : MonoBehaviour
 
     public void EndDialog()
     {
+        IsDialogueActive = false;
         Animator.SetBool("isOpen", false);
 
         if (npcGuideManager != null)

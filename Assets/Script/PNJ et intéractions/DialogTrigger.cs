@@ -15,9 +15,10 @@ public class DialogTrigger : MonoBehaviour
     // Liste des noms des objets à ramasser (dynamique)
     public List<string> requiredItems = new List<string>();
 
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isInRange)
+        if (Input.GetKeyDown(KeyCode.E) && isInRange && !DialogManager.Instance.IsDialogueActive)
         {
             // Vérifier si c'est un boss et si les objets nécessaires sont dans l'inventaire
             if (isBoss && CheckRequiredItems())
@@ -36,8 +37,8 @@ public class DialogTrigger : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+    {  
+        if (collision.CompareTag("Player") && !DialogManager.Instance.IsDialogueActive)
         {
             isInRange = true;
             interactMessage.gameObject.SetActive(true);
@@ -49,10 +50,11 @@ public class DialogTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            interactMessage.gameObject.SetActive(false);
             TriggerExit();
+            interactMessage.gameObject.SetActive(false);
         }
     }
+
 
     public void TriggerExit()
     {
@@ -62,10 +64,11 @@ public class DialogTrigger : MonoBehaviour
 
     public void TriggerDialog()
     {
-        // Ajout de la condition pour vérifier si l'objet est actif (visible)
-        if (gameObject.activeSelf)
+        if (gameObject.activeSelf && !DialogManager.Instance.IsDialogueActive)
         {
-            FindObjectOfType<DialogManager>().StartDialog(dialog);
+            interactMessage.gameObject.SetActive(false);
+
+            DialogManager.Instance.StartDialog(dialog);
         }
     }
 
