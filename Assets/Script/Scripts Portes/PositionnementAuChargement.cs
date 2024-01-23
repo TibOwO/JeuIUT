@@ -16,7 +16,6 @@ public class PositionnementAuChargement : MonoBehaviour
             // Positionne le joueur à cet emplacement
             transform.position = pointDeSpawn.position;
 
-            // Optionnel : Effacer le PlayerPrefs si vous ne voulez pas qu'il persiste
             PlayerPrefs.DeleteKey("PointDeSpawn");
         }
     }

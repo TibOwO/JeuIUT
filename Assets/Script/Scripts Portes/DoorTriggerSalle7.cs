@@ -12,7 +12,7 @@ public class DoorTriggerSalle7 : MonoBehaviour
 
         if (other.CompareTag("Player") && ElementalInventory.Instance.contains("Cle 7", 1))
         {
-            string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Video", "porte_anim.mov");
+            string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, "Video", "porte_anim.mp4");
             videoPlayer.url = videoPath;
 
             videoPlayer.Play();

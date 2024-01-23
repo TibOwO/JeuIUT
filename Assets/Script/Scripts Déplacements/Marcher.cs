@@ -3,13 +3,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public AudioSource footstepAudioSource; // Ajout de la source audio pour les pas
-    public AudioClip[] footstepSounds; // Tableau des sons de pas
+    public AudioSource footstepAudioSource; 
+    public AudioClip[] footstepSounds; 
     private Rigidbody2D rb;
     private Vector2 movement;
     private Animator animator;
     public bool canMove = true; // Flag pour contrôler le mouvement du personnage
-    private bool isMoving = false; // Pour vérifier si le personnage se déplace
+    private bool isMoving = false; //Flag Pour vérifier si le personnage se déplace
 
     void Start()
     {

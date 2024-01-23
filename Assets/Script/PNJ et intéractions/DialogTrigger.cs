@@ -12,16 +12,17 @@ public class DialogTrigger : MonoBehaviour
     public bool isBoss = false;
     public bool isDoor = false;
 
+    // Liste des noms des objets à ramasser (dynamique)
     public List<string> requiredItems = new List<string>();
+
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isInRange)
+        if (Input.GetKeyDown(KeyCode.E) && isInRange && !DialogManager.Instance.IsDialogueActive)
         {
-
+            // Vérifier si c'est un boss et si les objets nécessaires sont dans l'inventaire
             if (isBoss && CheckRequiredItems())
             {
-
                 StartBossFight();
             }
             else if (isDoor && !CheckRequiredItems())
@@ -36,8 +37,8 @@ public class DialogTrigger : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+    {  
+        if (collision.CompareTag("Player") && !DialogManager.Instance.IsDialogueActive)
         {
             isInRange = true;
             interactMessage.gameObject.SetActive(true);
@@ -49,10 +50,11 @@ public class DialogTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            interactMessage.gameObject.SetActive(false);
             TriggerExit();
+            interactMessage.gameObject.SetActive(false);
         }
     }
+
 
     public void TriggerExit()
     {
@@ -62,29 +64,31 @@ public class DialogTrigger : MonoBehaviour
 
     public void TriggerDialog()
     {
-        if (gameObject.activeSelf)
+        if (gameObject.activeSelf && !DialogManager.Instance.IsDialogueActive)
         {
-            FindObjectOfType<DialogManager>().StartDialog(dialog);
+            interactMessage.gameObject.SetActive(false);
+
+            DialogManager.Instance.StartDialog(dialog);
         }
     }
 
     private bool CheckRequiredItems()
     {
+        // Utiliser la liste de noms d'objets configurables depuis l'Inspector
         foreach (string itemName in requiredItems)
         {
             bool hasItem = ElementalInventory.Instance.contains(itemName, 1);
             Debug.Log(ElementalInventory.Instance.convertToString());
             if (!hasItem)
             {
-                return false;
+                return false; 
             }
         }
-
 
         return true;
     }
 
-
+    // Fonction pour déclencher la scène de combat avec le boss
     private void StartBossFight()
     {
         SceneManager.LoadScene(gameObject.name);
