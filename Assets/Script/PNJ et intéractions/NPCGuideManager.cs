@@ -59,7 +59,7 @@ public class NPCGuideManager : MonoBehaviour
 
     public void OnDialogueComplete()
     {
-        Invoke(nameof(EndCinematic), 1f);
+        Invoke(nameof(EndCinematic), 0.5f);
     }
 
     public void EndCinematic()

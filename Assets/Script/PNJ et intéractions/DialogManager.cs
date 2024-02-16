@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour
 {
@@ -10,34 +12,34 @@ public class DialogManager : MonoBehaviour
     private Queue<string> sentences;
     public TMP_Text nameText;
     public TMP_Text dialogText;
-    private NPCGuideManager npcGuideManager; 
+    private NPCGuideManager npcGuideManager;
     public PlayerMovement playerMovement;
+    public Image dialogueImage;
+    public int imageDisplaySentenceIndex = 3;
+    private int currentSentenceIndex = 0;
+    public string requiredSceneForImage = "Couloir";
+
+    private HashSet<string> playedDialogues = new HashSet<string>(); // Pour suivre les dialogues déjà joués
 
     public static DialogManager Instance;
-
-    // Ajout d'un indicateur pour vérifier si une phrase est en train d'être écrite
-    private bool isTyping = false;
     public bool IsDialogueActive { get; private set; }
+    private bool isTyping = false;
 
     private void Awake()
     {
-        if (Instance != null)
-        {
-            Debug.LogWarning("Plusieurs instances de DialogManager ont été trouvées dans la scène.");
-            return;
-        }
         Instance = this;
         sentences = new Queue<string>();
-        npcGuideManager = FindObjectOfType<NPCGuideManager>(); 
-
+        npcGuideManager = FindObjectOfType<NPCGuideManager>();
+        dialogueImage.gameObject.SetActive(false);
     }
 
     public void StartDialog(Dialog dialog)
     {
         IsDialogueActive = true;
+        currentSentenceIndex = 0;
         if (playerMovement != null)
         {
-            playerMovement.SetCanMove(false); // Désactiver le mouvement
+            playerMovement.SetCanMove(false);
         }
         Animator.SetBool("isOpen", true);
         nameText.text = dialog.name;
@@ -49,6 +51,9 @@ public class DialogManager : MonoBehaviour
         }
 
         DisplayNextSentence();
+
+        // Marquer le dialogue comme joué
+        playedDialogues.Add(dialog.name);
     }
 
     public void DisplayNextSentence()
@@ -59,20 +64,37 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
-        // Ne pas commencer à écrire une nouvelle phrase si la coroutine est déjà en cours.
         if (isTyping)
         {
             return;
         }
 
         string sentence = sentences.Dequeue();
+        if (SceneManager.GetActiveScene().name == requiredSceneForImage &&
+            nameText.text == "Mysterieux Guide" &&
+            currentSentenceIndex == imageDisplaySentenceIndex)
+        {
+            // S'assurer que l'objet Image n'est pas nul avant de l'activer
+            if (dialogueImage != null)
+            {
+                dialogueImage.gameObject.SetActive(true); // Afficher l'image
+            }
+        }
+        else
+        {
+            if (dialogueImage != null)
+            {
+                dialogueImage.gameObject.SetActive(false); // Cacher l'image
+            }
+        }
+        currentSentenceIndex++;
         typingCoroutine = StartCoroutine(TypeSentence(sentence));
     }
 
     private IEnumerator TypeSentence(string sentence)
     {
         dialogText.text = "";
-        isTyping = true; // Définir l'indicateur sur vrai puisque la frappe commence.
+        isTyping = true;
 
         foreach (char letter in sentence.ToCharArray())
         {
@@ -80,13 +102,17 @@ public class DialogManager : MonoBehaviour
             yield return new WaitForSeconds(0.02f);
         }
 
-        isTyping = false; // Remettre l'indicateur à faux lorsque la frappe est terminée.
+        isTyping = false;
     }
 
     public void EndDialog()
     {
         IsDialogueActive = false;
         Animator.SetBool("isOpen", false);
+        if (SceneManager.GetActiveScene().name == requiredSceneForImage)
+        {
+            dialogueImage.gameObject.SetActive(false);
+        }// Cacher l'image à la fin du dialogue
 
         if (npcGuideManager != null)
         {
@@ -95,8 +121,7 @@ public class DialogManager : MonoBehaviour
 
         if (playerMovement != null)
         {
-            playerMovement.SetCanMove(true); // Réactiver le mouvement
+            playerMovement.SetCanMove(true);
         }
     }
-
 }
