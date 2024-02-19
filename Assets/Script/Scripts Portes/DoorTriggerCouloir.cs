@@ -29,31 +29,35 @@ public class DoorTriggerCouloir : MonoBehaviour
         string spawnPoint = null;
         if (currScene.name == "Salle 1")
         {
-            spawnPoint += "Salle1";
+            spawnPoint += "Salle 1";
         }
         else if (currScene.name == "Salle 2")
         {
-            spawnPoint += "Salle2";
+            spawnPoint += "Salle 2";
         }
         else if (currScene.name == "Salle 3")
         {
-            spawnPoint += "Salle3";
+            spawnPoint += "Salle 3";
         }
         else if (currScene.name == "Salle 4")
         {
-            spawnPoint += "Salle4";
+            spawnPoint += "Salle 4";
         }
         else if (currScene.name == "Salle 5")
         {
-            spawnPoint += "Salle5";
+            spawnPoint += "Salle 5";
         }
         else if (currScene.name == "Salle 6")
         {
-            spawnPoint += "Salle6";
+            spawnPoint += "Salle 6";
         }
         else if (currScene.name == "Salle 7")
         {
-            spawnPoint += "Salle7";
+            spawnPoint += "Salle 7";
+        }
+        else
+        {
+            Debug.LogError(currScene.name);
         }
 
         // Set spawn point
