@@ -10,7 +10,7 @@ public class PlayerSpawner : MonoBehaviour
         // Get the name of the spawn point stored in PlayerPrefs
         string spawnPointName = PlayerPrefs.GetString("PointDeSpawn");
 
-        // Find the spawn point in the scene
+
         GameObject point = GameObject.Find(spawnPointName);
 
         if (point != null)
@@ -18,7 +18,16 @@ public class PlayerSpawner : MonoBehaviour
             spawnPoint = point.transform;
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = spawnPoint.position;
-            Debug.Log("Player spawned at: " + spawnPointName);
         }
+<<<<<<< Updated upstream
+=======
+        else
+        {
+            point = GameObject.Find("SpawnBase");
+            spawnPoint = point.transform;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.transform.position = spawnPoint.position;
+        }
+>>>>>>> Stashed changes
     }
 }

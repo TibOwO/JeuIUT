@@ -162,7 +162,7 @@ public class ElementalInventory : MonoBehaviour
 
 	//Add element to inventory
 	// Add element to inventory
-	public void addItem(string name, int count, Color color)
+	public void addItem(string name, int count, Color color, string description)
 	{
 		Debug.Log("Adding item: " + name + " - Count: " + count + " - Color: " + color.ToString());
 		int cellId = getEquals(name, color);
@@ -185,11 +185,12 @@ public class ElementalInventory : MonoBehaviour
 		{
 			int remain = Cells[cellId].elementCount - maxStack;
 			Cells[cellId].elementCount = maxStack;
-			addItem(name, remain, color);
+			addItem(name, remain, color, description);
 		}
 
 		Cells[cellId].elementName = name;
 		Cells[cellId].elementColor = color;
+		Cells[cellId].elementDescription = description;
 		Cells[cellId].UpdateCellInterface();
 	}
 

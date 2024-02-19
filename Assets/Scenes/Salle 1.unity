@@ -769,6 +769,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &112232853
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +962,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &133650298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1302,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &180181671
 GameObject:
   m_ObjectHideFlags: 0
@@ -3391,6 +3394,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!114 &469646767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3596,6 +3600,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &489167805
 GameObject:
   m_ObjectHideFlags: 0
@@ -4009,6 +4014,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &514688557
 GameObject:
   m_ObjectHideFlags: 0
@@ -4512,6 +4518,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &560896504
 GameObject:
   m_ObjectHideFlags: 0
@@ -4707,6 +4714,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &568465594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5243,6 +5251,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &643665625
 GameObject:
   m_ObjectHideFlags: 0
@@ -5582,6 +5591,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &698235242
 GameObject:
   m_ObjectHideFlags: 0
@@ -5849,6 +5859,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &733442261
 GameObject:
   m_ObjectHideFlags: 0
@@ -6117,6 +6128,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &795067898
 GameObject:
   m_ObjectHideFlags: 0
@@ -6630,6 +6642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elementDescription: 
 --- !u!114 &823177515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7702,6 +7715,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &980375489
 GameObject:
   m_ObjectHideFlags: 0
@@ -7970,6 +7984,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1043573648
 GameObject:
   m_ObjectHideFlags: 0
@@ -8491,6 +8506,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1106652207
 GameObject:
   m_ObjectHideFlags: 0
@@ -8909,6 +8925,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1140670904
 GameObject:
   m_ObjectHideFlags: 0
@@ -9171,6 +9188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elementDescription: une encore autre desc
 --- !u!114 &1181349601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9389,6 +9407,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1208634345
 GameObject:
   m_ObjectHideFlags: 0
@@ -9661,6 +9680,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1231526143
 GameObject:
   m_ObjectHideFlags: 0
@@ -9781,6 +9801,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1252974269
 GameObject:
   m_ObjectHideFlags: 0
@@ -10439,6 +10460,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1333668432
 GameObject:
   m_ObjectHideFlags: 0
@@ -10559,6 +10581,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1340558979
 GameObject:
   m_ObjectHideFlags: 0
@@ -10979,6 +11002,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1394863315
 GameObject:
   m_ObjectHideFlags: 0
@@ -11381,6 +11405,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1447866997
 GameObject:
   m_ObjectHideFlags: 0
@@ -15344,6 +15369,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1502911370
 GameObject:
   m_ObjectHideFlags: 0
@@ -17735,6 +17761,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1618686572
 GameObject:
   m_ObjectHideFlags: 0
@@ -19312,6 +19339,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1873774295
 GameObject:
   m_ObjectHideFlags: 0
@@ -19874,6 +19902,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1944340607
 GameObject:
   m_ObjectHideFlags: 0
@@ -20199,6 +20228,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1947617838
 GameObject:
   m_ObjectHideFlags: 0
@@ -20536,6 +20566,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1974932010
 GameObject:
   m_ObjectHideFlags: 0
@@ -20678,6 +20709,11 @@ PrefabInstance:
       propertyPath: elementName
       value: 'Infos Matieres IUT '
       objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementDescription
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20814,6 +20850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elementDescription: une autre desc
 --- !u!114 &1978713562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20956,6 +20993,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &1986726508
 GameObject:
   m_ObjectHideFlags: 0
@@ -21903,6 +21941,7 @@ MonoBehaviour:
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
   elementTransform: {fileID: 0}
+  elementDescription: 
 --- !u!1 &2082693602
 GameObject:
   m_ObjectHideFlags: 0

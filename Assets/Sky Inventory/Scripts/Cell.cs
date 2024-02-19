@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+
 public class Cell : MonoBehaviour
 {
 
@@ -11,6 +12,7 @@ public class Cell : MonoBehaviour
 	public Transform elementTransform;
 	private GameObject elementPrefab;
 
+	public string elementDescription;
 	public void UpdateCellInterface()
 	{
 		if (elementPrefab == null)
@@ -45,10 +47,23 @@ public class Cell : MonoBehaviour
 			Image bgImage = SimpleMethods.getChildByTag(elementTransform, "backgroundImage").GetComponent<Image>();
 			Text elementText = SimpleMethods.getChildByTag(elementTransform, "elementText").GetComponent<Text>();
 			Text amountText = SimpleMethods.getChildByTag(elementTransform, "amountText").GetComponent<Text>();
+			Text descriptionText = SimpleMethods.getChildByTag(elementTransform, "descriptionText").GetComponent<Text>();
+			if (descriptionText != null)
+			{
+				Text DescriptionText = descriptionText.GetComponent<Text>();
+				DescriptionText.text = elementDescription;
+			}
+			else
+			{
+				// Gérer le cas où l'enfant n'a pas été trouvé
+				Debug.LogError("Enfant avec le tag 'descriptionText' non trouvé dans l'objet " + elementTransform.name);
+			}
 			//change UI options
 			bgImage.color = elementColor;
 			elementText.text = elementName;
 			amountText.text = elementCount.ToString();
+			descriptionText.text = elementDescription;
+
 		}
 	}
 

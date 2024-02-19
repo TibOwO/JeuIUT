@@ -10,6 +10,7 @@ TagManager:
   - backgroundImage
   - elementText
   - amountText
+  - descriptionText
   layers:
   - Default
   - TransparentFX
