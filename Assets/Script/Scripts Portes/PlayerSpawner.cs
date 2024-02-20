@@ -18,13 +18,13 @@ public class PlayerSpawner : MonoBehaviour
             player.transform.position = spawnPoint.position;
             Debug.Log("Player spawned at: " + spawnPointName);
         }
-        else
-        {
-            point = GameObject.Find("SpawnBase");
-            spawnPoint = point.transform;
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            player.transform.position = spawnPoint.position;
-            Debug.Log("Player spawned at: " + spawnPointName);
-        }
+        //        else
+        //        {
+        //            spawnPoint = point.transform;
+        //            point = GameObject.Find("SpawnBase");
+        //            GameObject player = GameObject.FindGameObjectWithTag("Player");
+        //            player.transform.position = spawnPoint.position;
+        //            Debug.Log("Player spawned at: " + spawnPointName);
+        //        }
     }
 }
