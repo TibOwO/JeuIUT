@@ -67,7 +67,7 @@ public class RandomItem : MonoBehaviour
 				{
 					if (inventory.Cells[i].elementCount > 0)
 					{
-						Debug.Log($"Cellule {i}: {inventory.Cells[i].elementName}, Count: {inventory.Cells[i].elementCount}, Color: {inventory.Cells[i].elementColor}");
+						Debug.Log($"Cellule {i}: {inventory.Cells[i].elementName}, Count: {inventory.Cells[i].elementCount}, Color: {inventory.Cells[i].elementColor} - Description: {inventory.Cells[i].elementDescription}");
 					}
 				}
 

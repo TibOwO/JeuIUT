@@ -17,7 +17,6 @@ public class PlayerSpawner : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = spawnPoint.position;
             Debug.Log("Player spawned at: " + spawnPointName);
-            PlayerPrefs.SetString("PointDeSpawn", "");
         }
         else
         {
@@ -26,7 +25,6 @@ public class PlayerSpawner : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = spawnPoint.position;
             Debug.Log("Player spawned at: " + spawnPointName);
-            PlayerPrefs.SetString("PointDeSpawn", "");
         }
     }
 }

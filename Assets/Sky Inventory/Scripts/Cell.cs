@@ -8,6 +8,8 @@ public class Cell : MonoBehaviour
 	public string elementName;
 	public int elementCount;
 	public Color elementColor;
+	public string elementDescription;
+
 	public Transform elementTransform;
 	private GameObject elementPrefab;
 
@@ -53,11 +55,12 @@ public class Cell : MonoBehaviour
 	}
 
 	//Change element options
-	public void ChangeElement(string name, int count, Color color)
+	public void ChangeElement(string name, int count, Color color, string description)
 	{
 		elementName = name;
 		elementCount = count;
 		elementColor = color;
+		elementDescription = description;
 		UpdateCellInterface();
 	}
 

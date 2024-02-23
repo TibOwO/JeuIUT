@@ -5,7 +5,7 @@ public class ElementalInventory : MonoBehaviour
 {
 
 	//Cell massive
-	public Cell[] Cells;
+	public Cell[] Cells = new Cell[31];
 	//Max element stack
 	public int maxStack;
 	public GameObject elementPrefab;
@@ -70,19 +70,20 @@ public class ElementalInventory : MonoBehaviour
 	}
 
 	//Set item from link
-	public void setItemLink(string name, int count, Color color, Transform cell)
+	public void setItemLink(string name, int count, Color color, string description, Transform cell)
 	{
 		Cell thisCell = cell.GetComponent<Cell>();
 		thisCell.elementName = name;
 		thisCell.elementCount = count;
 		thisCell.elementColor = color;
+		thisCell.elementDescription = description;
 	}
 
 	//Moves item
 	public void moveItem(int moveFrom, int moveTo)
 	{
-		setItem(Cells[moveFrom].elementName, Cells[moveFrom].elementCount, Cells[moveFrom].elementColor, moveTo);
-		setItem("", 0, new Color(), moveFrom);
+		setItem(Cells[moveFrom].elementName, Cells[moveFrom].elementCount, Cells[moveFrom].elementColor, moveTo, Cells[moveFrom].elementDescription);
+		setItem("", 0, new Color(), moveFrom, "");
 	}
 
 	//Moves item with link
@@ -94,7 +95,7 @@ public class ElementalInventory : MonoBehaviour
 			Cell moveFromCell = moveFrom.parent.GetComponent<Cell>();
 			moveTo.GetComponent<Cell>().elementTransform = moveFromCell.elementTransform;
 			moveFromCell.elementTransform = null;
-			setItemLink(moveFromCell.elementName, moveFromCell.elementCount, moveFromCell.elementColor, moveTo);
+			setItemLink(moveFromCell.elementName, moveFromCell.elementCount, moveFromCell.elementColor, moveFromCell.elementDescription, moveTo);
 			moveFromCell.elementCount = 0;
 			moveFrom.parent = moveTo;
 			moveFrom.localPosition = new Vector3();
@@ -113,9 +114,9 @@ public class ElementalInventory : MonoBehaviour
 	}
 
 	//Sets item
-	public void setItem(string name, int count, Color color, int cellId)
+	public void setItem(string name, int count, Color color, int cellId, string description)
 	{
-		Cells[cellId].ChangeElement(name, count, color);
+		Cells[cellId].ChangeElement(name, count, color, description);
 		Cells[cellId].UpdateCellInterface();
 	}
 
@@ -126,7 +127,7 @@ public class ElementalInventory : MonoBehaviour
 		for (int i = 0; i < Cells.Length; i++)
 		{
 			string[] splitedLine = splitedInventory[i].Split(" "[0]);
-			setItem(splitedLine[0], int.Parse(splitedLine[1]), SimpleMethods.stringToColor(splitedLine[2]), i);
+			setItem(splitedLine[0], int.Parse(splitedLine[1]), SimpleMethods.stringToColor(splitedLine[2]), i, "");
 		}
 	}
 
@@ -134,12 +135,12 @@ public class ElementalInventory : MonoBehaviour
 	public string convertToString()
 	{
 		string s_Inventory = "";
-		for (int i = 0; i < Cells.Length; i++)
+		for (int i = 0; i < Cells.Length - 1; i++)
 		{
 			s_Inventory += Cells[i].elementName + " ";
 			s_Inventory += Cells[i].elementCount + " ";
 			s_Inventory += SimpleMethods.colorToString(Cells[i].elementColor);
-			if (i != Cells.Length)
+			if (i != Cells.Length - 1)
 			{
 				s_Inventory += "\n";
 			}
@@ -162,10 +163,10 @@ public class ElementalInventory : MonoBehaviour
 
 	//Add element to inventory
 	// Add element to inventory
-	public void addItem(string name, int count, Color color)
+	public void addItem(string name, int count, Color color, string description)
 	{
-		Debug.Log("Adding item: " + name + " - Count: " + count + " - Color: " + color.ToString());
-		int cellId = getEquals(name, color);
+		Debug.Log("Adding item: " + name + " - Count: " + count + " - Color: " + color.ToString() + " - Description: " + description);
+		int cellId = getEquals(name);
 		if (cellId != -1)
 		{
 			Cells[cellId].elementCount += count;
@@ -185,13 +186,15 @@ public class ElementalInventory : MonoBehaviour
 		{
 			int remain = Cells[cellId].elementCount - maxStack;
 			Cells[cellId].elementCount = maxStack;
-			addItem(name, remain, color);
+			addItem(name, remain, color, description); // Ajouter la description pour l'élément restant
 		}
 
 		Cells[cellId].elementName = name;
 		Cells[cellId].elementColor = color;
+		Cells[cellId].elementDescription = description; // Attribuer la description à l'élément
 		Cells[cellId].UpdateCellInterface();
 	}
+
 
 
 	//Returns id of first clear cell
@@ -209,11 +212,12 @@ public class ElementalInventory : MonoBehaviour
 	}
 
 	//Returns id of first same element cell
-	public int getEquals(string name, Color color)
+	public int getEquals(string name)
 	{
 		for (int i = 0; i < Cells.Length; i++)
 		{
-			if (Cells[i].elementCount != 0 && Cells[i].elementCount <= maxStack && Cells[i].elementName == name && Cells[i].elementColor == color)
+			Debug.Log("Element name: " + Cells[i].elementName + " - " + name);
+			if (Cells[i].elementName == name)
 			{
 				return i;
 			}

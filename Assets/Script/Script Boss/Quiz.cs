@@ -209,7 +209,7 @@ public class Quiz : MonoBehaviour
         if (selectedAnswer == Reponse)
         {
             Debug.Log("Correct !");
-            bossHealth -= 10; 
+            bossHealth -= 10;
             UpdateBossHealthBar();
             Debug.Log($"Santé du boss restante : {bossHealth}");
 
@@ -218,44 +218,44 @@ public class Quiz : MonoBehaviour
 
                 if (SceneManager.GetActiveScene().name == "Boss Makssoud")
                 {
-                    SceneManager.LoadScene("Credits"); 
+                    SceneManager.LoadScene("Credits");
                 }
                 else
                 {
-                    SceneManager.LoadScene(winSceneName); 
+                    SceneManager.LoadScene(winSceneName);
                 }
                 Color randomColor = new Color(Random.value, Random.value, Random.value);
                 if (!ElementalInventory.Instance.contains("Cle 2", 1))
                 {
-                    ElementalInventory.Instance.addItem("Cle 2", 1, randomColor);
+                    ElementalInventory.Instance.addItem("Cle 2", 1, randomColor, "Cle qui ouvre la porte 2");
                 }
                 else if (!ElementalInventory.Instance.contains("Cle 3", 1))
                 {
-                    ElementalInventory.Instance.addItem("Cle 3", 1, randomColor);
+                    ElementalInventory.Instance.addItem("Cle 3", 1, randomColor, "Cle qui ouvre la porte 3");
                 }
                 else if (!ElementalInventory.Instance.contains("Cle 4", 1))
                 {
-                    ElementalInventory.Instance.addItem("Cle 4", 1, randomColor);
+                    ElementalInventory.Instance.addItem("Cle 4", 1, randomColor, "Cle qui ouvre la porte 4");
                 }
                 else if (!ElementalInventory.Instance.contains("Cle 5", 1))
                 {
-                    ElementalInventory.Instance.addItem("Cle 5", 1, randomColor);
+                    ElementalInventory.Instance.addItem("Cle 5", 1, randomColor, "Cle qui ouvre la porte 5");
                 }
                 else if (!ElementalInventory.Instance.contains("Cle 6", 1))
                 {
-                    ElementalInventory.Instance.addItem("Cle 6", 1, randomColor);
+                    ElementalInventory.Instance.addItem("Cle 6", 1, randomColor, "Cle qui ouvre la porte 6");
                 }
                 else if (!ElementalInventory.Instance.contains("Cle 7", 1))
                 {
-                    ElementalInventory.Instance.addItem("Cle 7", 1, randomColor);
+                    ElementalInventory.Instance.addItem("Cle 7", 1, randomColor, "Cle qui ouvre la porte 7");
                 }
-                
+
             }
         }
         else
         {
             Debug.Log("Incorrect !");
-            playerLives -= 1; 
+            playerLives -= 1;
             StartCoroutine(LoseLifeRoutine());
             Debug.Log($"Vies du joueur restantes : {playerLives}");
         }
@@ -335,8 +335,8 @@ public class Quiz : MonoBehaviour
         Debug.Log("Début de la coroutine de fondu au noir");
         Debug.Log("Image de fondu activée");
 
-        float fadeDuration = 0.8f; 
-        float fadeStep = 0.2f; 
+        float fadeDuration = 0.8f;
+        float fadeStep = 0.2f;
 
         for (float i = 0; i <= 1; i += fadeStep)
         {
@@ -347,10 +347,10 @@ public class Quiz : MonoBehaviour
 
         Debug.Log("Fondu au noir terminé");
 
-        yield return new WaitForSeconds(1f); 
+        yield return new WaitForSeconds(1f);
         Debug.Log("Chargement de la nouvelle scène : " + loseSceneName);
 
-        SceneManager.LoadScene(loseSceneName); 
+        SceneManager.LoadScene(loseSceneName);
     }
 
 

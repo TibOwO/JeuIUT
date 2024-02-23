@@ -4,6 +4,7 @@ public class CleScript : MonoBehaviour, IInteractable
 {
     private bool playerInRange = false;
     private bool itemPickedUp = false;
+    public string description;
     private Renderer myRenderer;
 
     private void Start()
@@ -42,7 +43,7 @@ public class CleScript : MonoBehaviour, IInteractable
         if (emptyCellId != -1)
         {
             Color randomColor = new Color(Random.value, Random.value, Random.value);
-            ElementalInventory.Instance.addItem(gameObject.name, 1, randomColor);
+            ElementalInventory.Instance.addItem(gameObject.name, 1, randomColor, description); // Passez également la description
             itemPickedUp = true;
 
             if (myRenderer != null)
@@ -59,4 +60,5 @@ public class CleScript : MonoBehaviour, IInteractable
             Debug.Log("L'inventaire est plein. Libérez de l'espace.");
         }
     }
+
 }
