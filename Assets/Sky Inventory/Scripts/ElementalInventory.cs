@@ -193,6 +193,8 @@ public class ElementalInventory : MonoBehaviour
 		Cells[cellId].elementColor = color;
 		Cells[cellId].elementDescription = description; // Attribuer la description à l'élément
 		Cells[cellId].UpdateCellInterface();
+
+
 	}
 
 

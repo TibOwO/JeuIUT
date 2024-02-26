@@ -33,11 +33,28 @@ public class MovingEvent : MonoBehaviour
 
 		// Afficher la description de l'objet dans le TextMesh
 
-		Cell cell = transform.GetComponent<Cell>();
-		int i = ElementalInventory.Instance.getEquals(cell.elementName);
-		Debug.Log(i + " - " + this + " - " + cell.elementName + " " + cell.elementColor + " " + cell.elementDescription + " " + inventory.Cells[i].elementDescription);
-		descriptionTextMesh.text = inventory.Cells[i].elementDescription;
-
+		CellIndexHolder indexHolder = transform.parent.GetComponent<CellIndexHolder>();
+		Debug.Log(indexHolder.Index);
+		if (indexHolder != null)
+		{
+			int cellIndex = indexHolder.Index - 1; // L'index est stocké dans chaque bouton.
+			if (cellIndex >= 0 && cellIndex < inventory.Cells.Length)
+			{
+				// Maintenant que vous avez l'index, utilisez-le pour accéder à la cellule de l'inventaire.
+				Cell cell = inventory.Cells[cellIndex];
+				Debug.Log(cell);
+				if (cell != null)
+				{
+					// Mettez à jour la description.
+					Debug.Log(cell.elementDescription);
+					descriptionTextMesh.text = cell.elementDescription;
+				}
+			}
+		}
+		else
+		{
+			Debug.LogError("CellIndexHolder component is missing on this button's GameObject!");
+		}
 	}
 
 	public void moveHere()
