@@ -67,7 +67,10 @@ public class Cell : MonoBehaviour
 	//Clear element
 	public void ClearElement()
 	{
+		elementName = "";
 		elementCount = 0;
+		elementColor = Color.clear; // Utilisez Color.clear pour une couleur "transparente"
+		elementDescription = "";
 		UpdateCellInterface();
 	}
 

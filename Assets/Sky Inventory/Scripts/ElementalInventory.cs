@@ -86,8 +86,7 @@ public class ElementalInventory : MonoBehaviour
 		setItem("", 0, new Color(), moveFrom, "");
 	}
 
-	//Moves item with link
-	//First - element, second - cell
+
 	public void moveItemLink(Transform moveFrom, Transform moveTo)
 	{
 		if (moveFrom != null && moveTo != null)
@@ -95,12 +94,19 @@ public class ElementalInventory : MonoBehaviour
 			Cell moveFromCell = moveFrom.parent.GetComponent<Cell>();
 			moveTo.GetComponent<Cell>().elementTransform = moveFromCell.elementTransform;
 			moveFromCell.elementTransform = null;
+
+			// Mise à jour de la cellule de destination avec les informations de l'élément
 			setItemLink(moveFromCell.elementName, moveFromCell.elementCount, moveFromCell.elementColor, moveFromCell.elementDescription, moveTo);
-			moveFromCell.elementCount = 0;
+
+			// Réinitialisation de la cellule d'origine
+			moveFromCell.ClearElement(); // Utilisez la méthode ClearElement pour réinitialiser la cellule
+
 			moveFrom.parent = moveTo;
 			moveFrom.localPosition = new Vector3();
 		}
 	}
+
+
 
 	public void moveItemLinkFirst(Transform t)
 	{
