@@ -68,6 +68,6 @@ public class MovingEvent : MonoBehaviour
 		// Afficher la description de l'objet dans le TextMesh
 		Cell cell = transform.GetComponent<Cell>();
 		descriptionTextMesh.text = cell.elementDescription;
-	}
 
+	}
 }
