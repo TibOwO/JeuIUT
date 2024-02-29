@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &17477417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,6 +391,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &26870742
 GameObject:
@@ -439,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &26870745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,6 +513,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &35034245
 GameObject:
@@ -972,6 +976,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!114 &69187391
 MonoBehaviour:
@@ -985,6 +990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &69187392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1931,6 +1937,12 @@ PrefabInstance:
       propertyPath: elementName
       value: Indice SQL2
       objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementDescription
+      value: "Le PHP est le langage utilis\xE9 pour interagir avec les bases de donnees
+        sur les sites internet notamment"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2067,6 +2079,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  description: "Le PHP est le langage utilis\xE9 pour interagir avec les bases de
+    donnees sur les sites internet notamment"
 --- !u!114 &197386819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,6 +2297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &213117167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2354,6 +2369,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &226842027
 GameObject:
@@ -2926,6 +2942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &284396556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2997,6 +3014,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &292067781
 GameObject:
@@ -3104,6 +3122,9 @@ MonoBehaviour:
   nameText: {fileID: 38299556}
   dialogText: {fileID: 1940829513}
   playerMovement: {fileID: 708235245}
+  dialogueImage: {fileID: 0}
+  imageDisplaySentenceIndex: 3
+  requiredSceneForImage: Couloir
 --- !u!4 &293070677
 Transform:
   m_ObjectHideFlags: 0
@@ -3242,6 +3263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &324748103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3313,6 +3335,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1001 &343425943
 PrefabInstance:
@@ -3393,6 +3416,12 @@ PrefabInstance:
         type: 3}
       propertyPath: elementName
       value: Indice SQL
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementDescription
+      value: Une table est composee d'une cle primaire qui lui sert d'identifiant
+        et de plusieurs attributs.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3530,6 +3559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  description: Une table est composee d'une cle primaire qui lui sert d'identifiant
+    et de plusieurs attributs.
 --- !u!114 &343425948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4121,6 +4152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &442785990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4192,6 +4224,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &446090682
 GameObject:
@@ -4463,6 +4496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &469424212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4534,6 +4568,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &488674687
 GameObject:
@@ -4655,6 +4690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &490204201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4726,6 +4762,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &490407456
 GameObject:
@@ -4850,6 +4887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &493600408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4921,6 +4959,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &508064523
 GameObject:
@@ -4970,6 +5009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &508064526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5041,6 +5081,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &510303111
 GameObject:
@@ -5766,6 +5807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &596525702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5837,6 +5879,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &606943213
 GameObject:
@@ -6073,6 +6116,12 @@ PrefabInstance:
       propertyPath: elementName
       value: 'Infos Matieres IUT '
       objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementDescription
+      value: Chaque annee, il est possible d'elir un bureau des eleves qui representera
+        les eleves et le BUT informatique
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6209,6 +6258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  description: Chaque annee, il est possible d'elir un bureau des eleves qui representera
+    les eleves et le BUT informatique
 --- !u!114 &622466610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6279,6 +6330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &623288785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6350,6 +6402,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &632774284
 GameObject:
@@ -6399,6 +6452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &632774287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6470,6 +6524,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &669110202
 GameObject:
@@ -6737,6 +6792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &689701386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6808,6 +6864,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &691245819
 GameObject:
@@ -7189,6 +7246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &723820069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7260,6 +7318,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &725174664
 GameObject:
@@ -7382,6 +7441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &734544249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7453,6 +7513,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &765621947
 GameObject:
@@ -7575,6 +7636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &803839385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7646,6 +7708,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &819770605
 GameObject:
@@ -7772,6 +7835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &822276708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7843,6 +7907,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &825776924
 GameObject:
@@ -8694,6 +8759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &935225342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8765,6 +8831,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &945156543
 GameObject:
@@ -10113,6 +10180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1177538907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10184,6 +10252,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1182377782
 GameObject:
@@ -10378,6 +10447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1183856178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10449,6 +10519,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1208634345
 GameObject:
@@ -10798,6 +10869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1285987127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10869,6 +10941,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1302847660
 GameObject:
@@ -11094,6 +11167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1336514320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11165,6 +11239,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1346560476
 GameObject:
@@ -18446,6 +18521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1571072179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18517,6 +18593,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1587193967
 GameObject:
@@ -18924,6 +19001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1610277589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18995,6 +19073,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1633687439
 GameObject:
@@ -19710,6 +19789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1712686462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19781,6 +19861,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1715838781
 GameObject:
@@ -21071,6 +21152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1863638914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21142,6 +21224,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1875062866
 GameObject:
@@ -21266,6 +21349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1884933147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21337,6 +21421,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1892203732
 GameObject:
@@ -21815,6 +21900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1946997662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21886,6 +21972,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1949606501
 GameObject:
@@ -22085,6 +22172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1962858491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22156,6 +22244,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1963317809
 GameObject:

@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &30371272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +388,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &38212696
 GameObject:
@@ -509,6 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &43516382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,6 +583,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &50546027
 GameObject:
@@ -733,6 +737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &106401139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -804,6 +809,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &109233438
 GameObject:
@@ -925,6 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &110935717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,6 +1003,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &130390028
 GameObject:
@@ -1117,6 +1125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &141087712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,6 +1197,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &144598069
 GameObject:
@@ -2806,6 +2816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &477417098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2877,6 +2888,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &502706978
 GameObject:
@@ -2984,6 +2996,9 @@ MonoBehaviour:
   nameText: {fileID: 745068957}
   dialogText: {fileID: 1081549281}
   playerMovement: {fileID: 309853053}
+  dialogueImage: {fileID: 0}
+  imageDisplaySentenceIndex: 3
+  requiredSceneForImage: Couloir
 --- !u!4 &508802937
 Transform:
   m_ObjectHideFlags: 0
@@ -3353,6 +3368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &540650347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3424,6 +3440,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &542293082
 GameObject:
@@ -3473,6 +3490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &542293085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3544,6 +3562,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &569122088
 GameObject:
@@ -3815,6 +3834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &619261345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3886,6 +3906,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
@@ -4017,6 +4038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &623722644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4088,6 +4110,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &626177537
 GameObject:
@@ -4137,6 +4160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &626177540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4208,6 +4232,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &631348826
 GameObject:
@@ -4417,6 +4442,11 @@ PrefabInstance:
       propertyPath: elementName
       value: Indice MathsDiscretes
       objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementDescription
+      value: Read The Fucking Manual
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4553,6 +4583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  description: Read The Fucking Manual
 --- !u!114 &640067478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4896,6 +4927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &654796248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4967,6 +4999,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &660681902
 GameObject:
@@ -5016,6 +5049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &660681905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5087,6 +5121,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &671455395
 GameObject:
@@ -6132,6 +6167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &768885895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6203,6 +6239,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &769709113
 GameObject:
@@ -6356,6 +6393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &780898166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6427,6 +6465,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &785146122
 GameObject:
@@ -6801,6 +6840,11 @@ PrefabInstance:
       propertyPath: elementName
       value: 'Infos Matieres IUT '
       objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementDescription
+      value: "Java, Sql, HTML, C++, tous ont leurs avantages et  inconv\xE9niants"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6937,6 +6981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  description: 
 --- !u!114 &806783904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7381,6 +7426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &871024177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7452,6 +7498,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &881909145
 GameObject:
@@ -8296,6 +8343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1015743373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8367,6 +8415,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1020987146
 GameObject:
@@ -9518,6 +9567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1185327299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9589,6 +9639,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1208634345
 GameObject:
@@ -10012,6 +10063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1254938736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10083,6 +10135,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1263846143
 GameObject:
@@ -10205,6 +10258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1265902957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10276,6 +10330,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1273545043
 GameObject:
@@ -10985,6 +11040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1363342578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11056,6 +11112,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1369772866
 GameObject:
@@ -11990,6 +12047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1439408187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12061,6 +12119,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1439999216
 GameObject:
@@ -15815,6 +15874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1457838571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15886,6 +15946,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1463525001
 GameObject:
@@ -16191,6 +16252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1504199435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16262,6 +16324,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1512145806
 GameObject:
@@ -16311,6 +16374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1512145809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16382,6 +16446,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1522870548
 GameObject:
@@ -16431,6 +16496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1522870551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16502,6 +16568,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1527017662
 GameObject:
@@ -18176,6 +18243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1587931829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18247,6 +18315,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1594538780
 GameObject:
@@ -18442,6 +18511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1614889431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18513,6 +18583,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1001 &1661176975
 PrefabInstance:
@@ -18730,6 +18801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  description: "Entr\xE9e: cout << \"Bonjour\"; Sortie: Bonjour"
 --- !u!114 &1661176980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19173,6 +19245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1706044111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19244,6 +19317,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1711724711
 GameObject:
@@ -20527,6 +20601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &1907412233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20598,6 +20673,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!1 &1915162220
 GameObject:
@@ -20908,6 +20984,7 @@ MonoBehaviour:
   elementName: 
   elementCount: 0
   elementColor: {r: 0, g: 0, b: 0, a: 0}
+  elementDescription: 
   elementTransform: {fileID: 0}
 --- !u!114 &2044502805
 MonoBehaviour:
@@ -20921,6 +20998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5718fec5c51b4d479977e6b175c8977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionTextMesh: {fileID: 0}
 --- !u!114 &2044502806
 MonoBehaviour:
   m_ObjectHideFlags: 0

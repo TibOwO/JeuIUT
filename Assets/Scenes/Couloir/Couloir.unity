@@ -4014,7 +4014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: CleScript
+  description: "Une cl\xE9 permettant d'ouvrir la premiere porte du couloir"
 --- !u!114 &276465931
 MonoBehaviour:
   m_ObjectHideFlags: 0
