@@ -12,54 +12,54 @@ EditorBuildSettings:
     path: Assets/test.unity
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/MenuPrincipal.unity
+    path: Assets/Level/Scenes/MenuPrincipal.unity
     guid: 90ad3d7b7f86c7b4d8cf8a2279036f7b
   - enabled: 1
-    path: Assets/Scenes/Couloir/Couloir.unity
+    path: Assets/Level/Scenes/Couloir/Couloir.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Salles/Salle 1.unity
+    path: Assets/Level/Scenes/Salles/Salle 1.unity
     guid: 74404b41a4d185e49b15f6c61fec8285
   - enabled: 1
-    path: Assets/Scenes/Salles/Salle 2.unity
+    path: Assets/Level/Scenes/Salles/Salle 2.unity
     guid: b9886ac5dc339124595b1f16637ee930
   - enabled: 1
-    path: Assets/Scenes/Salles/Salle 3.unity
+    path: Assets/Level/Scenes/Salles/Salle 3.unity
     guid: d968057865f197245b609565add8d361
   - enabled: 1
-    path: Assets/Scenes/Salles/Salle 4.unity
+    path: Assets/Level/Scenes/Salles/Salle 4.unity
     guid: 9bc56eacb1877114d81e22cd8d2e0f5c
   - enabled: 1
-    path: Assets/Scenes/Salles/Salle 5.unity
+    path: Assets/Level/Scenes/Salles/Salle 5.unity
     guid: 2b7ad128d0df0c04c991170816576f64
   - enabled: 1
-    path: Assets/Scenes/Salles/Salle 6.unity
+    path: Assets/Level/Scenes/Salles/Salle 6.unity
     guid: 69e09f72159f0384fade00987b1faaec
   - enabled: 1
-    path: Assets/Scenes/Salles/Salle 7.unity
+    path: Assets/Level/Scenes/Salles/Salle 7.unity
     guid: 56adb5e64f2cb864487aa4cb90c96f50
   - enabled: 1
-    path: Assets/Scenes/Combat Boss/Boss Casali.unity
+    path: Assets/Level/Scenes/Combat Boss/Boss Casali.unity
     guid: d4c4e2576ee59d44cb063cd27f85927f
   - enabled: 1
-    path: Assets/Scenes/Combat Boss/Boss Morancey.unity
+    path: Assets/Level/Scenes/Combat Boss/Boss Morancey.unity
     guid: 4e4ec870c792ec5479a2ece93d509806
   - enabled: 1
-    path: Assets/Scenes/Combat Boss/Boss Nevot.unity
+    path: Assets/Level/Scenes/Combat Boss/Boss Nevot.unity
     guid: 394382f8f94d63448b58072b646c5692
   - enabled: 1
-    path: Assets/Scenes/Combat Boss/Boss Salou.unity
+    path: Assets/Level/Scenes/Combat Boss/Boss Salou.unity
     guid: 031ff87222f410242beefae0bebd885d
   - enabled: 1
-    path: Assets/Scenes/Combat Boss/Boss Makssoud.unity
+    path: Assets/Level/Scenes/Combat Boss/Boss Makssoud.unity
     guid: 1733c803f5061bf489a63b6c203debbf
   - enabled: 1
-    path: Assets/Scenes/Combat Boss/Boss Random.unity
+    path: Assets/Level/Scenes/Combat Boss/Boss Random.unity
     guid: 7687fe1eb514d0847823c7a90a1aa9b2
   - enabled: 1
-    path: Assets/Scenes/Combat Boss/Boss Slezak.unity
+    path: Assets/Level/Scenes/Combat Boss/Boss Slezak.unity
     guid: 0c4f1ff8c9633f445a8a822d2e20ac9f
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
+    path: Assets/Level/Scenes/Credits.unity
     guid: 5d97d6affb430b04eb0b9fe0255d3487
   m_configObjects: {}
