@@ -4827,6 +4827,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012250132106, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 114000013692566722, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: descriptionTextMesh
@@ -6488,7 +6493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &807348027
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6688,7 +6693,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice MathsDiscretes
+      value: Probabilite
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
@@ -6865,7 +6870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indices Probabilite
+    name: Probabilite
     sentences:
     - Une carte cachee sous une table de chevet....
     - 'Il y est inscrit le texte suivant:'
@@ -9351,7 +9356,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Indice MathsDiscretes
+      value: Graphes
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
@@ -9513,7 +9518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: Indice Graphes
+    name: Graphes
     sentences:
     - Oh tiens...
     - Un eleve a laisse son antiseche sur le bureau du professeur.
@@ -21305,7 +21310,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: 'Infos Matieres IUT '
+      value: 'Infos IUT '
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
