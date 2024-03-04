@@ -22,6 +22,12 @@ public class MovingEvent : MonoBehaviour
 			GetComponent<Button>().onClick.AddListener(delegate { moveItem(); });
 		}
 	}
+	private void Awake()
+	{
+		DontDestroyOnLoad(gameObject); // Empêche la destruction lors d'un changement de scène
+	}
+
+
 
 	public void moveItem()
 	{

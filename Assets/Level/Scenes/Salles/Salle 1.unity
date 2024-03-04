@@ -6488,7 +6488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &807348027
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6690,6 +6690,32 @@ PrefabInstance:
       propertyPath: elementName
       value: Indice MathsDiscretes
       objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementColor.b
+      value: 0.06532536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementColor.g
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementColor.r
+      value: 0.037246335
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementDescription
+      value: "\"Les probabilites sont utilis\xE9es pour estimer les risques et prendre
+        des d\xE9cisions en cons\xE9quences\""
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6826,8 +6852,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: "\"Les probabilites sont utilis\xE9es pour estimer les risques et
-    prendre des d\xE9cisions en cons\xE9quences\""
 --- !u!114 &823177515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9331,8 +9355,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
+      propertyPath: elementCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
       propertyPath: elementDescription
-      value: 
+      value: '"A retenir : Les graphes sont souvent utilise pour modeliser les reseaux
+        en informatique"'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9470,8 +9500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: '"A retenir : Les graphes sont souvent utilise pour modeliser les
-    reseaux en informatique"'
 --- !u!114 &1181349601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21281,8 +21309,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
+      propertyPath: elementCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementColor.b
+      value: 0.9771304
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
       propertyPath: elementDescription
-      value: 
+      value: "\"Il est possible de faire de l'alternance \xE0 partir de la seconde
+        ann\xE9e\""
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21420,8 +21469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c415d3261ce514b83de63853def94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: "\"Il est possible de faire de l'alternance \xE0 partir de la seconde
-    ann\xE9e\""
 --- !u!114 &1978713562
 MonoBehaviour:
   m_ObjectHideFlags: 0

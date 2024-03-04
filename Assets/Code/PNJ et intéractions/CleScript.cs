@@ -4,7 +4,6 @@ public class CleScript : MonoBehaviour, IInteractable
 {
     private bool playerInRange = false;
     private bool itemPickedUp = false;
-    public string description;
     private Renderer myRenderer;
 
     private void Start()
@@ -42,17 +41,27 @@ public class CleScript : MonoBehaviour, IInteractable
 
         if (emptyCellId != -1)
         {
-            Color randomColor = new Color(Random.value, Random.value, Random.value);
-            ElementalInventory.Instance.addItem(gameObject.name, 1, randomColor, description); // Passez également la description
-            itemPickedUp = true;
-
-            if (myRenderer != null)
+            // Get the Cell component from this GameObject
+            Cell cell = GetComponent<Cell>();
+            if (cell != null)
             {
-                myRenderer.enabled = false;
+                Color randomColor = new Color(Random.value, Random.value, Random.value);
+                // Use the values from the Cell component when adding the item
+                ElementalInventory.Instance.addItem(cell.elementName, cell.elementCount, randomColor, cell.elementDescription);
+                itemPickedUp = true;
+
+                if (myRenderer != null)
+                {
+                    myRenderer.enabled = false;
+                }
+                else
+                {
+                    Debug.LogError("Le composant Renderer est introuvable sur cet objet.");
+                }
             }
             else
             {
-                Debug.LogError("Le composant Renderer est introuvable sur cet objet.");
+                Debug.LogError("Le composant Cell est introuvable sur cet objet.");
             }
         }
         else
@@ -60,5 +69,6 @@ public class CleScript : MonoBehaviour, IInteractable
             Debug.Log("L'inventaire est plein. Libérez de l'espace.");
         }
     }
+
 
 }
