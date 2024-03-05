@@ -2681,10 +2681,20 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.132387
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013692566722, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: descriptionTextMesh
+      value: 
+      objectReference: {fileID: 1395772404}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
       value: Indice Comm2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
@@ -9478,10 +9488,20 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.132387
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013692566722, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: descriptionTextMesh
+      value: 
+      objectReference: {fileID: 1395772404}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
       value: Indice Comm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
@@ -11101,7 +11121,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OUI OUI
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11128,14 +11148,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -13063,7 +13083,7 @@ PrefabInstance:
         type: 3}
       propertyPath: descriptionTextMesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1395772404}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21643,10 +21663,20 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.132387
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013692566722, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: descriptionTextMesh
+      value: 
+      objectReference: {fileID: 1395772404}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
       value: 'Infos Matieres IUT '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}

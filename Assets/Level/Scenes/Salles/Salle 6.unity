@@ -2572,10 +2572,20 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.132387
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013692566722, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: descriptionTextMesh
+      value: 
+      objectReference: {fileID: 665687719}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
       value: Indice SQL2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
@@ -3721,10 +3731,20 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.132387
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013692566722, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: descriptionTextMesh
+      value: 
+      objectReference: {fileID: 665687719}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
       value: Indice SQL
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
@@ -6216,15 +6236,25 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.132387
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013692566722, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: descriptionTextMesh
+      value: 
+      objectReference: {fileID: 665687719}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: 'Infos Matieres IUT '
+      value: Info BDE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: elementCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementDescription
-      value: Chaque annee, il est possible d'elir un bureau des eleves qui representera
+      value: Chaque annee, il est possible d'elire un bureau des eleves qui representera
         les eleves et le BUT informatique
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6376,9 +6406,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: 'Info IUT '
+    name: Info BDE
     sentences:
-    - Chaque annee, il est possible d'elir un bureau des eleves qui representera
+    - Chaque annee, il est possible d'elire un bureau des eleves qui representera
       les eleves et le BUT informatique
   interactMessage: {fileID: 1587193969}
   isInRange: 0
@@ -6499,14 +6529,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -8726,7 +8756,7 @@ MonoBehaviour:
   requiredItems:
   - Indice SQL
   - Indice SQL2
-  - 'Infos Matieres IUT '
+  - Info BDE
 --- !u!61 &894382100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13624,7 +13654,7 @@ PrefabInstance:
         type: 3}
       propertyPath: descriptionTextMesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 665687719}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
