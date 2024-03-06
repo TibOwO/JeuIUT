@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pulse : MonoBehaviour
+public class AnimationBoss : MonoBehaviour
 {
     [SerializeField] GameObject targetObject;
     [SerializeField] float expandDuration = 1.0f;

@@ -15,7 +15,7 @@ public class Quiz : MonoBehaviour
     public Button btnReponseG;
     public Button btnReponseD;
     public string conn;
-    public ProgressBar bossHealthBar; // Référence à la barre de progression du boss
+    public BarreDeVie bossHealthSlider; // Référence à la barre de progression du boss
     public int bossHealth, bossMaxHealth = 20;
     public int playerLives = 3; // Vies initiales du joueur
     public string winSceneName = "Salle 1"; // Nom de la scène de victoire
@@ -44,6 +44,15 @@ public class Quiz : MonoBehaviour
         }
     }
 
+    private void UpdateBossHealthBar()
+    {
+    Debug.Log("1");
+    float healthPercentage = (float)bossHealth / bossMaxHealth;
+    Debug.Log("2");
+    bossHealthSlider.slider.value = healthPercentage; // Assurez-vous d'avoir une référence correcte à votre Slider dans BarreDeVie
+    Debug.Log("Boss Health: " + healthPercentage * 100 + "%");
+    }
+
     void Update()
     {
         if (typeWriter.IsTyping)
@@ -63,6 +72,8 @@ public class Quiz : MonoBehaviour
         txtQuestion = GameObject.Find("txtQuestion").GetComponent<TextMeshProUGUI>();
         btnReponseG = GameObject.Find("ReponseG").GetComponent<Button>();
         btnReponseD = GameObject.Find("ReponseD").GetComponent<Button>();
+        bossHealthSlider = GameObject.FindObjectOfType<BarreDeVie>();
+
 
         if (txtQuestion == null || btnReponseG == null || btnReponseD == null)
         {
@@ -197,70 +208,69 @@ public class Quiz : MonoBehaviour
         CheckAnswer(buttonText);
     }
 
-    private void UpdateBossHealthBar()
+   public void CheckAnswer(string selectedAnswer)
+{
+    if (selectedAnswer == Reponse)
     {
-        float healthPercentage = (float)bossHealth / bossMaxHealth;
-        bossHealthBar.SetProgress(healthPercentage);
-        Debug.Log("Boss Health: " + healthPercentage * 100 + "%");
-    }
+        Debug.Log("Correct !");
+        bossHealth -= 10;
+        UpdateBossHealthBar();
+        Debug.Log($"Santé du boss restante : {bossHealth}");
 
-    public void CheckAnswer(string selectedAnswer)
-    {
-        if (selectedAnswer == Reponse)
+        if (bossHealth <= 0)
         {
-            Debug.Log("Correct !");
-            bossHealth -= 10;
-            UpdateBossHealthBar();
-            Debug.Log($"Santé du boss restante : {bossHealth}");
-
-            if (bossHealth <= 0)
-            {
-
-                if (SceneManager.GetActiveScene().name == "Boss Makssoud")
-                {
-                    SceneManager.LoadScene("Credits");
-                }
-                else
-                {
-                    SceneManager.LoadScene(winSceneName);
-                }
-                Color randomColor = new Color(Random.value, Random.value, Random.value);
-                if (!ElementalInventory.Instance.contains("Cle 2", 1))
-                {
-                    ElementalInventory.Instance.addItem("Cle 2", 1, randomColor, "Cle qui ouvre la porte 2");
-                }
-                else if (!ElementalInventory.Instance.contains("Cle 3", 1))
-                {
-                    ElementalInventory.Instance.addItem("Cle 3", 1, randomColor, "Cle qui ouvre la porte 3");
-                }
-                else if (!ElementalInventory.Instance.contains("Cle 4", 1))
-                {
-                    ElementalInventory.Instance.addItem("Cle 4", 1, randomColor, "Cle qui ouvre la porte 4");
-                }
-                else if (!ElementalInventory.Instance.contains("Cle 5", 1))
-                {
-                    ElementalInventory.Instance.addItem("Cle 5", 1, randomColor, "Cle qui ouvre la porte 5");
-                }
-                else if (!ElementalInventory.Instance.contains("Cle 6", 1))
-                {
-                    ElementalInventory.Instance.addItem("Cle 6", 1, randomColor, "Cle qui ouvre la porte 6");
-                }
-                else if (!ElementalInventory.Instance.contains("Cle 7", 1))
-                {
-                    ElementalInventory.Instance.addItem("Cle 7", 1, randomColor, "Cle qui ouvre la porte 7");
-                }
-
-            }
+            HandleGameWin();
         }
         else
         {
-            Debug.Log("Incorrect !");
-            playerLives -= 1;
-            StartCoroutine(LoseLifeRoutine());
-            Debug.Log($"Vies du joueur restantes : {playerLives}");
+            PoseUneQuestion();
         }
-        PoseUneQuestion();
     }
+    else
+    {
+        Debug.Log("Incorrect !");
+        playerLives -= 1;
+        StartCoroutine(LoseLifeRoutine());
+        Debug.Log($"Vies du joueur restantes : {playerLives}");
+    }
+}
+
+private void HandleGameWin()
+{
+    if (SceneManager.GetActiveScene().name == "Boss Makssoud")
+    {
+        SceneManager.LoadScene("Credits");
+    }
+    else
+    {
+        SceneManager.LoadScene(winSceneName);
+    }
+    Color randomColor = new Color(Random.value, Random.value, Random.value);
+    if (!ElementalInventory.Instance.contains("Cle 2", 1))
+    {
+        ElementalInventory.Instance.addItem("Cle 2", 1, randomColor, "Cle qui ouvre la porte 2");
+    }
+    else if (!ElementalInventory.Instance.contains("Cle 3", 1))
+    {
+        ElementalInventory.Instance.addItem("Cle 3", 1, randomColor, "Cle qui ouvre la porte 3");
+    }
+    else if (!ElementalInventory.Instance.contains("Cle 4", 1))
+    {
+        ElementalInventory.Instance.addItem("Cle 4", 1, randomColor, "Cle qui ouvre la porte 4");
+    }
+    else if (!ElementalInventory.Instance.contains("Cle 5", 1))
+    {
+        ElementalInventory.Instance.addItem("Cle 5", 1, randomColor, "Cle qui ouvre la porte 5");
+    }
+    else if (!ElementalInventory.Instance.contains("Cle 6", 1))
+    {
+        ElementalInventory.Instance.addItem("Cle 6", 1, randomColor, "Cle qui ouvre la porte 6");
+    }
+    else if (!ElementalInventory.Instance.contains("Cle 7", 1))
+    {
+        ElementalInventory.Instance.addItem("Cle 7", 1, randomColor, "Cle qui ouvre la porte 7");
+    }
+}
 
     IEnumerator LoseLifeRoutine()
     {
@@ -323,11 +333,6 @@ public class Quiz : MonoBehaviour
 
         sceneParent.transform.localPosition = originalPosition;
     }
-
-
-
-
-
 
 
     private IEnumerator FadeToBlackAndLoadScene()
