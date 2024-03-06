@@ -214,8 +214,9 @@ public class Quiz : MonoBehaviour
             Debug.Log($"Santé du boss restante : {bossHealth}");
 
             if (bossHealth <= 0)
-                GlobalQuest.QuestStep += 1;
             {
+
+                GlobalQuest.QuestStep += 1;
 
                 if (SceneManager.GetActiveScene().name == "Boss Makssoud")
                 {

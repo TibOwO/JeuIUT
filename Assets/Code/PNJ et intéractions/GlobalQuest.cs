@@ -95,6 +95,8 @@ public class GlobalQuest : MonoBehaviour
                     ArrowOrbit.ChangeTarget(targetobject.transform);
                 }
                 break;
+
+
             case 5:
                 if (currentScene.name == "Couloir")
                 {
