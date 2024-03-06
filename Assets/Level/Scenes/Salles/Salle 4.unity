@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    name: 'Info  IUT '
+    name: 'Infos Matieres IUT '
     sentences:
     - Une competence regroupe plusieurs matieres et le BUT est divise en 6 competences
     - Chaque competence possede ses coefficient et les SAE sont ce qui ont le plus
@@ -21710,7 +21710,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_Name
-      value: 'Infos Matieres IUT '
+      value: Infos Matieres IUT 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalScale.x

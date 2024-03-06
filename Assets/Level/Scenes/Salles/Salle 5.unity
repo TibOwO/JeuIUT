@@ -6329,7 +6329,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_Name
-      value: 'Info IUT '
+      value: Inforum
       objectReference: {fileID: 0}
     - target: {fileID: 4000011436495994, guid: ac9938edf08164c4d8b1b7ef15810da8, type: 3}
       propertyPath: m_LocalScale.x

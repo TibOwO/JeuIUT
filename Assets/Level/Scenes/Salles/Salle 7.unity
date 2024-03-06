@@ -6276,7 +6276,7 @@ MonoBehaviour:
   isBoss: 1
   isDoor: 0
   requiredItems:
-  - Infos BDE
+  - Infos BDE 2
 --- !u!61 &888834735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22641,7 +22641,7 @@ PrefabInstance:
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
-      value: Infos BDE
+      value: Infos BDE 2
       objectReference: {fileID: 0}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
