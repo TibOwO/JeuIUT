@@ -6,8 +6,7 @@ using TMPro;
 public class MovingEvent : MonoBehaviour
 {
 	private ElementalInventory inventory;
-	public TMP_Text descriptionTextMesh; // Référence au TextMesh pour afficher la description
-	private bool isInventoryOpen = false;
+	public TMP_Text descriptionTextMesh;
 
 
 	void Start()
@@ -39,15 +38,13 @@ public class MovingEvent : MonoBehaviour
 		Debug.Log(indexHolder.Index);
 		if (indexHolder != null)
 		{
-			int cellIndex = indexHolder.Index - 1; // L'index est stocké dans chaque bouton.
+			int cellIndex = indexHolder.Index - 1;
 			if (cellIndex >= 0 && cellIndex < inventory.Cells.Length)
 			{
-				// Maintenant que vous avez l'index, utilisez-le pour accéder à la cellule de l'inventaire.
 				Cell cell = inventory.Cells[cellIndex];
 				Debug.Log(cell);
 				if (cell != null)
 				{
-					// Mettez à jour la description.
 					Debug.Log(cell.elementDescription);
 					descriptionTextMesh.text = cell.elementDescription;
 				}
@@ -66,8 +63,6 @@ public class MovingEvent : MonoBehaviour
 			inventory = FindObjectOfType(typeof(ElementalInventory)) as ElementalInventory;
 		}
 		inventory.moveItemLinkSecond(transform);
-
-		// Afficher la description de l'objet dans le TextMesh
 		Cell cell = transform.GetComponent<Cell>();
 		descriptionTextMesh.text = cell.elementDescription;
 
