@@ -37,12 +37,21 @@ public class DialogTrigger : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {  
+    {
         if (collision.CompareTag("Player") && !DialogManager.Instance.IsDialogueActive)
         {
             isInRange = true;
-            interactMessage.gameObject.SetActive(true);
-            Debug.Log("Le joueur est dans la zone de dialogue");
+            if (isDoor && CheckRequiredItems())
+            {
+                interactMessage.gameObject.SetActive(false);
+                Debug.Log("Le joueur est dans la zone de dialogue");
+
+            }
+            else
+            {
+                interactMessage.gameObject.SetActive(true);
+                Debug.Log("Le joueur est dans la zone de dialogue");
+            }
         }
     }
 
@@ -51,7 +60,11 @@ public class DialogTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             TriggerExit();
-            interactMessage.gameObject.SetActive(false);
+            if (interactMessage != null)
+            {
+                interactMessage.gameObject.SetActive(false);
+            }
+
         }
     }
 
@@ -81,7 +94,7 @@ public class DialogTrigger : MonoBehaviour
             Debug.Log(ElementalInventory.Instance.convertToString());
             if (!hasItem)
             {
-                return false; 
+                return false;
             }
         }
 
@@ -95,3 +108,4 @@ public class DialogTrigger : MonoBehaviour
         Debug.Log("Lancement de la scène de combat avec le boss!");
     }
 }
+
