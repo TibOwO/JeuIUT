@@ -9,6 +9,14 @@ public class CleScript : MonoBehaviour, IInteractable
     private void Start()
     {
         myRenderer = GetComponent<Renderer>();
+        // Assume each interactable item has a unique identifier, like a name or ID
+        string itemName = gameObject.name; // Example of unique identifier
+
+        if (CleManager.Instance.WasItemPickedUp(itemName))
+        {
+            // Item was previously picked up, so destroy or disable it
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -49,6 +57,10 @@ public class CleScript : MonoBehaviour, IInteractable
                 // Use the values from the Cell component when adding the item
                 ElementalInventory.Instance.addItem(cell.elementName, cell.elementCount, randomColor, cell.elementDescription);
                 itemPickedUp = true;
+                CleManager.Instance.MarkItemAsPickedUp(gameObject.name);
+
+
+                Destroy(gameObject);
 
                 if (myRenderer != null)
                 {

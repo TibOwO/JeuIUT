@@ -30,7 +30,10 @@ public class DialogManager : MonoBehaviour
         Instance = this;
         sentences = new Queue<string>();
         npcGuideManager = FindObjectOfType<NPCGuideManager>();
-        dialogueImage.gameObject.SetActive(false);
+        if (dialogueImage != null)
+        {
+            dialogueImage.gameObject.SetActive(false);
+        }
     }
 
     public void StartDialog(Dialog dialog)

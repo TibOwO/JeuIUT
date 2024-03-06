@@ -13,6 +13,14 @@ public class Cell : MonoBehaviour
 	public Transform elementTransform;
 	private GameObject elementPrefab;
 
+
+	public void Start()
+	{
+		if (elementName == "ElementPrefab")
+		{
+			DontDestroyOnLoad(gameObject);
+		}
+	}
 	public void UpdateCellInterface()
 	{
 		if (elementPrefab == null)

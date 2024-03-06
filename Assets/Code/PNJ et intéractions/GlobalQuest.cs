@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GlobalQuest : MonoBehaviour
 {
 
-    public static int QuestStep = 1; // Etape actuelle de la quête
+    public static int QuestStep = 1; // Etape actuelle de la quï¿½te
     GameObject targetobject;
     Scene currentScene;
 
@@ -20,7 +20,7 @@ public class GlobalQuest : MonoBehaviour
 
     void Awake()
     {
- 
+
 
     }
     // Update is called once per frame
@@ -29,21 +29,20 @@ public class GlobalQuest : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         switch (QuestStep)
         {
-            case 1: // Après avoir ramassé la clé
-                Debug.Log(currentScene.name);
+            case 1: // Aprï¿½s avoir ramassï¿½ la clï¿½
                 if (currentScene.name == "Couloir")
                 {
                     targetobject = GameObject.Find("Salle 1");
                     ArrowOrbit.ChangeTarget(targetobject.transform);
                 }
-                else if(currentScene.name == "Salle 1")
+                else if (currentScene.name == "Salle 1")
                 {
                     targetobject = GameObject.Find("Boss Morancey");
                     ArrowOrbit.ChangeTarget(targetobject.transform);
                 }
                 break;
 
-            case 2: // Après avoir battu Mr.Morancey
+            case 2: // Aprï¿½s avoir battu Mr.Morancey
                 if (currentScene.name == "Couloir")
                 {
                     targetobject = GameObject.Find("Salle " + QuestStep.ToString());
@@ -61,7 +60,7 @@ public class GlobalQuest : MonoBehaviour
                 }
                 break;
 
-            case 3: // Après avoir battu Mr.Casali
+            case 3: // Aprï¿½s avoir battu Mr.Casali
                 if (currentScene.name == "Couloir")
                 {
                     targetobject = GameObject.Find("Salle " + QuestStep.ToString());
@@ -103,12 +102,12 @@ public class GlobalQuest : MonoBehaviour
                     targetobject = GameObject.Find("Salle " + QuestStep.ToString());
                     ArrowOrbit.ChangeTarget(targetobject.transform);
                 }
-                else if (currentScene.name == "Salle "+ (QuestStep-1).ToString())
+                else if (currentScene.name == "Salle " + (QuestStep - 1).ToString())
                 {
                     targetobject = GameObject.Find("Porte_Salle" + (QuestStep - 1).ToString());
                     ArrowOrbit.ChangeTarget(targetobject.transform);
                 }
-                else if (currentScene.name == "Salle "+ QuestStep.ToString())
+                else if (currentScene.name == "Salle " + QuestStep.ToString())
                 {
                     targetobject = GameObject.Find("Boss Slezak");
                     ArrowOrbit.ChangeTarget(targetobject.transform);
@@ -117,7 +116,7 @@ public class GlobalQuest : MonoBehaviour
             case 6:
                 if (currentScene.name == "Couloir")
                 {
-                    targetobject = GameObject.Find("Salle"  + QuestStep.ToString());
+                    targetobject = GameObject.Find("Salle" + QuestStep.ToString());
                     ArrowOrbit.ChangeTarget(targetobject.transform);
                 }
                 else if (currentScene.name == "Salle " + (QuestStep - 1).ToString())
