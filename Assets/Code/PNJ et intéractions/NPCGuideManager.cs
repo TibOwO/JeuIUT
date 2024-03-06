@@ -42,7 +42,6 @@ public class NPCGuideManager : MonoBehaviour
     {
         characterAnimator.SetTrigger("EnterScreen");
         cinematicBars.ShowBars();
-
         Invoke(nameof(StartDialogue), 1.5f);
     }
 

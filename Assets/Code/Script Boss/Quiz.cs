@@ -216,6 +216,8 @@ public class Quiz : MonoBehaviour
             if (bossHealth <= 0)
             {
 
+                GlobalQuest.QuestStep += 1;
+
                 if (SceneManager.GetActiveScene().name == "Boss Makssoud")
                 {
                     SceneManager.LoadScene("Credits");
