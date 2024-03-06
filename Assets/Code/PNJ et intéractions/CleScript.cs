@@ -32,6 +32,8 @@ public class CleScript : MonoBehaviour, IInteractable
         if (playerInRange && Input.GetKeyDown(KeyCode.E) && !itemPickedUp)
         {
             Interact();
+            GameObject targetobject = GameObject.Find("Porte_salle1");
+            ArrowOrbit.ChangeTarget(targetobject.transform);
         }
     }
 
