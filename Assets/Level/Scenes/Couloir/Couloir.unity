@@ -1605,10 +1605,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 276465929}
-    - targetCorrespondingSourceObject: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 276465924}
     - targetCorrespondingSourceObject: {fileID: 1000013806000354, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
@@ -3552,18 +3548,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3187623, y: 1.5113742}
   m_EdgeRadius: 0
---- !u!114 &276465929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276465923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfdce6ff89c77354c9be7ef9027f4e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &276465930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40234,6 +40218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461900127}
   - component: {fileID: 461900126}
+  - component: {fileID: 461900131}
   - component: {fileID: 461900128}
   - component: {fileID: 461900129}
   - component: {fileID: 461900130}
@@ -40335,6 +40320,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1836064144}
+--- !u!114 &461900131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461900125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdce6ff89c77354c9be7ef9027f4e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &464149052
 GameObject:
   m_ObjectHideFlags: 0
@@ -45605,7 +45602,7 @@ GameObject:
   - component: {fileID: 739470264}
   - component: {fileID: 739470263}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: DialogUi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

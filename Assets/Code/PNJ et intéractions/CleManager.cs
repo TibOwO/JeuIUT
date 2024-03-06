@@ -10,17 +10,4 @@ public class CleManager : MonoBehaviour
         get { return itemPickedUp; }
         set { itemPickedUp = value; }
     }
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 }

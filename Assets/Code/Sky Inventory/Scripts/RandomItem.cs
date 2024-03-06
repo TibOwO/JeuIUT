@@ -32,23 +32,6 @@ public class RandomItem : MonoBehaviour
 			}
 		}
 
-		//	if (Input.GetKeyDown(KeyCode.G))
-		//	{
-		//		inventory.addItem(SimpleMethods.randomElement(), Random.Range(1, inventory.maxStack), new Color(Random.value / 2f, Random.value / 2f, Random.value / 2f, 1f));
-		//	}
-		//	if (Input.GetKeyDown(KeyCode.C))
-		//	{
-		//		inventory.clear();
-		//	}
-		//	if (Input.GetKeyDown(KeyCode.S))
-		//	{
-		//		PlayerPrefs.SetString("EInventory", inventory.convertToString());
-		//	}
-		//	if (Input.GetKeyDown(KeyCode.L))
-		//	{
-		//		inventory.loadFromString(PlayerPrefs.GetString("EInventory"));
-		//	}
-
 		if (Input.GetKeyDown(KeyCode.Tab))
 		{
 			if (inventory != null)
