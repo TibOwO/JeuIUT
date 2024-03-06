@@ -4503,7 +4503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -208.87, y: -1575.25}
+  m_AnchoredPosition: {x: -208.87, y: -1567}
   m_SizeDelta: {x: 401.67, y: 648.1}
   m_Pivot: {x: 1.9112139, y: -2.0701272}
 --- !u!114 &804849343
@@ -4558,7 +4558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 804849341}
   expandDuration: 1
-  breatheIn: {x: 0.99, y: 1, z: 0}
+  breatheIn: {x: 1, y: 1, z: 0}
   breatheOut: {x: 1, y: 0.99, z: 0}
   pulsing: 1
 --- !u!1 &814185649
@@ -7110,6 +7110,8 @@ MonoBehaviour:
   selectedProfessor: Casali
   fadeImage: {fileID: 0}
   sceneParent: {fileID: 1951801816}
+  barredevie: {fileID: 7886558}
+  barreDeVie: {fileID: 7886559}
 --- !u!1 &1111414294
 GameObject:
   m_ObjectHideFlags: 0
