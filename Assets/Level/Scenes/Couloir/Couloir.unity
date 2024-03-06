@@ -51397,6 +51397,7 @@ GameObject:
   - component: {fileID: 1280666180}
   - component: {fileID: 1280666179}
   - component: {fileID: 1280666183}
+  - component: {fileID: 1280666184}
   m_Layer: 0
   m_Name: Porte_salle1
   m_TagString: Untagged
@@ -51449,7 +51450,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.7421055, y: 0.45588326}
+  m_Offset: {x: -3.7337124, y: 0.24852324}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -51460,7 +51461,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0469837, y: 1.2494082}
+  m_Size: {x: 1.1788716, y: 0.83805275}
   m_EdgeRadius: 0
 --- !u!328 &1280666181
 VideoPlayer:
@@ -51545,7 +51546,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.73825, y: 0.4303422}
+  m_Offset: {x: -3.73825, y: 0.210145}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -51556,8 +51557,30 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0271974, y: 1.2077503}
+  m_Size: {x: 1.0271974, y: 0.64640903}
   m_EdgeRadius: 0
+--- !u!114 &1280666184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280666178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da792c87f7648e144917460ff0ade326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: Porte Salle 1
+    sentences:
+    - Il vous faut une cle pour ouvrir cette porte
+  interactMessage: {fileID: 1374714068}
+  isInRange: 0
+  isBoss: 0
+  isDoor: 1
+  requiredItems:
+  - Cle
 --- !u!1 &1287649861
 GameObject:
   m_ObjectHideFlags: 0
