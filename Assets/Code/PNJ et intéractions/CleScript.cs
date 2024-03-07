@@ -9,12 +9,10 @@ public class CleScript : MonoBehaviour, IInteractable
     private void Start()
     {
         myRenderer = GetComponent<Renderer>();
-        // Assume each interactable item has a unique identifier, like a name or ID
-        string itemName = gameObject.name; // Example of unique identifier
+        string itemName = gameObject.name;
 
         if (CleManager.Instance.WasItemPickedUp(itemName))
         {
-            // Item was previously picked up, so destroy or disable it
             Destroy(gameObject);
         }
     }
@@ -49,12 +47,10 @@ public class CleScript : MonoBehaviour, IInteractable
 
         if (emptyCellId != -1)
         {
-            // Get the Cell component from this GameObject
             Cell cell = GetComponent<Cell>();
             if (cell != null)
             {
                 Color randomColor = new Color(Random.value, Random.value, Random.value);
-                // Use the values from the Cell component when adding the item
                 ElementalInventory.Instance.addItem(cell.elementName, cell.elementCount, randomColor, cell.elementDescription);
                 itemPickedUp = true;
                 CleManager.Instance.MarkItemAsPickedUp(gameObject.name);
