@@ -6,6 +6,8 @@ public class CleScript : MonoBehaviour, IInteractable
     private bool itemPickedUp = false;
     private Renderer myRenderer;
 
+    //vérifie si l'objet a déjà été ramassé par le joueur
+    //si c'est le cas, l'objet est détruit
     private void Start()
     {
         myRenderer = GetComponent<Renderer>();
@@ -41,6 +43,8 @@ public class CleScript : MonoBehaviour, IInteractable
         }
     }
 
+    //fonction appelée lorsqu'un objet est ramassé par le joueur
+    //elle ajoute l'objet à l'inventaire et le détruit de la scène
     public void Interact()
     {
         int emptyCellId = ElementalInventory.Instance.getFirst();

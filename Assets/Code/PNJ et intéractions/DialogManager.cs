@@ -36,10 +36,17 @@ public class DialogManager : MonoBehaviour
         }
     }
 
+    //commente ma fonction StartDialog
+    //est appelée par le script DialogTrigger
+    //permet de lancer un dialogue
+    //prend en paramètre un objet de type Dialog
+
     public void StartDialog(Dialog dialog)
     {
         IsDialogueActive = true;
         currentSentenceIndex = 0;
+
+        // met en pause le mouvement du joueur
         if (playerMovement != null)
         {
             playerMovement.SetCanMove(false);
@@ -59,6 +66,9 @@ public class DialogManager : MonoBehaviour
         playedDialogues.Add(dialog.name);
     }
 
+    //est appelée par le script DialogTrigger
+    //permet d'afficher la phrase suivante
+    //prend en paramètre un objet de type Dialog
     public void DisplayNextSentence()
     {
         if (sentences.Count == 0)
@@ -94,6 +104,7 @@ public class DialogManager : MonoBehaviour
         typingCoroutine = StartCoroutine(TypeSentence(sentence));
     }
 
+    //Gere l'affichage lettre par lettre des phrases
     private IEnumerator TypeSentence(string sentence)
     {
         dialogText.text = "";
