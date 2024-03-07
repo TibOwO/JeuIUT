@@ -712,8 +712,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114000012250132106, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 145
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250132106, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012250132106, guid: ac9938edf08164c4d8b1b7ef15810da8,
+        type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114000013692566722, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
@@ -3776,6 +3786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 508802937}
   - component: {fileID: 508802936}
+  - component: {fileID: 508802938}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -3817,6 +3828,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &508802938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508802934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdce6ff89c77354c9be7ef9027f4e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &510303111
 GameObject:
   m_ObjectHideFlags: 0

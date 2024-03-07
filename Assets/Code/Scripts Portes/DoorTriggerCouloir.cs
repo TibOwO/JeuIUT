@@ -22,10 +22,8 @@ public class DoorTriggerCouloir : MonoBehaviour
 
     void LoadCouloirScene(VideoPlayer vp)
     {
-        // Get current scene
         Scene currScene = SceneManager.GetActiveScene();
 
-        // Determine spawn point based on the current scene
         string spawnPoint = null;
         if (currScene.name == "Salle 1")
         {
@@ -60,10 +58,8 @@ public class DoorTriggerCouloir : MonoBehaviour
             Debug.LogError(currScene.name);
         }
 
-        // Set spawn point
         PlayerPrefs.SetString("PointDeSpawn", spawnPoint);
 
-        // Load Couloir scene
         SceneManager.LoadScene("Couloir");
     }
 }
