@@ -29,10 +29,7 @@ public class Quiz : MonoBehaviour
     public string selectedProfessor;
     public Image fadeImage;
     public GameObject sceneParent; // Référence à l'objet parent de la scène
-    public GameObject barredevie;
-    public RectTransform barreDeVie; // Assurez-vous de faire référence à votre RectTransform dans l'inspecteur Unity
 
-    private int compteur = 0;
     public struct Question
     {
         public string Text;
@@ -59,10 +56,6 @@ public class Quiz : MonoBehaviour
             btnReponseG.interactable = true;
             btnReponseD.interactable = true;
         }
-         compteur++;
-
-        // Appelez la fonction de mise à jour de la barre de vie
-        UpdateBossHealthBar();
     }
 
     void Awake()
@@ -91,7 +84,6 @@ public class Quiz : MonoBehaviour
             heart.enabled = false;
         }
         PoseUneQuestion();
-        UpdateBossHealthBar();
     }
 
 
@@ -207,33 +199,10 @@ public class Quiz : MonoBehaviour
 
     private void UpdateBossHealthBar()
     {
-          if (barredevie != null)
-        {
-            RectTransform rectTransform = barredevie.GetComponent<RectTransform>();
-
-            // Vérifiez la valeur du compteur
-            if (compteur == 0)
-            {
-                // Diminuez la valeur de m_SizeDelta.x pour simuler la baisse de la vie du boss
-                rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x - 10f, rectTransform.sizeDelta.y);
-            }
-            else if (compteur == 1)
-            {
-                // Diminuez davantage la valeur de m_SizeDelta.x pour simuler une autre étape de la baisse de la vie du boss
-                rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x - 20f, rectTransform.sizeDelta.y);
-            }
-            else
-            {
-                // Augmentez la valeur de m_SizeDelta.x pour simuler la reprise de la vie du boss
-                rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x + 30f, rectTransform.sizeDelta.y);
-            }
-        }
-        else
-        {
-            Debug.LogError("Veuillez assigner l'objet barredevie dans l'inspecteur Unity.");
-        }
+        float healthPercentage = (float)bossHealth / bossMaxHealth;
+        bossHealthBar.SetProgress(healthPercentage);
+        Debug.Log("Boss Health: " + healthPercentage * 100 + "%");
     }
-
 
     public void CheckAnswer(string selectedAnswer)
     {
