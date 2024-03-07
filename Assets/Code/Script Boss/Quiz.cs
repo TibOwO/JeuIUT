@@ -268,8 +268,26 @@ public class Quiz : MonoBehaviour
                 {
                     ElementalInventory.Instance.addItem("Cle 3", 1, randomColor, "Cle qui ouvre la porte 3");
                 }
-                // Ajouter d'autres conditions pour les clés suivantes...
-
+                else if (!ElementalInventory.Instance.contains("Cle 4", 1))
+                {
+                    ElementalInventory.Instance.addItem("Cle 4", 1, randomColor, "Cle qui ouvre la porte 4");
+                }
+                else if (!ElementalInventory.Instance.contains("Cle 5", 1))
+                {
+                    ElementalInventory.Instance.addItem("Cle 5", 1, randomColor, "Cle qui ouvre la porte 5");
+                }
+                else if (!ElementalInventory.Instance.contains("Cle 6", 1))
+                {
+                    ElementalInventory.Instance.addItem("Cle 6", 1, randomColor, "Cle qui ouvre la porte 6");
+                }
+                else if (!ElementalInventory.Instance.contains("Cle 7", 1))
+                {
+                    ElementalInventory.Instance.addItem("Cle 7", 1, randomColor, "Cle qui ouvre la porte 7");
+                }
+                else
+                {
+                    ElementalInventory.Instance.addItem("wsh", 1, randomColor, "Il faut quitter le jeu par pitié");
+                }
             }
         }
         else

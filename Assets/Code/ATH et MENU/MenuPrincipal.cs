@@ -5,16 +5,17 @@ public class MainMenuScript : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Couloir"); 
+        SceneManager.LoadScene("Couloir");
+        PlayerPrefs.SetString("PointDeSpawn", "");
     }
 
     public void QuitGame()
     {
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-    #else
+#else
         Application.Quit();
-    #endif
+#endif
     }
 
 }
