@@ -40418,8 +40418,6 @@ GameObject:
   m_Component:
   - component: {fileID: 461900127}
   - component: {fileID: 461900126}
-  - component: {fileID: 461900131}
-  - component: {fileID: 461900128}
   - component: {fileID: 461900129}
   - component: {fileID: 461900130}
   m_Layer: 0
@@ -40463,36 +40461,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &461900128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461900125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e56496b174ed54c85b5f524aa1f4e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterAnimator: {fileID: 958499463}
-  dialogManager: {fileID: 461900126}
-  characterSprite: {fileID: 958499461}
-  characterName: Mysterieux Guide
-  dialogueLines:
-  - Bienvenue dans les couloirs de la connaissance, ou chaque porte peut ouvrir un
-    univers de possibilites
-  - Ici a l'IUT, nous ne nous contentons pas d'apprendre ; nous defions les mysteres
-    de la technologie.
-  - Chaque salle recele des secrets qui attendent d'etre devoiles par les esprits
-    curieux
-  - Mais d'abord, laissez moi vous presenter ce que nous abordons dans la filiere
-    informatique...
-  - Cette image devant vos yeux presente les competences apprises lors d'un cursus
-    de BUT informatique
-  - Pour le reste des informations, explorez les couloirs de l'IUT...
-  - Tiens, un etudiant semble confus devant vous
-  cinematicBars: {fileID: 461900129}
 --- !u!114 &461900129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40520,18 +40488,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1836064144}
---- !u!114 &461900131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461900125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfdce6ff89c77354c9be7ef9027f4e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &464149052
 GameObject:
   m_ObjectHideFlags: 0
@@ -46840,6 +46796,7 @@ GameObject:
   - component: {fileID: 855172658}
   - component: {fileID: 855172657}
   - component: {fileID: 855172656}
+  - component: {fileID: 855172659}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -46897,6 +46854,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &855172659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855172655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e56496b174ed54c85b5f524aa1f4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAnimator: {fileID: 958499463}
+  dialogManager: {fileID: 461900126}
+  characterSprite: {fileID: 958499461}
+  characterName: Mysterieux Guide
+  dialogueLines:
+  - Bienvenue dans les couloirs de la connaissance, ou chaque porte peut ouvrir un
+    univers de possibilites
+  - Ici a l'IUT, nous ne nous contentons pas d'apprendre ; nous defions les mysteres
+    de la technologie.
+  - Chaque salle recele des secrets qui attendent d'etre devoiles par les esprits
+    curieux
+  - Mais d'abord, laissez moi vous presenter ce que nous abordons dans la filiere
+    informatique...
+  - Cette image devant vos yeux presente les competences apprises lors d'un cursus
+    de BUT informatique
+  - Pour le reste des informations, explorez les couloirs de l'IUT...
+  - Tiens, un etudiant semble confus devant vous
+  cinematicBars: {fileID: 461900129}
 --- !u!1 &869881830
 GameObject:
   m_ObjectHideFlags: 0
@@ -51356,6 +51343,7 @@ GameObject:
   - component: {fileID: 1238776074}
   - component: {fileID: 1238776073}
   - component: {fileID: 1238776072}
+  - component: {fileID: 1238776077}
   m_Layer: 5
   m_Name: Canvas (Inventory)
   m_TagString: Untagged
@@ -51493,6 +51481,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1238776077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238776071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdce6ff89c77354c9be7ef9027f4e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1268287406
 GameObject:
   m_ObjectHideFlags: 0
@@ -75824,7 +75824,6 @@ SceneRoots:
   - {fileID: 1109659249}
   - {fileID: 461900127}
   - {fileID: 619394802}
-  - {fileID: 855172658}
   - {fileID: 26847351}
   - {fileID: 206635264}
   - {fileID: 1836064144}
@@ -75837,3 +75836,4 @@ SceneRoots:
   - {fileID: 1140670906}
   - {fileID: 739470266}
   - {fileID: 1238776076}
+  - {fileID: 855172658}

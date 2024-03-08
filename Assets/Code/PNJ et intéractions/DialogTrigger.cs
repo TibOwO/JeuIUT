@@ -91,7 +91,6 @@ public class DialogTrigger : MonoBehaviour
         foreach (string itemName in requiredItems)
         {
             bool hasItem = ElementalInventory.Instance.contains(itemName, 1);
-            Debug.Log(ElementalInventory.Instance.convertToString());
             if (!hasItem)
             {
                 return false;
