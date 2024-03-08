@@ -4,8 +4,9 @@ public class PlayerSpawner : MonoBehaviour
 {
     public Transform spawnPoint;
 
-    void Start()
+    void Awake()
     {
+        Debug.Log("PlayerSpawner Start called");
         string spawnPointName = PlayerPrefs.GetString("PointDeSpawn");
 
         // Find the spawn point in the scene

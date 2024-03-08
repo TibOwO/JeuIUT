@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2050007
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2674,7 +2674,7 @@ PrefabInstance:
         type: 3}
       propertyPath: descriptionTextMesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1347319072}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
@@ -3846,7 +3846,7 @@ PrefabInstance:
         type: 3}
       propertyPath: descriptionTextMesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1347319072}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
@@ -5072,7 +5072,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 10.25186, y: 4.623521}
+  m_Offset: {x: 10.25186, y: 4.485253}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5083,7 +5083,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.87936115, y: 0.9038811}
+  m_Size: {x: 0.8793602, y: 0.6273451}
   m_EdgeRadius: 0
 --- !u!4 &446090684
 Transform:
@@ -6351,7 +6351,7 @@ PrefabInstance:
         type: 3}
       propertyPath: descriptionTextMesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1347319072}
     - target: {fileID: 1424941095979090963, guid: ac9938edf08164c4d8b1b7ef15810da8,
         type: 3}
       propertyPath: elementName
@@ -13616,7 +13616,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 10.260809, y: 4.689145}
+  m_Offset: {x: 10.260809, y: 4.528576}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13627,7 +13627,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9211235, y: 0.7607007}
+  m_Size: {x: 0.9211235, y: 0.61797094}
   m_EdgeRadius: 0
 --- !u!4 &1426144621
 Transform:
@@ -13785,7 +13785,7 @@ PrefabInstance:
         type: 3}
       propertyPath: descriptionTextMesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1347319072}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

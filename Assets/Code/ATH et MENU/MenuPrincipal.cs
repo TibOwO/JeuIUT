@@ -6,7 +6,7 @@ public class MainMenuScript : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("Couloir");
-        PlayerPrefs.SetString("PointDeSpawn", "");
+        PlayerPrefs.SetString("PointDeSpawn", null);
     }
 
     public void QuitGame()
