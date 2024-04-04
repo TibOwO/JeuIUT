@@ -3641,7 +3641,6 @@ GameObject:
   m_Component:
   - component: {fileID: 293070677}
   - component: {fileID: 293070676}
-  - component: {fileID: 293070678}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -3683,18 +3682,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &293070678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293070674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfdce6ff89c77354c9be7ef9027f4e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &310067476
 GameObject:
   m_ObjectHideFlags: 0
@@ -19948,6 +19935,7 @@ GameObject:
   - component: {fileID: 1571632953}
   - component: {fileID: 1571632952}
   - component: {fileID: 1571632951}
+  - component: {fileID: 1571632956}
   m_Layer: 5
   m_Name: Canvas (Inventory)
   m_TagString: Untagged
@@ -20085,6 +20073,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1571632956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571632950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdce6ff89c77354c9be7ef9027f4e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1587193967
 GameObject:
   m_ObjectHideFlags: 0
